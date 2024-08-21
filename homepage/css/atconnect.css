@@ -1,0 +1,136 @@
+/* 상단메뉴 추가 수정 */
+#menu {position:relative;}
+#menu div.itemmenu {display:none; position:absolute; left:0; min-width:100%; padding:10px; z-index:10;}
+#menu > li {position:relative}
+#menu > li:hover .itemmenu {display:block; top:72px; background-color:#fff; border:1px solid #ddd; border-radius:2px;}
+#menu div.itemmenu ul {flex-direction: column;}
+#menu div.itemmenu li {display:block !important; width:100%;}
+#menu div.itemmenu li a {display:block; padding:10px 16px; word-break:auto-phrase; font-size:14px;}
+#menu div.itemmenu li a:hover {background-color:#f7f7f7; border-radius:2px; overflow:hidden;}
+/* // 상단메뉴 추가 수정 */
+
+/* Step */
+.step_wrap {}
+.step_wrap ol {display:flex; justify-content:center;}
+.step_wrap ol li {position:relative; text-align:center; min-width:85px; color:#555;}
+.step_wrap ol li + li {padding-left:100px;}
+.step_wrap ol li span.step_icon {display:inline-flex; justify-content:center; align-items:center; position:relative; width:36px; height:36px; border:3px solid #ddd; background-color:#fff; border-radius:100%; color:#ddd; font-size:20px; font-weight:bold; z-index:1;}
+.step_wrap ol li div {}
+.step_wrap ol li div strong,
+.step_wrap ol li div span {display:block; font-size:18px; line-height:26px;}
+.step_wrap ol li div span {font-weight:400;}
+.step_wrap ol li + li::before {content:""; display:block; position:absolute; top:18px; right:0; width:100%; height:3px; background-color:#213DA1; transform:translate(-36px, -50%); z-index:0;}
+.step_wrap ol li.complete,
+.step_wrap ol li.active {color:#213DA1;}
+.step_wrap ol li.complete span.step_icon,
+.step_wrap ol li.active span.step_icon {font-size:0; color:transparent;}
+.step_wrap ol li.complete span.step_icon {background-color:#fff; border-color:#213DA1;}
+.step_wrap ol li.active span.step_icon {border-color:transparent; background-color:#213DA1;}
+.step_wrap ol li.complete span.step_icon::before,
+.step_wrap ol li.active span.step_icon::before {content:""; display:block; position:absolute; bottom:50%; left:50%; width:55%; height:30%; border-width:0 0 3px 3px; border-style:solid; transform-origin:0 100%; transform:translate(-20%, 75%) rotate(-45deg);}
+.step_wrap ol li.complete span.step_icon::before {border-color:#213DA1; color: #fff;;}
+.step_wrap ol li.active span.step_icon::before {color:#fff;}
+.step_wrap ol li.active ~ li::before {background-color:#ddd;}
+/* // Step */
+
+
+/* 약관 동의 */
+.agree_wrap {}
+.agree_wrap div.chk_all {padding:16px 24px; border:1px solid #ddd;}
+
+.agree_wrap ul {margin-top:20px;}
+.agree_wrap ul + ul {padding-top:20px; border-top:1px solid #ddd;}
+.agree_wrap ul li {display:flex; justify-content:space-between; align-items:flex-start; gap:10px; width:100%; padding:10px 24px;}
+.agree_wrap ul li button {min-width:28px; width:28px; height:28px; background:url('../images/ico_arrow_r.png') no-repeat right center / contain; color:transparent; white-space:nowrap; text-decoration:underline; overflow:hidden;}
+
+.agree_wrap input[type="text"] {border:1px solid #ddd;}
+.agree_wrap input[type="text"]:optional {background-color: #f7f7f7;} /* 선택옵션 */
+.agree_wrap input[type="text"]:required {background-color: #ff0000;} /* 필수옵션 */
+
+.agree_wrap label {position:relative; padding-left:38px; font-size:16px; line-height:28px; cursor:pointer;}
+.agree_wrap label input[type="checkbox"] {position:absolute; width:0; height:0; border:0 none; opacity:0;}
+.agree_wrap label input[type="checkbox"] + span.checkmark {content:""; display:inline-block; position:absolute; top:0; left:0; width:28px; height:28px; background:url('../images/ico_check_on.png') no-repeat left top / contain; border:1px solid #989898; vertical-align:top;}
+.agree_wrap label input[type="checkbox"]:checked + span.checkmark {/* border-color:#242424; */ border:0; background-color: #242424;}
+/* .agree_wrap label input[type="checkbox"]:checked + span.checkmark::before,
+.agree_wrap label input[type="checkbox"]:checked + span.checkmark::after {content:""; display:block; position:absolute; bottom:30%; width:0.11em; background-color:#fff; border-radius:100em}
+.agree_wrap label input[type="checkbox"]:checked + span.checkmark::before {left:50%; height:40%; transform:translateX(-50%) rotate(-40deg); transform-origin:0% 100%;}
+.agree_wrap label input[type="checkbox"]:checked + span.checkmark::after {left:50%; height:70%; transform:translateX(-100%) rotate(40deg); transform-origin:100% 100%;} */
+.agree_wrap label em {margin-left:0.25em; color:#ff0000}
+.agree_wrap label span.txt {display:inline-block; line-height:28px;}
+
+.agree_wrap li label input[type="checkbox"] + span.checkmark {border:0 none; background-color:#fff;}
+.agree_wrap div.chk_all label input[type="checkbox"] + span.checkmark {border-radius:100%;}
+.agree_wrap div.chk_all label span.txt {font-weight:bold;}
+.agree_wrap .btn_group {display:flex; justify-content:space-between; gap:20px; width:100%;}
+.agree_wrap .btn_group div {width:100%; margin-top:60px;}
+.agree_wrap .btn_group div button {width:100%; height:72px; background-color:#213DA1;}
+.agree_wrap .btn_group div button span {display:block; color:#fff; line-height:29px;; font-weight:500;}
+/* // 약관 동의 /*
+
+
+/* 항목 선택 */
+.select_group {display:flex; justify-content:flex-start; width:100%; padding:12px 0;}
+.select_group label {display:flex; justify-content:center; align-items:center; position:relative; width:100%; min-width:25%; height:60px; color:#555; cursor:pointer;}
+.select_group.multi {flex-wrap:wrap;}
+.select_group.multi label {width:25%;}
+.select_group label span.checkmark {display:flex; justify-content:center; align-items:center; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #ddd; background-color:#fff;}
+.select_group label input:checked + span.checkmark {background-color:#213DA1; border-color:transparent; color:#fff;}
+/* // 항목 선택 */
+
+
+
+/* 입력폼 */
+.btn_set {width:100%; padding:12px 24px;}
+.btn_default {width:100%; height:60px; background-color:#213DA1; color:#fff;}
+.form_wrap {}
+.form_wrap .row {display:flex; align-items:flex-start; width:100%;}
+.form_wrap .row div.tit {min-width:140px; padding:12px 0;}
+.form_wrap .row div.tit strong {display:flex; align-items:center; height:60px;}
+.form_wrap .row .ipt_form {width:100%;}
+.form_wrap .row .ipt_form .ipt_set {display:flex; justify-content:space-between; width:100%; padding:12px 0; border-bottom:1px solid #ddd;}
+.form_wrap .row .ipt_form .ipt_set > div {flex:1;}
+.form_wrap .row .ipt_form .ipt_set input {width:100%; padding:0 24px;}
+.form_wrap .row .ipt_form .ipt_set button {position: relative !important}
+.form_wrap .row .ipt_form span.dash {width:30px; min-width:30px; text-align:center;}
+.form_wrap .row .ipt_form input {border:0 none; line-height:60px;}
+.form_wrap .row .ipt_form input::placeholder {color:#999; font-size:18px; line-height:inherit;}
+.ipt_wrap {display:flex; align-items:center; width:100%;}
+
+.select_set {width:100%; padding:12px 0; border-bottom:1px solid #ddd;}
+.select_set select {position:relative; width:100%; height:60px; padding:0 24px; border:0 none; color:#999; font-size:18px; background:url('../images/ico_arrow_u.png') no-repeat right 24px center / 36px 36px;}
+.select_set select option {background-color:#fff; color:#000;}
+.select_set select.changed {color:#000;}
+.select_set select::before {content:""; display:block; position:absolute; top:0; right:0; width:20px; height:20px; background-color:#ff6600;;}
+/* // 입력폼 */
+
+/* 입력폼 안내 문구 */
+.box_alert {padding:20px 24px; background-color:#f5f5f5;}
+.box_alert div.tit {padding-bottom:10px;}
+.box_alert div.tit strong {}
+.box_alert p {line-height:1.75em;}
+.box_alert ul {}
+.box_alert ul li p {position:relative; padding-left:17px; color:#000; font-size:16px;}
+.box_alert ul li p::before {content:"·"; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
+
+.box_alert p.txt {}
+.box_alert p.txt a {color:#213DA1; font-size:inherit; font-weight:bold; text-decoration:none;}
+/* // 입력폼 안내 문구 */
+
+
+
+/* 파일 업로드 */
+.file_upload_wrap {display:flex; flex-direction:column; gap:20px; width:100%;}
+.file_upload_wrap button.btn_add_file {width:140px; height:60px; color:#fff; background-color:#213DA1;}
+.file_upload_wrap button.btn_add_file span {color:#fff;}
+.file_upload_wrap div {display:flex; justify-content:space-between; align-items:flex-start; gap:20px; width:100%; padding:18px 24px; border:1px solid #ddd;}
+.file_upload_wrap div p {display:flex; gap:10px; color:#555; font-size:16px; line-height:24px;}
+.file_upload_wrap div p strong,
+.file_upload_wrap div p span {display:block}
+.file_upload_wrap div p strong {word-break:break-all;}
+.file_upload_wrap div button.btn_del {position:relative; min-width:24px; width:24px; height:24px; color:transparent; text-align:center;}
+.file_upload_wrap div button.btn_del span {display:block; position:relative; width:20px; height:20px; border-radius:100%; background-color:#999999; overflow:hidden;}
+.file_upload_wrap div button.btn_del span::before,
+.file_upload_wrap div button.btn_del span::after {content:""; display:block; position:absolute; top:50%; left:50%; width:57.25%; height:2px; background-color:#fff; transform-origin:50% 50%;}
+.file_upload_wrap div button.btn_del span::before {transform:translate(-50%,-50%) rotate(-45deg);}
+.file_upload_wrap div button.btn_del span::after {transform:translate(-50%,-50%) rotate(45deg);}
+/* // 파일 업로드 */
