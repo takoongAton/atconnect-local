@@ -9,13 +9,18 @@
 #menu div.itemmenu li a:hover {background-color:#f7f7f7; border-radius:2px; overflow:hidden;}
 /* // 상단메뉴 추가 수정 */
 
+
+
+/* layout */
+.container_wrap {width:800px; margin:0 auto;}
+
 /* Step */
-.step_wrap {}
+.step_wrap {padding:100px 0 80px;}
 .step_wrap ol {display:flex; justify-content:center;}
 .step_wrap ol li {position:relative; text-align:center; min-width:85px; color:#555;}
 .step_wrap ol li + li {padding-left:100px;}
 .step_wrap ol li span.step_icon {display:inline-flex; justify-content:center; align-items:center; position:relative; width:36px; height:36px; border:3px solid #ddd; background-color:#fff; border-radius:100%; color:#ddd; font-size:20px; font-weight:bold; z-index:1;}
-.step_wrap ol li div {}
+.step_wrap ol li div {margin-top:20px;}
 .step_wrap ol li div strong,
 .step_wrap ol li div span {display:block; font-size:18px; line-height:26px;}
 .step_wrap ol li div span {font-weight:400;}
@@ -47,7 +52,7 @@
 .agree_wrap input[type="text"]:optional {background-color: #f7f7f7;} /* 선택옵션 */
 .agree_wrap input[type="text"]:required {background-color: #ff0000;} /* 필수옵션 */
 
-.agree_wrap label {position:relative; padding-left:38px; font-size:16px; line-height:28px; cursor:pointer;}
+.agree_wrap label {display:inline-block; position:relative; padding-left:38px; font-size:16px; line-height:28px; cursor:pointer;}
 .agree_wrap label input[type="checkbox"] {position:absolute; width:0; height:0; border:0 none; opacity:0;}
 .agree_wrap label input[type="checkbox"] + span.checkmark {content:""; display:inline-block; position:absolute; top:0; left:0; width:28px; height:28px; background:url('../images/ico_check_on.png') no-repeat left top / contain; border:1px solid #989898; vertical-align:top;}
 .agree_wrap label input[type="checkbox"]:checked + span.checkmark {/* border-color:#242424; */ border:0; background-color: #242424;}
@@ -56,7 +61,7 @@
 .agree_wrap label input[type="checkbox"]:checked + span.checkmark::before {left:50%; height:40%; transform:translateX(-50%) rotate(-40deg); transform-origin:0% 100%;}
 .agree_wrap label input[type="checkbox"]:checked + span.checkmark::after {left:50%; height:70%; transform:translateX(-100%) rotate(40deg); transform-origin:100% 100%;} */
 .agree_wrap label em {margin-left:0.25em; color:#ff0000}
-.agree_wrap label span.txt {display:inline-block; line-height:28px;}
+.agree_wrap label span.txt {display:inline-block; line-height:28px; word-break:keep-all;}
 
 .agree_wrap li label input[type="checkbox"] + span.checkmark {border:0 none; background-color:#fff;}
 .agree_wrap div.chk_all label input[type="checkbox"] + span.checkmark {border-radius:100%;}
@@ -134,3 +139,31 @@
 .file_upload_wrap div button.btn_del span::before {transform:translate(-50%,-50%) rotate(-45deg);}
 .file_upload_wrap div button.btn_del span::after {transform:translate(-50%,-50%) rotate(45deg);}
 /* // 파일 업로드 */
+
+
+
+
+
+/* footer 약관 영역 */
+.footer_privacy_wrap {background-color:#fff; border-top:1px solid #ddd;}
+.footer_privacy_wrap .inner {padding:20px 0; max-width:1200px; width:100%; margin:0 auto;}
+.footer_privacy_wrap .inner a {display:inline-block; text-decoration:none !important;}
+.footer_privacy_wrap .inner a + a {margin-left:1em;}
+.footer_privacy_wrap .inner a span {display:block; color:#222; line-height:1;}
+.footer_privacy_wrap .inner a:hover {text-decoration:underline;}
+/* // footer 약관 영역 */
+
+/* footer 안내 문구 */
+.footer_wrap .footer_alert {background-color:#EEF2F5;}
+.footer_wrap .footer_alert div.inner {width:100%; max-width:1200px; margin:0 auto; padding:20px 0; line-height:1.5em;}
+.footer_wrap .footer_alert div.inner p {word-break:keep-all;}
+.footer_wrap .footer_alert div.inner p.em {margin-top:1em; color:red;}
+/* // footer 안내 문구 */
+
+/* footer 하단 정보 영역 */
+.footer_other {background-color:#000;;}
+.footer_other .inner {width:100%; max-width:1200px; padding:20px 0; margin:0 auto; text-align:right;}
+.footer_other .inner a {color:#fff; text-decoration:none;}
+.footer_other .inner a + a {margin-left:1em;}
+.footer_other .inner a span {color:#fff;}
+/* // footer 하단 정보 영역 */

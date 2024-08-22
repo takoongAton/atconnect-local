@@ -14,7 +14,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-.infofofof {display:flex; justify-content:space-between; width:100%; max-width:1200px; margin:0 auto; padding:16px 20px; background-color:#fefefe; font-size:12px; box-shadow:0 0 2px rgba(0,0,0,0.06);;}
+.infofofof {background-color:#f9f9f9; font-size:12px;}
+.infofofof div.inner {display:flex; justify-content:space-between; width:100%; max-width:1200px; margin:0 auto; padding:10px 0;}
 .infofofof p {display:inline-block; margin-right:10px;}
 
 .form_alert {padding:10px 24px;}
@@ -22,16 +23,33 @@
 .form_alert p.em {color:#FF0000;}
 .form_alert p.txt {padding-left:0.6875em;}
 .form_alert p.txt span {position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit;}
+.form_alert button.btn_tooltips {display:inline-flex; align-items:center; height:24px; color:#999; font-size:16px;}
+.form_alert button.btn_tooltips span {}
+.form_alert button.btn_tooltips span.icon {display:inline-flex; width:24px; height:24px;}
+.form_alert button.btn_tooltips span.icon img {}
+.form_alert button.btn_tooltips span.txt {display:inline-block; color:#999; font-size:16px; line-height:1.5em;}
+</style>
+
+<style>
+ol.txt {padding:20px 24px;}
+ol.txt li {}
+ol.txt li p {position:relative; padding-left:1.125em; color:#000; line-height:1.75em; word-break:keep-all; letter-spacing:-0.05em;}
+ol.txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-size:inherit; line-height:inherit;}
+
+div.title {display:flex; align-items:center; height:84px;}
+div.title strong {display:inline-block; font-size:16px; line-height:1em; font-weight:bold;}
 </style>
 </head>
 
 <body>
 <div class="infofofof">
-	<div>
-		<p>2024-서울영등포-0012(대부업)</p>
-		<p>2024-서울영등포-0013(대부중개업)</p>
+	<div class="inner">
+		<div>
+			<p>2024-서울영등포-0012(대부업)</p>
+			<p>2024-서울영등포-0013(대부중개업)</p>
+		</div>
+		<div class="tel">1600-0218</div>
 	</div>
-	<div class="tel">1600-0218</div>
 </div>
 
 <header>
@@ -80,47 +98,194 @@
 </header>
 
 <section>
-	<div class="step_wrap">
-		<ol>
-			<li class="complete">
-				<span class="step_icon">1</span>
-				<div>
-					<strong>Step 1</strong>
-					<span>본인인증</span>
-				</div>
-			</li>
-			<li class="complete">
-				<span class="step_icon">2</span>
-				<div>
-					<strong>Step 2</strong>
-					<span>고객동의</span>
-				</div>
-			</li>
-			<li class="active">
-				<span class="step_icon">3</span>
-				<div>
-					<strong>Step 3</strong>
-					<span>상품선택</span>
-				</div>
-			</li>
-			<li>
-				<span class="step_icon">4</span>
-				<div>
-					<strong>Step 4</strong>
-					<span>대출신청</span>
-				</div>
-			</li>
-			<li>
-				<span class="step_icon">5</span>
-				<div>
-					<strong>Step 5</strong>
-					<span>신청완료</span>
-				</div>
-			</li>
-		</ol>
-	</div>
+	<div class="container_wrap">
+		
+		<div class="step_wrap">
+			<ol>
+				<li class="complete">
+					<span class="step_icon">1</span>
+					<div>
+						<strong>Step 1</strong>
+						<span>본인인증</span>
+					</div>
+				</li>
+				<li class="complete">
+					<span class="step_icon">2</span>
+					<div>
+						<strong>Step 2</strong>
+						<span>고객동의</span>
+					</div>
+				</li>
+				<li class="active">
+					<span class="step_icon">3</span>
+					<div>
+						<strong>Step 3</strong>
+						<span>상품선택</span>
+					</div>
+				</li>
+				<li>
+					<span class="step_icon">4</span>
+					<div>
+						<strong>Step 4</strong>
+						<span>대출신청</span>
+					</div>
+				</li>
+				<li>
+					<span class="step_icon">5</span>
+					<div>
+						<strong>Step 5</strong>
+						<span>신청완료</span>
+					</div>
+				</li>
+			</ol>
+		</div>
+		<!-- // step_wrap -->
 
-	<div class="container_wrap" style="width:800px; margin:0 auto; padding:100px 0;">
+
+<style>
+.table_wrap {overflow:hidden; overflow-x:auto;}
+.table_wrap table {width:100%; min-width:800px; border-width:1px 0 0 0; border-style:solid; border-color:#ddd;}
+.table_wrap table tr {}
+.table_wrap table tr th,
+.table_wrap table tr td {padding:11px 20px; font-size:14px; line-height:1.444444em; font-weight:normal;}
+.table_wrap table tr th {border-bottom:1px solid #ddd; background-color:#F5F5F5;}
+.table_wrap table tr td {border-bottom:1px solid #ddd; background-color:#fff;}
+.table_wrap table tr td.tar {text-align:right;}
+
+.table_wrap table.table_type_01 {text-align:left;}
+
+.table_wrap table.table_type_02 {text-align:center;}
+.table_wrap table.table_type_02 tr {}
+.table_wrap table.table_type_02 tr th,
+.table_wrap table.table_type_02 tr td {font-size:14px;}
+.table_wrap table.table_type_02 tr th {background-color:#555555; color:#fff; text-align:center;}
+.table_wrap table.table_type_02 tr td {}
+</style>
+
+
+		<div class="content_group">
+			<div class="title">
+				<strong>타이틀</strong>
+			</div>
+
+			<div class="table_wrap">
+				<table class="table_type_01">
+					<colgroup>
+						<col style="width:25%;">
+						<col style="width:25%;">
+						<col style="width:25%;">
+						<col style="width:25%;">
+					</colgroup>
+					<tr>
+						<th>대출상품</th>
+						<td>코넥안심스탁론</td>
+						<th>여신기관</th>
+						<td>주식회사 에이티코넥</td>
+					</tr>
+					<tr>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+					</tr>
+					<tr>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+					</tr>
+					<tr>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+					</tr>
+					<tr>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+					</tr>
+					<tr>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+					</tr>
+					<tr>
+						<th>ㅇㅇ</th>
+						<td>ㅇㅇ</td>
+						<th></th>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+
+			<br /><br />
+			
+
+			<div class="table_wrap">
+				<table class="table_type_02">
+					<colgroup>
+						<col style="">
+						<col style="">
+						<col style="">
+						<col style="">
+						<col style="">
+						<col style="">
+					</colgroup>
+					<tr>
+						<th>No</th>
+						<th>신청구분</th>
+						<th>증권사명</th>
+						<th>증권계좌번호</th>
+						<th>대출실행일</th>
+						<th>대출금액</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>신규</td>
+						<td>유진투자증권</td>
+						<td>00000000000000</td>
+						<td>2024-01-01</td>
+						<td class="tar">0원</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>신규</td>
+						<td>하나증권</td>
+						<td>00000000000000</td>
+						<td>2024-03-01</td>
+						<td class="tar">50,000,000원</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>대환</td>
+						<td>유진투자증권</td>
+						<td>00000000000000</td>
+						<td>심사진행중</td>
+						<td class="tar">100,000,000원</td>
+					</tr>
+					<!-- <tr>
+						<td>ㅁㅁㅁㅁ</td>
+						<td>ㅁㅁㅁㅁ</td>
+						<td>ㅁㅁㅁㅁ</td>
+						<td>ㅁㅁㅁㅁ</td>
+						<td>ㅁㅁㅁㅁ</td>
+						<td class="tar">ㅁㅁㅁㅁ</td>
+					</tr> -->
+				</table>
+				<!-- // table_type_02 -->
+			</div>
+			<!-- // table_wrap -->
+
+		</div>
+		<!-- // content_group -->
+		
+
+
+
+	
 		<div class="conetnet">
 			<div class="box_alert">
 				<div class="tit">
@@ -217,8 +382,13 @@
 									<option value="제휴 증권사를 선택하세요" selected disabled hidden>제휴 증권사를 선택하세요</option>
 									<option value="개인">개인</option>
 									<option value="단체">단체</option>
+									<option value="대출금리: 00.00% / 연장금리: 연장 시 변동 / 선,후취구분 : 선취">대출금리: 00.00% / 연장금리: 연장 시 변동 / 선,후취구분 : 선취</option>
+									<option value="대출금리: 00.00% / 연장금리: 연장 시 변동 / 선,후취구분 : 선취">대출금리: 00.00% / 연장금리: 연장 시 변동 / 선,후취구분 : 선취</option>
 								</select>
 							</div>
+						</div>
+						<div class="form_alert">
+							<button type="button" class="btn_tooltips"><span class="icon"><img src="../images/ico_quest.png" alt="물음표"></span><span class="txt">선,후취란?</span></button>
 						</div>
 					</div>
 				</div>
@@ -440,20 +610,16 @@
 							<span class="txt">본인은 당사에 제공한 적합성/적정성 관련 정보와 관련하여 다음의 사항을 확인합니다.본인은 당사에 제공한 적합성/적정성 관련 정보와 관련하여 다음의 사항을 확인합니다.</span>
 						</label>
 					</div>
-<style>
-ol.txt {padding:20px 24px;}
-ol.txt li {}
-ol.txt li p {position:relative; padding-left:1.125em; color:#000; line-height:1.75em; word-break:keep-all; letter-spacing:-0.05em;}
-ol.txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-size:inherit; line-height:inherit;}
 
-</style>
-					<ol class="txt" style="padding:20px 24px;">
+					<ol class="txt">
 						<li>
 							<p><span>1.</span>당사에 제공한 적합성/적정성 관련 정보는 본인의 재산상황, 용도 등의 정보를 정확히 알려드린 것 입니다.</p>
 							<p><span>2.</span>본인이 제공한 정보가 정확하지 않거나, 정보에 변경사항이 발생한 경우에는 적합성/적정성 판단이 달라질 수 있음을 설명 받았습니다.</p>
 							<p><span>3.</span>상기 목적을 위해 개인정보를 수집, 이용, 제공하는 것에 동의 합니다.</p>
 						</li>
 					</ol>
+					<!-- // txt -->
+
 				</div>
 				<!-- // agree_wrap -->
 
@@ -477,17 +643,9 @@ ol.txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-size:in
 
 </section>
 
-<style>
-.footer_privacy_wrap {}
-.footer_privacy_wrap .inner {}
-.footer_privacy_wrap .inner a {display:inline-block; text-decoration:none;}
-.footer_privacy_wrap .inner a + a {margin-left:1em;}
-.footer_privacy_wrap .inner a span {display:block; color:#222; line-height:1;}
-.footer_privacy_wrap .inner a:hover {text-decoration:underline;}
-</style>
 <div class="footer_wrap">
-	<div class="footer_privacy_wrap" style="background-color:#fff; border-top:1px solid #ddd;">
-		<div class="inner" style="padding:20px 0; max-width:1200px; width:100%; margin:0 auto;">
+	<div class="footer_privacy_wrap">
+		<div class="inner">
 			<a href="#g"><span>이용약관</span></a>
 			<a href="#g"><span>개인정보처리방침</span></a>
 			<a href="#g"><span>고객정보취급방침</span></a>
@@ -496,10 +654,10 @@ ol.txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-size:in
 			<a href="#g"><span>이메일무단수집거부</span></a>
 		</div>
 	</div>
-	<div class="footer_alert" style="background-color:#EEF2F5;">
-		<div class="inner" style="width:100%; max-width:1200px; margin:0 auto; padding:20px 0; line-height:1.5em;">
-			<p style="word-break:keep-all;">대출금리: 연20%이내(연체이자율은 정상이자율+3%p이내, 최대 연20%이내) - 단, 2021년 7월 7일부터 체결되거나 갱신, 연장되는 계약에 한함. 해당 상품은 신용대출과 담보대출 상품으로 만 20세 이상 고객 대상으로 개인신용평점 등 신용도 및 당사 심사 기준에 따라 대출 가능 여부 및 이자율 산출. 이자는 매월 약정일에 부과하고 상품에 따라 원금자유상환(만기일시상환) 등의 방법으로 상환. 조기상환 조건 없음.</p>
-			<p class="em" style="margin-top:1em; color:red;">중개수수료를 요구하거나 받는 것은 불법입니다.<br />
+	<div class="footer_alert">
+		<div class="inner">
+			<p>대출금리: 연20%이내(연체이자율은 정상이자율+3%p이내, 최대 연20%이내) - 단, 2021년 7월 7일부터 체결되거나 갱신, 연장되는 계약에 한함. 해당 상품은 신용대출과 담보대출 상품으로 만 20세 이상 고객 대상으로 개인신용평점 등 신용도 및 당사 심사 기준에 따라 대출 가능 여부 및 이자율 산출. 이자는 매월 약정일에 부과하고 상품에 따라 원금자유상환(만기일시상환) 등의 방법으로 상환. 조기상환 조건 없음.</p>
+			<p class="em">중개수수료를 요구하거나 받는 것은 불법입니다.<br />
 				과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.<br />
 				대출시 신용등급 또는 개인신용평점 하락으로 다른 금융거래가 제약 받을 수 있습니다.</p>
 		</div>
@@ -538,13 +696,7 @@ ol.txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-size:in
 			<div class="copyright">Copyright ⓒ 2023 ATON Inc. All rights reserved.</div>
 		</div>
 	</div>
-<style>
-.footer_other {background-color:#000;;}
-.footer_other .inner {width:100%; max-width:1200px; padding:20px 0; margin:0 auto; text-align:right;}
-.footer_other .inner a {color:#fff; text-decoration:none;}
-.footer_other .inner a + a {margin-left:1em;}
-.footer_other .inner a span {color:#fff;}
-</style>
+
 	<div class="footer_other">
 		<div class="inner">
 			<a href="#g"><span>불법사금융피해신고센터</span></a>

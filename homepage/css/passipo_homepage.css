@@ -14,7 +14,7 @@ body {
 }
 
 /* header */
-body header {display:-ms-flexbox; display:flex; align-items:center; /* position:fixed; top:0; left:0; */ position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; min-height:108px; padding-top:36px; z-index:11; transition:all 0.2s ease;}
+body header {display:-ms-flexbox; display:flex; align-items:center; /* position:fixed; top:0; left:0; */ position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; /* min-height:108px; */ padding-top:36px; z-index:11; transition:all 0.2s ease;}
 body header.home {background-color:transparent;}
 body header .inner {display:-ms-flexbox; display:flex; justify-content:space-between;  align-items:center; width:100%; max-width:1200px; margin:0  auto;}
 body header .inner div.nav {display:-ms-flexbox; display:flex;}
