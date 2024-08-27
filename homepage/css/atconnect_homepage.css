@@ -119,6 +119,7 @@ div.header {box-sizing:border-box; position:fixed; left:0; width:100%; padding:0
 .footer_wrap div.footer .inner div.info_wrap div.info_list dl {display:flex; gap:0 0.5em; flex-wrap:wrap; font-size:0.875em; line-height:1.75em; }
 .footer_wrap div.footer .inner div.info_wrap div.info_list dl dt {color:#fff; font-weight:normal;}
 .footer_wrap div.footer .inner div.info_wrap div.info_list dl dd {color:#9c9c9c; text-align:left; word-break: break-all;}
+.footer_wrap div.footer .inner div.info_wrap div.info_list dl dd a {color:#9c9c9c;}
 .footer_wrap div.footer div.copyright {width:100%; max-width:1200px; margin:2em auto 0; color:#fff; font-size:0.875em; font-weight:300; text-align:right;}
 @media only screen and (max-width:1200px) {
 	.footer_wrap div.footer {padding:20px 24px;}
@@ -532,6 +533,7 @@ div.title strong {display:inline-block; font-size:16px; line-height:1em; font-we
 .infofofof div.inner {display:flex; justify-content:space-between; align-items:center; width:100%; max-width:1200px; margin:0 auto; padding:10px 0;}
 .infofofof div.inner div:first-of-type {display:flex; gap:10px; flex:1;}
 .infofofof p {display:inline-block;}
+.infofofof a {color:#111}
 @media screen and (max-width:1200px) {
     .infofofof div.inner {padding:10px 24px;}
     .infofofof p {line-height:1.25em;}
