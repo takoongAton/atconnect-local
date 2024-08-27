@@ -151,6 +151,7 @@ window.addEventListener("load", function(){
 	}
 })
 
+
 gnbAs.forEach(function(item,index){
 	item.addEventListener("click", function(e){
 		console.log(index)

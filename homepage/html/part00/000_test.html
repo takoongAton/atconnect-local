@@ -31,16 +31,16 @@
 		<div class="logo"><h1><strong><img src="../../images/img_logo.png" alt="에이티코넥"></strong></h1></div>
 		<div class="nav">
 			<ul class="gnb" id="menu">
-				<li><a href="#g" class="active"><span>대출신청</span></a>
+				<li><a href="#g" class="depth1 active"><span>대출신청</span></a>
 					<div class="itemmenu">
 						<ul>
-							<li><a href="#g">신규대출</a></li>
+							<li><a href="#g" class="current-page">신규대출</a></li>
 							<li><a href="#g">대환대출</a></li>
 							<li><a href="#g">추가대출</a></li>
 						</ul>
 					</div>
 				</li>
-				<li><a href="#g"><span>대출관리</span></a>
+				<li><a href="#g"class="depth1"><span>대출관리</span></a>
 					<div class="itemmenu">
 						<ul>
 							<li><a href="#g">대출내역확인</a></li>
@@ -49,14 +49,14 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="#g"><span>고객센터</span></a>
+				<li><a href="#g"class="depth1"><span>고객센터</span></a>
 					<div class="itemmenu">
 						<ul>
 							<li><a href="#g">공지사항</a></li>
 						</ul>
 					</div>
 				</li>
-				<li><a href="#g"><span>나의업무</span></a>
+				<li><a href="#g"class="depth1"><span>나의업무</span></a>
 					<!-- <div class="itemmenu">
 						<ul>
 							<li><a href="#g">텍스트</a></li>
@@ -314,18 +314,18 @@
 					<div class="tit"><strong>주소</strong></div>
 					<div class="ipt_form">
 						<div class="ipt_wrap">
-							<div class="ipt_set" style="position:relative;">
+							<div class="ipt_set">
 								<div><input type="text" placeholder="" /></div>
-								<button type="button" style="width:140px; height:60px; background-color:#213DA1; color:#fff; font-size:20px; font-weight:500;">주소검색</button>
+								<button type="button" class="btn_default"><span>주소검색</span></button>
 							</div>
 						</div>
 						<div class="ipt_wrap">
-							<div class="ipt_set" style="position:relative;">
+							<div class="ipt_set">
 								<div><input type="text" placeholder="" /></div>
 							</div>
 						</div>
 						<div class="ipt_wrap">
-							<div class="ipt_set" style="position:relative;">
+							<div class="ipt_set">
 								<div><input type="text" placeholder="상세주소를 입력해주세요." /></div>
 							</div>
 						</div>
@@ -701,13 +701,51 @@
 
 
 <div id="aside-nav" class="aside">
-	<div class="btn-close"><button type="button"><span>메뉴닫기</span></button></div>
-	<ul>
-		<li><a href="#g">대출신청</a></li>
-		<li><a href="#g">대출관리</a></li>
-		<li><a href="#g">고객센터</a></li>
-		<li><a href="#g">나의업무</a></li>
-	</ul>
+	<div class="aside_nav_wrap">
+		<nav>
+			<div class="nav_section">
+				<div class="nav_group">
+					<h2><a href="#g"><span>대출신청</span></a></h2>
+					<ul>
+						<li><a href="#g"><span>신규대출</span></a></li>
+						<li><a href="#g"><span>대환대출</span></a></li>
+						<li><a href="#g"><span>추가대출</span></a></li>
+					</ul>
+				</div>
+				<!-- // nav_group -->
+		
+				<div class="nav_group">
+					<h2><a href="#g"><span>대출관리</span></a></h2>
+					<ul>
+						<li><a href="#g"><span>대출내역확인</span></a></li>
+						<li><a href="#g"><span>일부상환</span></a></li>
+						<li><a href="#g"><span>해지신청</span></a></li>
+					</ul>
+				</div>
+				<!-- // nav_group -->
+		
+				<div class="nav_group">
+					<h2><a href="#g"><span>고객센터</span></a></h2>
+					<ul>
+						<li><a href="#g"><span>공지사항</span></a></li>
+					</ul>
+				</div>
+				<!-- // nav_group -->
+		
+				<div class="nav_group">
+					<h2><a href="#g"><span>나의업무</span></a></h2>
+					<!-- <ul>
+						<li><a href="#g"><span>ㅇㅇㅇㅇ</span></a></li>
+					</ul> -->
+				</div>
+				<!-- // nav_group -->
+			</div>
+			<!-- // nav_section -->
+		</nav>
+		<div class="btn-close">
+			<button type="button"><span>메뉴닫기</span></button>
+		</div>
+	</div>
 </div>
 <!-- // aside -->
 
