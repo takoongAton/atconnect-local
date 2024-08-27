@@ -1,8 +1,7 @@
 'use strict';
 
-
 /*
-passipo
+atconnect
 이하 전체 테스트 스크립트입니다.
 개발에 맞게 새로 작성해서 적용 부탁드립니다.
 */

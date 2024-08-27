@@ -41,7 +41,10 @@ body header:not(.home) ul li a.active::before {background-color:#000;}
 body header:not(.home) ul li a span {color:#000;}
 
 body header.aside_on .logo h1 {width:112px; height:25px; background-image:url('../images/index/ico_logo_pass_dark.png') !important}
+@media only screen and (max-width:1200px) {
+	body header .inner {padding:0 24px;}
 
+}
 @media only screen and (max-width:786px) {
 	body header.mobile {height:48px; padding:6px 0;}
 	body header.mobile h1 {height:36px; padding:9px 16px; color:#fff}
@@ -360,56 +363,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 }
 /* // 휴대폰안심 서비스 해지 */
 
-/* 하단 공통 */
-.footer_wrap {/* display:flex; justify-content:center; align-items:center; */ width:100%; background-color:#000;}
-	
-.footer_wrap div.footer {position:relative; width:1200px; max-width:100%; margin:0 auto; padding:48px 0 36px; color:#fff; font-size:12px; line-height:1.66666em; text-align:center;}
-.footer_wrap div.footer .inner div.row {width:100%;}
-.footer_wrap div.footer .private {white-space:nowrap;}
-.footer_wrap div.footer .private span {position:relative; color:#fff;}
-.footer_wrap div.footer .private span + span {margin-left:10px; padding-left:11px;}
-.footer_wrap div.footer .private span + span::before {content:""; display:block; position:absolute; top:50%; left:0; width:1px; height:50%; background-color:#fff; transform:translate(-50%,-50%);}
-.footer_wrap div.footer .private a {color:#fff; text-decoration:none;}
 
-.footer_wrap div.footer .co_name  {margin-top:24px;}
-
-.footer_wrap div.footer .co_info dl,
-.footer_wrap div.footer .co_info dl dt,
-.footer_wrap div.footer .co_info dl dd {display:inline-block;}
-
-.footer_wrap div.footer dt {color:#fff;}
-.footer_wrap div.footer dd,
-.footer_wrap div.footer address {color:#888;}
-
-.footer_wrap div.footer dl + dl {position:relative; margin-left:10px; padding-left:11px;}
-.footer_wrap div.footer dl + dl::before {content:""; display:block; position:absolute; top:50%; left:0; width:1px; height:50%; background-color:#fff; transform:translate(-50%,-50%);}
-
-.footer_wrap div.footer dt a {color:#fff; text-decoration:none;}
-.footer_wrap div.footer dd {padding-left:0.75em;}
-.footer_wrap div.footer dd a {color:#888; text-decoration:none;}
-
-.footer_wrap div.footer div.customer {margin-top:24px;}
-.footer_wrap div.footer div.copyright {margin-top:24px; color:#888}
-
-@media only screen and (max-width:1000px) {
-}
-
-@media only screen and (max-width:786px) {
-}
-
-@media only screen and (min-width:720px) {
-	.footer_wrap div.footer {padding:20px 0; font-size:18px; line-height:1.77777em; text-align:left;}
-	.footer_wrap div.footer .co_name {margin-top:0; font-size:24px}
-	.footer .inner div.row {display:flex; justify-content:space-between; align-items:flex-start;}
-	.footer .inner div.row.row1 {flex-direction:row-reverse;}
-	.footer .inner div.row.row2 {margin-top:48px;}
-	.footer_wrap div.footer .private,
-	.footer_wrap div.footer .customer {margin-top:0; width:260px;}
-	.footer_wrap div.footer div.customer {margin-top:0;}
-	.footer_wrap div.footer div.customer dd {padding-left:0;}
-	.footer_wrap div.footer div.copyright {margin-top:24px;}
-}
-/* // 하단 공통 */
 
 /* // 230818 수정 및 추가 */
 
@@ -432,7 +386,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 
 
 /* 테이블 컨텐츠 */
-.board_list {margin-top:24px;}
+.board_list {}
 table.boardTable {width:100%; max-width:1200px; margin:0 auto; font-size:1.125em;}
 table.boardTable thead tr > th,
 table.boardTable thead tr > td {min-height:60px; text-align:center;}
@@ -572,18 +526,31 @@ table.dataTable tbody td:first-of-type {padding-left:2em; text-align:left;}
 .board_view {width:100%; max-width:1200px; margin:0 auto; border-top:2px solid #000; border-bottom:2px solid #ddd;}
 .board_view .board_title {border-bottom:2px solid #ddd;}
 .board_view .board_title div.inner {display:flex; justify-content:space-between; align-items:flex-start; padding:21.5px 0; padding-left:70px;}
-.board_view .board_title div.inner p {font-weight:500; font-size:20px;}
-.board_view .board_title div.inner span.date {display:block; width:282px; font-size:20px; text-align:center;}
-
+.board_view .board_title div.inner p {flex:1; font-weight:500; font-size:20px;}
+.board_view .board_title div.inner span.date {display:block; width:200px; font-size:20px; text-align:center;}
 .board_view .board_content {padding:77px 60px; color:#000; font-size:18px; line-height:1.66666em;}
+
+.board_view .board_footer {padding:20px 60px; border-top:1px solid #ddd;}
+.board_view .board_footer div.file {display:flex; align-items:center; gap:2em;}
+.board_view .board_footer div.file strong {font-size:20px; font-weight:normal;}
+.board_view .board_footer div.file button {height:60px; padding:0 2em; border:1px solid #ddd; border-radius:2px; transition:all 0.2s ease;}
+/* .board_view .board_footer div.file button:hover {background-color:#000; color:#fff; border-color:transparent;} */
+.board_view .board_footer div.file button span {display:inline-block; max-width:300px;}
 
 @media screen and (max-width:786px) {
 	.board_view {background-color:#fff; border-radius:3px; border-top:0; border-bottom:0;}
 	.board_view .board_title {border-bottom:1px solid #f8f8f8;}
-	.board_view .board_title div.inner {display:block; padding:13px 12px; }
-	.board_view .board_title div.inner p {font-size:0.875em;}
-	.board_view .board_title div.inner span.date {width:auto; color:#999999; font-size:0.75em; line-height:1.5em; text-align:left;}
-	.board_view .board_content {padding:24px 12px; color:#999; font-size:0.875em; line-height:1.57142em;}
+	.board_view .board_title div.inner {display:block; padding:13px 16px; }
+	.board_view .board_title div.inner p {font-size:0.875em; font-weight:bold;}
+	.board_view .board_title div.inner span.date {width:auto; margin-top:0.5em; color:#999999; font-size:0.75em; line-height:1.5em; text-align:left;}
+	.board_view .board_content {padding:24px 16px; color:#999; font-size:0.875em; line-height:1.57142em;}
+
+	.board_view .board_footer {padding:20px 16px; border-top:1px solid #ddd;}
+	.board_view .board_footer div.file {display:flex; align-items:center; gap:2em;}
+	.board_view .board_footer div.file strong {font-size:0.875em; font-weight:normal;}
+	.board_view .board_footer div.file button {height:auto; padding:1em 2em; border:1px solid #ddd; border-radius:2px; font-size:0.875em; transition:all 0.2s ease; outline:none;}
+	/* .board_view .board_footer div.file button:hover {background-color:inherit; border-color:inherit; color:inherit;} */
+	.board_view .board_footer div.file button span {display:inline-block; max-width:300px;}
 }
 /* // 게시판 상세 */
 
