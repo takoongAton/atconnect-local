@@ -39,25 +39,6 @@ function fn_scrollY(ddd){
 	} else {
 		document.querySelector("header").classList.remove("active");
 	}
-
-	let header = document.querySelector("header.home");
-	if(header) {
-		let sections = document.querySelectorAll(".section");
-
-		gnbAs.forEach(function(item){
-			item.classList.remove("active")
-		})
-		if(ddd <= sections[2].offsetTop - header.offsetHeight) {
-			gnbAs[0].classList.add("active");
-			console.log("000");
-		} else if(ddd <= sections[3].offsetTop - header.offsetHeight) {
-			gnbAs[1].classList.add("active");
-			console.log("111");
-		} else if(ddd <= sections[4].offsetTop - header.offsetHeight) {
-			gnbAs[2].classList.add("active");
-			console.log("222");
-		}
-	}
 }
 
 
@@ -105,70 +86,6 @@ if(layers.length > 0) {
 
 
 
-/* 해지하기 입력창 */
-let cancelInputs = document.querySelectorAll(".phonenumber_wrap input")
-cancelInputs.forEach(function(item, index){
-	item.addEventListener("focusin", function(e){
-		e.target.closest(".item").classList.add("focus");
-	})
-	item.addEventListener("blur", function(e){
-		e.target.closest(".item").classList.remove("focus");
-	})
-})
-/* // 해지하기 입력창 */
-
-
-
-
-let gnbAs = document.querySelectorAll(".gnb li a");
-
-window.addEventListener("load", function(){
-	// 현재 페이지의 URL 가져오기
-	const url = window.location.href;
-
-	// "section" 단어의 위치 찾기
-	const sectionIndex = url.indexOf("section");
-	if (sectionIndex !== -1) {
-		// "section" 다음에 오는 문자열 추출
-		const sectionNumber = url.slice(sectionIndex + 7);
-		// 숫자만 추출
-		const number = parseInt(sectionNumber);
-		if (!isNaN(number)) {
-			console.log("찾은 숫자:", number);
-			for(let i = 0; i < gnbAs.length; i++){
-				gnbAs[i].classList.remove("active");
-				if(number==0) {
-					gnbAs[number].classList.add("active");	
-				} else {
-					gnbAs[number-1].classList.add("active");
-				}
-			}
-		} else {
-			console.log("숫자를 찾지 못했습니다.");
-		}
-	} else {
-		console.log("'section'을 찾지 못했습니다.");
-	}
-})
-
-
-gnbAs.forEach(function(item,index){
-	item.addEventListener("click", function(e){
-		console.log(index)
-		for(let i = 0; i < gnbAs.length; i++){
-			gnbAs[i].classList.remove("active");
-			gnbAs[index].classList.add("active");
-		}
-	})
-})
-
-
-
-
-
-
-/* atconnect 추가 샘플 */
-
 /* select용 샘플 */
 let selectElement = document.querySelectorAll("select");
 if(selectElement.length > 0) {
@@ -192,7 +109,3 @@ if(selectElement.length > 0) {
 	});
 }
 /* // select용 샘플 */
-
-
-
-/* // atconnect 추가 샘플 */

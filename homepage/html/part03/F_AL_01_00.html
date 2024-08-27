@@ -13,33 +13,6 @@
 	
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-.board_list_wrap {font-size:14px;}
-.board_list {}
-.board_list_wrap .board_list_header {background-color:#333; color:#fff;}
-.board_list_wrap .board_list_content div.board_item p.tit {text-align:left;}
-.board_list_wrap div.board_item {display:flex; justify-content:space-between; align-items:flex-start; gap:1.5em; position:relative; padding:10px; line-height:1.5em; text-align:center;}
-.board_list_wrap div.board_item p.tit {flex:1;}
-.board_list_wrap div.board_item div.file {width:100px;}
-.board_list_wrap div.board_item div.date {width:100px;}
-.board_list_wrap div.board_item button.btn_down {min-width:20px; width:20px; height:20px; background-color:#ff6600; color:transparent; white-space:nowrap;}
-.board_list .board_item {border-bottom:1px solid #ddd;}
-@media screen and (max-width:786px) {
-	.board_list_wrap .board_list_header {display:none;}
-	.board_list_wrap div.board_item {flex-direction:column; gap:0.5em; padding:1em;}
-	.board_list_wrap div.board_item {}
-	.board_list_wrap div.board_item p.tit {padding-right:30px;}
-	.board_list_wrap div.board_item div.file {position:absolute; top:1em; right:1em; width:auto; text-align:unset;}
-	.board_list_wrap div.board_item div.date {width:auto; color:#999; text-align:unset;}
-	.board_list_wrap div.board_item button.btn_down {width:21px; height:21px;}
-}
-.board_search {display:flex; align-items:flex-start; width:100%;}
-.board_search .select_set {width:200px;}
-
-.board_btn_group {display:flex; justify-content:flex-end; margin-top:2em; padding:0 24px;}
-.board_btn_group button {height:40px; padding:0 24px; background-color:#333; border-radius:2px;}
-.board_btn_group button span {color:#fff; font-size:14px;}
-</style>
 </head>
 
 <body>
@@ -53,17 +26,16 @@
 	</div>
 </div>
 
-
 <header>
 	<div class="inner">
 		<div class="logo"><h1><strong><img src="../../images/img_logo.png" alt="에이티코넥"></strong></h1></div>
 		<div class="nav">
 			<ul class="gnb">
-				<li><a href="#g" class="depth1"><span>대출신청</span></a>
+				<li><a href="#g" class="depth1 active"><span>대출신청</span></a>
 					<div class="itemmenu">
 						<ul>
 							<li><a href="#g"><span>신규대출</span></a></li>
-							<li><a href="#g"><span>대환대출</span></a></li>
+							<li><a href="#g" class="current-page"><span>대환대출</span></a></li>
 							<li><a href="#g"><span>추가대출</span></a></li>
 						</ul>
 					</div>
@@ -77,10 +49,10 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="#g" class="depth1 active"><span>고객센터</span></a>
+				<li><a href="#g" class="depth1"><span>고객센터</span></a>
 					<div class="itemmenu">
 						<ul>
-							<li><a href="#g" class="current-page"><span>공지사항</span></a></li>
+							<li><a href="#g"><span>공지사항</span></a></li>
 						</ul>
 					</div>
 				</li>
@@ -101,83 +73,66 @@
 	<!-- // inner -->
 </header>
 
-
 <section>
 	<div class="container_wrap">
 
 		<div class="content_wrap">
 
-			<div class="board_wrap">
+			<div class="loan_wrap">
 
-				<div class="board_search">
-					<div class="select_set">
-						<select name="" id="">
-							<option value="제목" selected>제목</option>
-							<option value="내용">내용</option>
-						</select>
-					</div>
-					<div class="ipt_wrap">
-						<div class="ipt_set">
-							<div><input type="text" placeholder="숫자만 입력하세요." value="000" /></div>
-							<button type="button" class="btn_search"><span>검색</span></button>
-						</div>
-					</div>
-				</div>
+				
+		
+				<div class="loan_content">
 
-				<div class="board_list_wrap">
 					
-					<div class="board_list_header">
-						<div class="board_item">
-							<p class="tit">제목</p>
-							<div class="file">첨부파일</div>
-							<div class="date">2024-03-01</div>
+		
+					<div class="loan_group">
+					
+						<div class="box_alert">
+							<div class="tit">
+								<strong>대환대출 유의사항 안내</strong>
+							</div>
+
+							<ol class="agree_txt">
+								<li><p><span>1.</span>대출신청 시간은 증권사영업일 08:30 ~ 16:00(토, 일요일, 공휴일 제외)입니다.</p></li>
+								<li><p><span>2.</span>증권계좌의 담보평가액(예수금+주식)이 100만원 이상 보유중이어야 하며, 대출신청금액 최소 100만원 이상이어야 진행 가능합니다.</p></li>
+								<li><p><span>3.</span>휴대폰 본인인증을 통하여 가능합니다.</p></li>
+							</ol>
+						</div>
+						<!-- // box_alert -->
+						
+						<hr>
+
+						<div class="agree_wrap">
+							<div class="chk_all">
+								<label>
+									<input type="checkbox" class="agree all">
+									<span class="checkmark"></span>
+									<span class="txt">대환대출 유의사항을 모두 확인했습니다.</span>
+								</label>
+							</div>
+						</div>
+			
+					</div>
+					<!-- // loan_group -->
+
+					<hr>
+
+					<div class="btn_group">
+						<div>
+							<button type="button" class="btn_next" disabled><span>다음</span></button>
 						</div>
 					</div>
-					<!-- // board_list_header -->
-
-					<div class="board_list_content">
-						<div class="board_list">
-							<div class="board_item">
-								<p class="tit">공지사항 테스트 입니다. 공지사항 테스트 입니다. 공지사항 테스트 입니다. 공지사항 테스트 입니다. 공지사항 테스트 입니다. 공지사항 테스트 입니다. 공지사항 테스트 입니다.</p>
-								<div class="file">
-									<button type="button" class="btn_down">파일</button>
-								</div>
-								<div class="date">2024-03-01</div>
-							</div>
-							<!-- // board_item -->
-							<div class="board_item">
-								<p class="tit">공지사항 테스트 입니다.</p>
-								<div class="file">
-									<button type="button" class="btn_down">파일</button>
-								</div>
-								<div class="date">2024-03-01</div>
-							</div>
-							<!-- // board_item -->
-							<div class="board_item">
-								<p class="tit">공지사항 테스트 입니다.</p>
-								<div class="file">
-									<button type="button" class="btn_down">파일</button>
-								</div>
-								<div class="date">2024-03-01</div>
-							</div>
-							<!-- // board_item -->
-						</div>
-						<!-- // board_list -->
-					</div>
-					<!-- // board_list_content -->
-
-					<div class="board_btn_group">
-						<button type="button"><span>목록보기</span></button>
-					</div>
+					 
 				</div>
-				<!-- // board_list_wrap -->
+				<!-- // loan_content -->
 
 			</div>
-			<!-- // board_wrap -->
-		 
+			<!-- // loan_wrap -->
+
 		</div>
 		<!-- // content_wrap -->
-		
+
 	</div>
 	<!-- // container_wrap -->
 
