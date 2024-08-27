@@ -9,35 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../../css/slick.css">
 	<link rel="stylesheet" type="text/css" href="../../css/atconnect_homepage.css">
-	<link rel="stylesheet" type="text/css" href="../../css/atconnect.css">
 	
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-.board_list_wrap {font-size:14px;}
-.board_list_wrap .board_list_header {background-color:#333; color:#fff;}
-.board_list_wrap .board_list_content div.board_item p.tit {text-align:left;}
-.board_list_wrap div.board_item {display:flex; justify-content:space-between; align-items:flex-start; gap:1.5em; position:relative; padding:10px; line-height:1.5em; text-align:center;}
-.board_list_wrap div.board_item p.tit {flex:1;}
-.board_list_wrap div.board_item div.file {width:100px;}
-.board_list_wrap div.board_item div.date {width:100px;}
-.board_list_wrap div.board_item button.btn_down {min-width:20px; width:20px; height:20px; background-color:#ff6600; color:transparent; white-space:nowrap;}
-.board_list .board_item {border-bottom:1px solid #ddd;}
-@media screen and (max-width:786px) {
-	.board_list_wrap .board_list_header {display:none;}
-	.board_list_wrap div.board_item {flex-direction:column; gap:0.5em; padding:1em;}
-	.board_list_wrap div.board_item p.tit {padding-right:30px;}
-	.board_list_wrap div.board_item div.file {position:absolute; top:1em; right:1em; width:auto; text-align:unset;}
-	.board_list_wrap div.board_item div.date {width:auto; color:#999; text-align:unset;}
-	.board_list_wrap div.board_item button.btn_down {width:21px; height:21px;}
-}
-.board_search {display:flex; align-items:flex-start; width:100%;}
-.board_search .select_set {width:200px;}
-
-.board_btn_group {display:flex; justify-content:flex-end; margin-top:2em; padding:0 24px;}
-.board_btn_group button {height:40px; padding:0 24px; background-color:#333; border-radius:2px;}
-.board_btn_group button span {color:#fff; font-size:14px;}
-</style>
 </head>
 
 <body>
@@ -116,11 +90,12 @@
 					</div>
 					<div class="ipt_wrap">
 						<div class="ipt_set">
-							<div><input type="text" placeholder="숫자만 입력하세요." value="000" /></div>
-							<button type="button" class="btn_search"><span>검색</span></button>
+							<div><input type="text" placeholder="검색어를 입력하세요." value="" /></div>
+							<button type="button" class="btn_search"><span><img src="../../images/icon_search.png" alt="검색"></span></button>
 						</div>
 					</div>
 				</div>
+				<!-- // board_search -->
 
 				<div class="board_list_wrap">
 					
@@ -128,7 +103,7 @@
 						<div class="board_item">
 							<p class="tit">제목</p>
 							<div class="file">첨부파일</div>
-							<div class="date">2024-03-01</div>
+							<div class="date">등록일</div>
 						</div>
 					</div>
 					<!-- // board_list_header -->
@@ -136,7 +111,7 @@
 					<div class="board_list_content">
 						<div class="board_list">
 
-							<div class="board_nodata" style="padding:50px; text-align:center;">
+							<div class="board_nodata">
 								등록된 게시글이 없습니다.
 							</div>
 
