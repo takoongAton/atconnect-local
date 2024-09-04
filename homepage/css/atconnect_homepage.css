@@ -764,6 +764,7 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 .file_upload_wrap {width:100%;}
 .file_upload_wrap button.btn_add_file {height:3.75em; margin-bottom:0.625em; border-radius:1px; background-color:#213DA1; color:#fff; font-size:inherit;}
 .file_upload_wrap button.btn_add_file span {display:block; padding:1em 2em; color:#fff;}
+.file_upload_wrap input.ipt_file {display:none;}
 
 .file_upload_wrap div.file_alert {display:flex; flex-direction:column; gap:0.5em; width:100%; margin-bottom:10px; padding:1em; background-color:#f5f5f5; border-radius:2px;}
 .file_upload_wrap div.file_alert p {position:relative; padding-left:1.25em; color:#222; font-size:14px; line-height:1.25em;}
