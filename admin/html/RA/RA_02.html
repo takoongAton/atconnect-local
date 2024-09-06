@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<div id="header">
+		<h1 class="logo"><img src="../../images/logo_sample.png" alt="로고" /></h1>
+		<div class="user">
+			<span><em>홍길동</em>님 환영합니다.</span>
+			<button type="button" class="btn-type01 gray">로그아웃</button>
+		</div>
+	</div>
+	<!-- // header -->
+
+	<div id="menu_wrap">
+		<div class="menu">
+			<ul>
+				<li><a href="#" class="depth2">이용자인증서 조회</a></li>
+				<li><a href="#" class="depth2 active">이용자인증서 관리</a></li>
+				<li><a href="#" class="depth2">이용자거래이력 조회</a></li>
+				<li>
+					<a href="#" class="depth2">통계 조회<i class="arrow"></i></a>
+					<ul>
+						<li><a href="#" class="depth3">발급 통계</a></li>
+						<li><a href="#" class="depth3">인증 통계</a></li>
+						<li><a href="#" class="depth3">검증 통계</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- // menu -->
+
+	<div class="content-wrap">
+		<div class="content-body">
+			<h2 class="content-title">이용자 인증서 조회</h2>
+
+			<div class="search_wrap">
+				<div>
+					<select name="" id="">
+						<option value="이용자번호">이용자번호</option>
+						<option value="이용자번호">이용자번호</option>
+					</select>
+					<input type="text">
+				</div>
+				<button type="button" class="btn-search btn-type01 gray">검색</button>
+			</div>
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:17%;">
+						<col style="width:17%;">
+						<col style="">
+						<col style="">
+						<col style="width:17%;">
+						<col style="width:17%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이용자번호</th>
+							<td class="left">06221477</td>
+							<th>일련번호</th>
+							<td class="left">0000015489</td>
+							<th>발급상태</th>
+							<td class="left">발급 (만료 2021-12-11)</td>
+						</tr>
+						<tr>
+							<th>발급일시</th>
+							<td class="left">2019-12-11 17:15:28</td>
+							<th>폐기일시</th>
+							<td class="left">-</td>
+							<th>최종거래일시</th>
+							<td class="left">2019-12-11 17:15:28</td>
+						</tr>
+						<tr>
+							<th>접속기기ID</th>
+							<td colspan="3" class="left">4156165CEFDF456</td>
+							<th>접속기기</th>
+							<td class="left">iPhone 9.4</td>
+						</tr>
+						<tr>
+							<th>사용자 인증</th>
+							<td colspan="5" class="left">바이오 [정상] (오류횟수 : 0회)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+
+			<div class="btn-group">
+				<button type="button" class="right btn-type01 gray" onclick="open_popup('test1');">폐기</button>
+			</div>
+
+
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:20%;">
+						<col style="width:20%;">
+						<col style="width:20%;">
+						<col style="width:20%;">
+						<col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th rowspan="2">일련번호</th>
+							<th>이용자번호</th>
+							<th>발급상태</th>
+							<th>발급일</th>
+							<th>폐기일</th>
+						</tr>
+						<tr>
+							<th colspan="2">접속기기ID</th>
+							<th colspan="2">접속기기</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2">0000015489</td>
+							<td>06221477</td>
+							<td>발급</td>
+							<td>2019-12-11</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td colspan="2">4156165CEFDF456</td>
+							<td colspan="2">iPhone 9.4</td>
+						</tr>
+						<tr>
+							<td rowspan="2">0000002497</td>
+							<td>06221477</td>
+							<td>폐기</td>
+							<td>2019-12-11</td>
+							<td>2019-12-02</td>
+						</tr>
+						<tr>
+							<td colspan="2">4156165CEFDF456</td>
+							<td colspan="2">iPhone 9.4</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+
+		</div>
+		<!-- // contnet-body -->
+
+	</div>
+	<!-- // content-wrap -->
+
+<!-- <div id="footer"></div> -->
+<!-- // wrap -->
+
+
+<div class="modal pCenter" id="test1" style="display:none;">
+	<h2 class="modal_tit">폐기</h2>
+	<div class="modal_body">
+		<div class="modal_view">
+			<p>해당 인증서가 폐기됩니다.<br />반영하시겠습니까?</p>
+		</div>
+		<div class="form"><textarea name="" id="" cols="30" rows="8" placeholder="폐기사유 입력"></textarea></div>
+		<div class="btn-group">
+			<button type="button" class="btn-type01 white" onclick="close_popup('test1');">취소</button>
+			<button type="button" class="btn-type01 gray" onclick="close_popup('test1');">확인</button>
+		</div>
+
+	</div>
+</div>
+
+<script src="../../js/temp.js"></script>
+</body>
+</html>

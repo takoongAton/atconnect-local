@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin.css">
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<div id="header">
+		<h1 class="logo"><img src="../../images/logo_sample.png" alt="로고" /></h1>
+		<div class="user">
+			<span><em>홍길동</em>님 환영합니다.</span>
+			<button type="button" class="btn-type01 gray">로그아웃</button>
+		</div>
+	</div>
+	<!-- // header -->
+
+	<div id="menu_wrap">
+		<div class="menu">
+			<ul>
+				<li><a href="#" class="depth2">관리자 등록</a></li>
+				<li><a href="#" class="depth2">OTP번호 리스트</a></li>
+				<li>
+					<a href="#" class="depth2 active">서비스 관리<i class="arrow"></i></a>
+					<ul>
+						<li><a href="#" class="depth3">서비스 설정</a></li>
+						<li><a href="#" class="depth3">인증서 추가</a></li>
+						<li><a href="#" class="depth3">인증수단 설정</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="depth2">mSB버전 관리<i class="arrow"></i></a>
+					<ul>
+						<li><a href="#" class="depth3">mSB버전 설정</a></li>d
+						<li><a href="#" class="depth3">mSB 이력조회</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="depth2">API 관리<i class="arrow"></i></a>
+					<ul>
+						<li><a href="#" class="depth3">API 설정</a></li>
+						<li><a href="#" class="depth3">API 이력조회</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="depth2">관리자 이용로그</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // menu -->
+
+	<div class="content-wrap">
+		<div class="content-body">
+			<h2 class="content-title">서비스 설정</h2>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:200px;">
+						<col style="width:220px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th rowspan="6">임시저장</th>
+							<td class="title">인증서 선택</td>
+							<td>
+								<select name="" id="">
+									<option value="브라우저 인증서">브라우저 인증서</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">사용유무</td>
+							<td>
+								<label><input type="radio">사용</label>
+								<label><input type="radio">미사용</label>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">유효기간</td>
+							<td>
+								<input type="number">
+								<select name="" id="">
+									<option value="일">일</option>
+									<option value="개월">개월</option>
+									<option value="년">년</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">만료 안내 기간</td>
+							<td>
+								<input type="number">
+								<select name="" id="">
+									<option value="일">일</option>
+									<option value="개월">개월</option>
+									<option value="년">년</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">인증수단 설정</td>
+							<td>
+								<select name="" id="">
+									<option value="PIN">PIN</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">다 회용 검증</td>
+							<td>
+								<input type="text">
+								<p>※ 0~1,000 까지 입력 가능하며, 0인 경우는 무제한 인증 합니다.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+			<div class="btn-group">
+				<button type="button" class="btn-type01 white" onclick="open_popup('test1');">임시저장</button>
+			</div>
+
+			<div class="view_table_customer">
+				<table>
+					<colgroup>
+						<col style="width:200px;">
+						<col style="width:220px;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th rowspan="7">브라우저 인증서</th>
+							<th>인증서 선택</th>
+							<th>임시저장</th>
+							<th>서비스 반영</th>
+						</tr>
+						<tr>
+							<td class="title">사용유무</td>
+							<td>사용</td>
+							<td>사용</td>
+						</tr>
+						<tr>
+							<td class="title">유효기간</td>
+							<td>7일</td>
+							<td>7일</td>
+						</tr>
+						<tr>
+							<td class="title">만료 안내 기간</td>
+							<td>6일</td>
+							<td>6일</td>
+						</tr>
+						<tr>
+							<td class="title">오류 허용 횟수</td>
+							<td>5회</td>
+							<td>5회</td>
+						</tr>
+						<tr>
+							<td class="title">인수단 설정</td>
+							<td>PIN</td>
+							<td>PIN</td>
+						</tr>
+						<tr>
+							<td class="title">다 회용 검증</td>
+							<td>2</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+			<div class="btn-group">
+				<button type="button"class="btn-type01 gray" onclick="open_popup('test2');">서비스 반영</button>
+			</div>
+
+
+
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:200px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>인증서 명</th>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<th>사용유무</th>
+							<td>
+								<label><input type="radio">사용</label>
+								<label><input type="radio">미사용</label>
+							</td>
+						</tr>
+						<tr>
+							<th>유효기간</th>
+							<td>
+								<input type="number">
+								<select name="" id="">
+									<option value="일">일</option>
+									<option value="개월">개월</option>
+									<option value="년">년</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>만료 안내 기간</th>
+							<td>
+								<input type="number">
+								<select name="" id="">
+									<option value="일">일</option>
+									<option value="개월">개월</option>
+									<option value="년">년</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>인증수단 설정</th>
+							<td>
+								<select name="" id="">
+									<option value="PIN">PIN</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>다 회용 검증</th>
+							<td>
+								<input type="text">
+								<p>※ 0~1,000 까지 입력 가능하며, 0인 경우는 무제한 인증 합니다.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+
+		</div>
+		<!-- // contnet-body -->
+
+	</div>
+	<!-- // content-wrap -->
+
+<!-- <div id="footer"></div> -->
+
+</div>
+<!-- // wrap -->
+
+<div class="modal pCenter" id="test1" style="display:none;">
+	<h2 class="modal_tit">임시 저장</h2>
+	<div class="modal_body">
+		<div class="modal_view">
+			<div class="modal_content">
+				<p>설정된 내용으로 임시저장 하시겠습니까?</p>
+			</div>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn-type01 white" onclick="close_popup('test1');">취소</button>
+			<button type="button" class="btn-type01 gray" onclick="close_popup('test1');">확인</button>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal pCenter" id="test2" style="display:none;">
+	<h2 class="modal_tit">서비스 반영</h2>
+	<div class="modal_body">
+		<div class="modal_view">
+			<div class="modal_content">
+				<p>설정된 내용으로 서비스에 반영됩니다.<br />반영하시겠습니까?</p>
+			</div>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn-type01 white" onclick="close_popup('test2');">취소</button>
+			<button type="button" class="btn-type01 gray" onclick="close_popup('test2');">확인</button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/temp.js"></script>
+</body>
+</html>

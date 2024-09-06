@@ -1,0 +1,78 @@
+* {font-family:'Noto Sans KR';}
+.wrap {display:flex; justify-content:flex-start; align-items:flex-start; width:100%; height:100%;}
+.wrap #menu {height:100%; background-color:#ff6600;}
+
+.header {display:flex; height:100px; padding:52px 48px 0 0;}
+.header .user_wrap {display:flex; justify-content:flex-end; align-items:center; width:100%; height:27px;}
+.header .user_wrap p.txt {color:#999; font-size:18px; line-height:1.5em;}
+.header .user_wrap div.user {margin-left:12px; font-weight:bold; font-size:18px; line-height:1.5em;}
+.header .user_wrap div.user span {display:inline-block;}
+.header .user_wrap div.user em {display:inline-block;}
+.header .user_wrap button.btn_logout {margin-left:28px; text-decoration:underline;}
+.header .user_wrap button.btn_logout span {display:block; color:#555555; font-size:18px; line-height:1.5em; font-weight:bold;}
+
+
+
+/* 메뉴 */
+
+#menu_wrap {width:300px; height:100%; background-color:#353851; z-index:3; overflow-y:auto;}
+
+/* width */
+#menu_wrap::-webkit-scrollbar {width:4px;} /* 0 으로 수정하면 사라집니다. */
+
+/* Track */
+#menu_wrap::-webkit-scrollbar-track {border-radius:10px;}
+/* Handle */
+#menu_wrap::-webkit-scrollbar-thumb {background:#353851; border-radius:10px;}
+/* Handle on hover */
+#menu_wrap::-webkit-scrollbar-thumb:hover {background:rgba(255,255,255,0.5);}
+
+#menu_wrap h1.logo {display:flex; justify-content:center; align-items:center; position:-webkit-sticky; position:sticky; top:0; left:0; height:100px; background-color:#353851; z-index:1;}
+#menu_wrap h1.logo img {width:168px; height:auto;;}
+#menu_wrap .menu > ul > li {}
+
+#menu_wrap .menu a.depth2 {display:flex; align-items:center; position:relative; gap:10px; padding:0 0 0 59px; background-color:transparent; color:rgba(255,255,255,0.8); text-decoration:none;}
+#menu_wrap .menu a.depth2 {height:60px; color:#898B9D; font-size:18px; line-height:1.5em; font-weight:500;}
+
+#menu_wrap .menu a.depth2 span.ico {display:inline-block; width:40px; height:36px;}
+
+#menu_wrap .menu a.depth2 + ul {display:none; padding:10px 0 20px; background-color:#14151f;}
+#menu_wrap .menu a.depth2.active + ul {display:block;}
+
+#menu_wrap .menu a.depth2.active {color:#fff; background-color:rgba(255,255,255,0.15);}
+#menu_wrap .menu a.depth2.active::before {content:""; display:block; position:absolute; top:0; left:0; width:6px; height:100%; background-color:#fff;}
+
+#menu_wrap .menu a.depth2 + ul a.depth3 { background-color: #14151f;}
+#menu_wrap .menu a.depth2 + ul a.depth3:hover {background-color:#000;}
+
+#menu_wrap .menu a.depth3 {display:flex; position:relative; padding-left:109px; color:#fff; font-size:16px; text-decoration:none;}
+#menu_wrap .menu a.depth3 span.txt {display:inline-block; position:relative; padding:10px 0;}
+#menu_wrap .menu a.depth3 span.txt::before {content:"-"; padding-right:5px; color:inherit; font-size:inherit; line-height:inherit;}
+#menu_wrap .menu a.depth3:hover {color:#fff;}
+
+#menu_wrap .menu .menu_group {box-shadow:0 -1px 4px rgba(0,0,0,0.1);}
+#menu_wrap .menu .menu_group > div {display:flex; justify-content:space-between; align-items:center; position:-webkit-sticky; position:sticky; top:0; width:100%; z-index:1;}
+#menu_wrap .menu .menu_group > div.active {background-color:#000}
+#menu_wrap .menu .menu_group > div a {display:flex; flex:1;}
+#menu_wrap .menu .menu_group > div button {box-sizing:content-box; position:relative; width:2em; height:2em; padding:0 1em;}
+#menu_wrap .menu .menu_group > div button i {position:absolute; bottom:50%; right:50%; width:10px; height:10px; border-right:2px solid #ccc; border-bottom:2px solid #ccc; transform:translate(0%, 50%) rotate(45deg); transform-origin:100% 100%; font-size:0;}
+#menu_wrap .menu .menu_group ul {display:none;}
+
+/* // 메뉴 */
+
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+input[type="date"] {height:30px; border:1px solid #ccc; border-radius:4px; padding:0 12px; line-height:30px; vertical-align:middle;}
+input[type="number"],
+input[type="date"],
+input[type="month"] {padding-right:0;}
+input[type="text"].date {width:150px;}
+
+select {height:30px; position:relative; padding:0 40px 0 12px; padding-right:40px; border:1px solid #ccc; background:url('../images/btn_select.png') no-repeat right 12px center; line-height:30px; vertical-align:middle;}
+
+
+
