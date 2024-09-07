@@ -1,7 +1,7 @@
 
 /* 표 상단 타이틀 */
 .table_title {display:flex; justify-content:space-between; align-items:center; gap:20px; height:48px; font-size:14px;}
-.table_title div {display:flex; gap:20px;}
+.table_title div {display:flex; gap:10px;}
 .table_title div.title {display:flex; align-items:center; flex:1;}
 .table_title div.title strong {display:block; color:#000; font-size:16px; font-weight:bold;}
 .table_title div p.txt {color:#333;}

@@ -108,7 +108,8 @@ table {position:relative; width:100%; border-top:1px solid #555; /* border-colla
 table th,
 table td {height:50px; vertical-align:middle;}
 table th {background-color: #ebebeb; color:#222; font-weight:bold; border-bottom:1px solid #ddd; border-right:1px solid #ddd;}
-table td {padding:4px; word-break:break-all;}
+table th.em {background-color:#ddd; color:#222; border-color:transparent;}
+table td {padding:8px; word-break:break-all;}
 table td {border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
 table th:last-child,
 table td:last-child {border-right:0 none;}
@@ -116,8 +117,11 @@ th.left,
 td.left,
 td.title {text-align:left;}
 td.title {background-color: #f7f7f7;}
+.tal {text-align:left !important;}
+.tar {text-align:right !important;}
 table .number {text-align:right;}
 tfoot td {background-color:#f7f7f7;}
+table textarea {border-color:#ccc; border-radius:2px; min-height:30px; line-height:30px;;}
 
 
 
@@ -127,6 +131,8 @@ tfoot td {background-color:#f7f7f7;}
 .view_table.vertical th {padding:0 20px; border-bottom:1px solid #ddd;}
 
 .view_table + .view_table {margin-top:30px;}
+
+.view_table button.btn {background-color:#222; color:#fff;}
 label + label {margin-left:40px;}
 label input[type="radio"],label input[type="checkbox"] {margin-right:5px;}
 .icon_day {display:inline-block; position:relative; width:30px; height:30px;}
