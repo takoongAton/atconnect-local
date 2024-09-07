@@ -611,9 +611,67 @@ hr {display:block; height:40px; border:0 none;}
 								<td colspan="5">약관 내용이 들어갑니다.</td>
 							</tr>
 							<tr>
+								<th>파일첨부</th>
+								<td colspan="5">
+<style>
+.file_upload_wrap {display:flex; justify-content:space-between; align-items:flex-start; gap:10px; width:100%;}
+.file_upload_wrap form {display:none;}
+.file_upload_wrap button.btn_add_file {height:30px; padding:0 12px; border-radius:2px; background-color:#333; color:#fff; font-size:inherit;}
+.file_upload_wrap button.btn_add_file span {display:block; color:#fff;}
+.file_upload_wrap input.ipt_file {display:none;}
+
+.file_upload_wrap div.file_alert {display:flex; flex-direction:column; gap:0.5em; width:100%; margin-bottom:10px; padding:1em; background-color:#f5f5f5; border-radius:2px;}
+.file_upload_wrap div.file_alert p {position:relative; padding-left:1.25em; color:#222; font-size:14px; line-height:1.25em;}
+.file_upload_wrap div.file_alert p::before {content:"·"; display:block; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit; font-weight:bold;}
+
+.file_upload_wrap div.file_list_wrap {flex:1;}
+.file_upload_wrap ul.file_list {display:flex; flex-direction:column; gap:0.2625em; width:100%;}
+.file_upload_wrap ul.file_list li {display:flex; justify-content:space-between; align-items:center; width:100%; gap:1.25em; width:100%; line-height:30px;}
+.file_upload_wrap ul.file_list li span.count {height:30px; line-height:30px;}
+.file_upload_wrap ul.file_list li p {flex:1; display:flex; justify-content: space-between; gap:10px; color:#555; font-size:1em; line-height:1.5em;}
+.file_upload_wrap ul.file_list li p strong,
+.file_upload_wrap ul.file_list li p span {display:block}
+.file_upload_wrap ul.file_list li p strong {word-break:break-all;}
+.file_upload_wrap ul.file_list li button.btn_del {position:relative; min-width:1.5em; width:1.5em; height:1.5em; color:transparent; font-size:inherit; text-align:center;}
+.file_upload_wrap ul.file_list li button.btn_del span {display:block; position:relative; width:1.25em; height:1.25em; border-radius:100%; background-color:#999999; overflow:hidden;}
+.file_upload_wrap ul.file_list li button.btn_del span::before,
+.file_upload_wrap ul.file_list li button.btn_del span::after {content:""; display:block; position:absolute; top:50%; left:50%; width:57.25%; height:2px; background-color:#fff; transform-origin:50% 50%;}
+.file_upload_wrap ul.file_list li button.btn_del span::before {transform:translate(-50%,-50%) rotate(-45deg);}
+.file_upload_wrap ul.file_list li button.btn_del span::after {transform:translate(-50%,-50%) rotate(45deg);}
+</style>
+									<div class="file_upload_wrap">
+										<button type="button" class="btn_add_file" id="#btnFileUpload"><span>파일첨부</span></button>
+										<form id="file_form" method="post" enctype="multipart/form-data">
+											<input type="file" id="file" class="ipt_file"><!-- // css명 추가, 또는 style="dispaly:none;" -->
+										</form>
+										<div class="file_list_wrap">
+											<ul class="file_list">
+												<li class="file_item">
+													<span class="count">첨부1.</span>
+													<p>
+														<strong class="file_name">document_file_name.doc</strong>
+														<span class="file_size">(300kb)</span>
+													</p>
+													<button type="button" class="btn_del"><span class="txt">삭제</span></button>
+												</li>
+												<li class="file_item">
+													<span class="count">첨부2.</span>
+													<p>
+														<strong class="file_name">document_file_name.doc</strong>
+														<span class="file_size">(300kb)</span>
+													</p>
+													<button type="button" class="btn_del"><span class="txt">삭제</span></button>
+												</li>
+											</ul>
+											<!-- // file_list -->
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
 								<th>약관내용</th>
 								<td colspan="5">
-									<textarea name="" id=""></textarea>
+									<textarea name="" id="" placeholder="약관내용 입력창"></textarea>
 									<!-- editer -->
 								</td>
 							</tr>

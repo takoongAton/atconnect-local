@@ -121,7 +121,7 @@ td.title {background-color: #f7f7f7;}
 .tar {text-align:right !important;}
 table .number {text-align:right;}
 tfoot td {background-color:#f7f7f7;}
-table textarea {border-color:#ccc; border-radius:2px; min-height:30px; line-height:30px;;}
+table textarea {border-color:#ccc; border-radius:2px; min-height:30px; padding:0 12px; line-height:30px;}
 
 
 

@@ -1,64 +1,4 @@
 * {font-family:'Noto Sans KR';}
-.wrap {display:flex; justify-content:flex-start; align-items:flex-start; width:100%; height:100%;}
-.wrap #menu {height:100%; background-color:#ff6600;}
-
-.header {display:flex; height:100px; padding:52px 48px 0 0;}
-.header .user_wrap {display:flex; justify-content:flex-end; align-items:center; width:100%; height:27px;}
-.header .user_wrap p.txt {color:#999; font-size:18px; line-height:1.5em;}
-.header .user_wrap div.user {margin-left:12px; font-weight:bold; font-size:18px; line-height:1.5em;}
-.header .user_wrap div.user span {display:inline-block;}
-.header .user_wrap div.user em {display:inline-block;}
-.header .user_wrap button.btn_logout {margin-left:28px; text-decoration:underline;}
-.header .user_wrap button.btn_logout span {display:block; color:#555555; font-size:18px; line-height:1.5em; font-weight:bold;}
-
-
-
-/* 메뉴 */
-
-#menu_wrap {width:300px; height:100%; background-color:#353851; z-index:3; overflow-y:auto;}
-
-/* width */
-#menu_wrap::-webkit-scrollbar {width:4px;} /* 0 으로 수정하면 사라집니다. */
-
-/* Track */
-#menu_wrap::-webkit-scrollbar-track {border-radius:10px;}
-/* Handle */
-#menu_wrap::-webkit-scrollbar-thumb {background:#353851; border-radius:10px;}
-/* Handle on hover */
-#menu_wrap::-webkit-scrollbar-thumb:hover {background:rgba(255,255,255,0.5);}
-
-#menu_wrap h1.logo {display:flex; justify-content:center; align-items:center; position:-webkit-sticky; position:sticky; top:0; left:0; height:100px; background-color:#353851; z-index:1;}
-#menu_wrap h1.logo img {width:168px; height:auto;;}
-#menu_wrap .menu > ul > li {}
-
-#menu_wrap .menu a.depth2 {display:flex; align-items:center; position:relative; gap:10px; padding:0 0 0 59px; background-color:transparent; color:rgba(255,255,255,0.8); text-decoration:none;}
-#menu_wrap .menu a.depth2 {height:60px; color:#898B9D; font-size:18px; line-height:1.5em; font-weight:500;}
-
-#menu_wrap .menu a.depth2 span.ico {display:inline-block; width:40px; height:36px;}
-
-#menu_wrap .menu a.depth2 + ul {display:none; padding:10px 0 20px; background-color:#14151f;}
-#menu_wrap .menu a.depth2.active + ul {display:block;}
-
-#menu_wrap .menu a.depth2.active {color:#fff; background-color:rgba(255,255,255,0.15);}
-#menu_wrap .menu a.depth2.active::before {content:""; display:block; position:absolute; top:0; left:0; width:6px; height:100%; background-color:#fff;}
-
-#menu_wrap .menu a.depth2 + ul a.depth3 { background-color: #14151f;}
-#menu_wrap .menu a.depth2 + ul a.depth3:hover {background-color:#000;}
-
-#menu_wrap .menu a.depth3 {display:flex; position:relative; padding-left:109px; color:#fff; font-size:16px; text-decoration:none;}
-#menu_wrap .menu a.depth3 span.txt {display:inline-block; position:relative; padding:10px 0;}
-#menu_wrap .menu a.depth3 span.txt::before {content:"-"; padding-right:5px; color:inherit; font-size:inherit; line-height:inherit;}
-#menu_wrap .menu a.depth3:hover {color:#fff;}
-
-#menu_wrap .menu .menu_group {box-shadow:0 -1px 4px rgba(0,0,0,0.1);}
-#menu_wrap .menu .menu_group > div {display:flex; justify-content:space-between; align-items:center; position:-webkit-sticky; position:sticky; top:0; width:100%; z-index:1;}
-#menu_wrap .menu .menu_group > div.active {background-color:#000}
-#menu_wrap .menu .menu_group > div a {display:flex; flex:1;}
-#menu_wrap .menu .menu_group > div button {box-sizing:content-box; position:relative; width:2em; height:2em; padding:0 1em;}
-#menu_wrap .menu .menu_group > div button i {position:absolute; bottom:50%; right:50%; width:10px; height:10px; border-right:2px solid #ccc; border-bottom:2px solid #ccc; transform:translate(0%, 50%) rotate(45deg); transform-origin:100% 100%; font-size:0;}
-#menu_wrap .menu .menu_group ul {display:none;}
-
-/* // 메뉴 */
 
 
 input[type="text"],
@@ -76,3 +16,175 @@ select {height:30px; position:relative; padding:0 40px 0 12px; padding-right:40p
 
 
 
+
+
+/* 로그인 */
+
+/* // 로그인 */
+
+
+
+
+
+/* 기본 틀 */
+.wrap {display:flex; justify-content:flex-start; align-items:flex-start; width:100%; height:100%;}
+.wrap .aside {height:100%;}
+.wrap .aside .menu {min-width:300px; width:300px; margin-top:80px;;}
+
+.container {height:100%; flex:1; width:100%; overflow-y:auto;}
+.container .header {position:-webkit-sticky; position:sticky; top:0; left:0; background-color:#fff; box-shadow:0 0 5px rgba(0,0,0,0.16); z-index:1;}
+.container .content_wrap {background-color:#eef2f5;}
+.container .content_wrap .content {padding:50px;}
+/* 기본 틀 */
+
+/* 컨텐츠 박스 */
+.content_box {padding:28px; border-radius:6px; background-color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.content_box + .content_box {margin-top:30px;}
+
+/* 컨텐츠 박스 타이틀 */
+.content_box .box_title {display:flex; justify-content:space-between; align-items:center; gap:20px; height:48px; font-size:14px;}
+.content_box .box_title div {display:flex; gap:20px;}
+.content_box .box_title div.title {display:flex; align-items:center; flex:1;}
+.content_box .box_title div.title strong {display:block; color:#000; font-size:16px; font-weight:bold;}
+.content_box .box_title div p.txt {color:#333;}
+.content_box .box_title div p.txt span.em {color:red;}
+.content_box .box_title div.title span,
+.content_box .box_title div.title strong {display:inline-block; line-height:1;}
+.content_box .box_title .btn_group {display:flex; gap:10px;}
+.content_box .box_title .btn_group button {height:30px; padding:0 14px; border-radius:2px; background-color:#222;}
+.content_box .box_title .btn_group button.btn {}
+.content_box .box_title .btn_group button span {color:#fff;}
+/* // 컨텐츠 박스 타이틀 */
+/* // 컨텐츠 박스 */
+
+
+
+/* 페이지 네비게이션 */
+.page_nav {display:flex; align-items:center; height:80px; padding-left:48px; background-color:#eef2f5;}
+.page_nav span {display:inline-block; position:relative; color:#999999; font-size:18px; line-height:1.5em; font-weight:500;}
+.page_nav span.home {padding-left:32px; background:url('../images/ico_home.png') no-repeat left bottom 1px / 24px 24px;}
+.page_nav span:last-of-type {color:#000; font-weight:bold;}
+.page_nav span:last-of-type::before {content:"/"; display:inline-block; color:#ddd; font-weight:bold;}
+/* // 페이지 네비게이션 */
+
+
+input.w25 {width:25%;}
+input.w50 {width:50%;}
+input.w75 {width:75%;}
+input.w100 {width:100%;}
+
+
+.wrap #menu {height:100%; background-color:#ff6600;}
+
+.header {display:flex; height:100px; padding:52px 48px 0 0;}
+.header .user_wrap {display:flex; justify-content:flex-end; align-items:center; width:100%; height:27px;}
+.header .user_wrap p.txt {color:#999; font-size:18px; line-height:1.5em;}
+.header .user_wrap div.user {margin-left:12px; font-weight:bold; font-size:18px; line-height:1.5em;}
+.header .user_wrap div.user span {display:inline-block;}
+.header .user_wrap div.user em {display:inline-block;}
+.header .user_wrap button.btn_logout {margin-left:28px; text-decoration:underline;}
+.header .user_wrap button.btn_logout span {display:block; color:#555555; font-size:18px; line-height:1.5em; font-weight:bold;}
+
+
+
+/* left메뉴 */
+#menu_wrap {width:300px; height:100%; background-color:#353851; z-index:3; overflow-y:auto;}
+/* width */
+#menu_wrap::-webkit-scrollbar {width:4px;} /* 0 으로 수정하면 사라집니다. */
+/* Track */
+#menu_wrap::-webkit-scrollbar-track {border-radius:10px;}
+/* Handle */
+#menu_wrap::-webkit-scrollbar-thumb {background:#353851; border-radius:10px;}
+/* Handle on hover */
+#menu_wrap::-webkit-scrollbar-thumb:hover {background:rgba(255,255,255,0.5);}
+
+#menu_wrap h1.logo {display:flex; justify-content:center; align-items:center; position:-webkit-sticky; position:sticky; top:0; left:0; height:100px; background-color:#353851; z-index:1;}
+#menu_wrap h1.logo img {width:168px; height:auto;;}
+#menu_wrap .menu a.depth2 {display:flex; align-items:center; position:relative; gap:10px; padding:0 0 0 59px; background-color:transparent; color:rgba(255,255,255,0.8); text-decoration:none;}
+#menu_wrap .menu a.depth2 {height:60px; color:#898B9D; font-size:18px; line-height:1.5em; font-weight:500;}
+#menu_wrap .menu a.depth2 span.ico {display:inline-block; width:40px; height:36px;}
+#menu_wrap .menu a.depth2 + ul {display:none; padding:10px 0 20px; background-color:#14151f;}
+#menu_wrap .menu a.depth2.active + ul {display:block;}
+#menu_wrap .menu a.depth2.active {color:#fff; background-color:rgba(255,255,255,0.15);}
+#menu_wrap .menu a.depth2.active::before {content:""; display:block; position:absolute; top:0; left:0; width:6px; height:100%; background-color:#fff;}
+#menu_wrap .menu a.depth2 + ul a.depth3 { background-color: #14151f;}
+#menu_wrap .menu a.depth2 + ul a.depth3:hover {background-color:#000;}
+#menu_wrap .menu a.depth3 {display:flex; position:relative; padding-left:109px; color:#fff; font-size:16px; text-decoration:none;}
+#menu_wrap .menu a.depth3 span.txt {display:inline-block; position:relative; padding:10px 0;}
+#menu_wrap .menu a.depth3 span.txt::before {content:"-"; padding-right:5px; color:inherit; font-size:inherit; line-height:inherit;}
+#menu_wrap .menu a.depth3:hover {color:#fff;}
+
+#menu_wrap .menu .menu_group {box-shadow:0 -1px 4px rgba(0,0,0,0.1);}
+#menu_wrap .menu .menu_group > div {display:flex; justify-content:space-between; align-items:center; position:-webkit-sticky; position:sticky; top:0; width:100%; z-index:1;}
+#menu_wrap .menu .menu_group > div.active {background-color:#000}
+#menu_wrap .menu .menu_group > div a {display:flex; flex:1;}
+#menu_wrap .menu .menu_group > div button {box-sizing:content-box; position:relative; width:2em; height:2em; padding:0 1em;}
+#menu_wrap .menu .menu_group > div button i {position:absolute; bottom:50%; right:50%; width:10px; height:10px; border-right:2px solid #ccc; border-bottom:2px solid #ccc; transform:translate(0%, 50%) rotate(45deg); transform-origin:100% 100%; font-size:0;}
+#menu_wrap .menu .menu_group ul {display:none;}
+/* // left메뉴 */
+
+
+
+/* 메인페이지 */
+.main_wellcom {display:flex; align-items:center; height:60px; padding-left:76px; background-color:#fff;;}
+/* // 메인페이지 */
+
+
+
+
+
+
+
+
+
+
+/* 상단 검색 작업중 */
+.search_wrap {position:relative; padding:20px; color:#000; overflow-x:auto;}
+.search_wrap .search_inner {display:inline-flex; flex-direction:column; gap:10px; width:100%; margin:0 auto;}
+.search_wrap div.row {display:flex; gap:10px;}
+.search_wrap div.row div.tit {display:table-cell; width:100px; font-size:14px;}
+.search_wrap div.row div.search_item {display:inline-flex; align-items:center;}
+.search_wrap div.row div.search_item:first-child div.con {display:flex; gap:20px;}
+.search_wrap div.row div.search_item:first-child div.con div {display:flex; align-items:center;}
+.search_wrap div.row div.search_item div.con {display:flex; align-items:center;}
+.search_wrap div.row div.search_item:nth-child(2) {}
+.search_wrap div.row div.search_item div.con div:nth-child(2) {}
+.search_wrap select {min-width:130px; height:30px; background-color:#fff; border-radius:4px; font-size:14px; color:222;}
+.search_btn_group {display:flex; justify-content:center; gap:10px; margin-top:1em;}
+.search_btn_group button {width:100px; padding:1em; border-radius:2px; background-color: #333; color:#fff;}
+
+.search_wrap label.chkbox {display:flex; position:relative; line-height:1;}
+.search_wrap label.chkbox input {position:absolute; width:0; height:0; opacity:0;}
+.search_wrap label.chkbox span.checkmark {width:30px; height:30px; border:1px solid #ccc; border-radius:4px; background-color:#fff; font-size:0; line-height:0;}
+.search_wrap label.chkbox input:checked + span.checkmark {background-color:#353851; border-color:transparent;}
+.search_wrap label.chkbox span.checkmark::before {content:""; display:block; position:absolute; top:40%; left:43%; width:40%; height:25%; border-width:0 0 2px 2px; border-style:solid; border-color:#ddd; transform:rotate(-45deg); transform-origin:0 100%;}
+.search_wrap label.chkbox input:checked + span.checkmark::before {border-color:#fff;}
+
+.select_date {position:relative; width:160px;}
+.select_date input.ipt_date {font-size:14px; color:#444;}
+.select_date span.icon_day {position:absolute; top:50%; right:10px; width:20px; height:20px; transform:translateY(-50%); cursor:pointer;}
+/* // 상단 검색 작업중 */
+
+
+
+/* datepidker */
+#ui-datepicker-div {display:none; background-color: #333; padding:20px; border-radius:12px; box-shadow:inset 0 0 10px rgba(0,0,0,0.5), 0 3px 9px rgba(0,0,0,0.16);}
+.ui-datepicker-header {display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;}
+.ui-datepicker-header .ui-datepicker-prev,
+.ui-datepicker-header .ui-datepicker-next {position:relative; width:30px; height:30px; background-color: #fff; border-radius:4px; color:transparent;}
+.ui-datepicker-header .ui-datepicker-prev::before,
+.ui-datepicker-header .ui-datepicker-next::before {content:""; display:block; position:absolute; top:50%; width:40%; height:40%; border-style:solid; border-color:#000;}
+.ui-datepicker-header .ui-datepicker-prev::before {left:50%; border-width:2px 0 0 2px; transform:translateX(-50%) rotate(-45deg); transform-origin:0 0;}
+.ui-datepicker-header .ui-datepicker-next::before {right:50%; border-width:2px 2px 0 0; transform:translateX(50%) rotate(45deg); transform-origin:100% 0;}
+
+.ui-datepicker-header .ui-datepicker-prev {order:-1}
+.ui-datepicker-header .ui-datepicker-next {order:1;}
+.ui-datepicker-header .ui-datepicker-title {order:0; color:#fff;}
+.ui-datepicker-calendar {max-width:100%; text-align:center;}
+.ui-datepicker-calendar th {padding:5px 0; font-size:12px; font-weight:normal;}
+.ui-datepicker-calendar th,
+.ui-datepicker-calendar td {padding:4px; color:#fff;}
+.ui-datepicker-calendar td a {display:flex; justify-content:center; align-items:center; width:30px; height:30px; color:#fff; font-size:12px; text-decoration:none; transition:all 0.1s ease;;}
+.ui-datepicker-calendar td a:hover {border-radius:100%; background-color:#fff; color:#000;;}
+.ui-datepicker-calendar td.ui-state-disabled {background-color:rgba(255,255,255,0.05);}
+/* // datepidker */

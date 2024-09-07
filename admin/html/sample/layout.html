@@ -9,48 +9,6 @@
 	<link rel="stylesheet" href="../../css/admin_new.css">
 	<!-- <link rel="stylesheet" href="../../css/admin_atconnect.css"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
-<style>
-/* 기본 틀 */
-.wrap {}
-.wrap .aside {height:100%;}
-.wrap .aside .menu {min-width:300px; width:300px; margin-top:80px;;}
-
-.container {height:100%; flex:1; width:100%; overflow-y:auto;}
-.container .header {position:-webkit-sticky; position:sticky; top:0; left:0; background-color:#fff; box-shadow:0 0 5px rgba(0,0,0,0.16);}
-.container .content_wrap {background-color:#eef2f5;}
-.container .content_wrap .content {padding:50px;}
-/* 기본 틀 */
-
-/* 컨텐츠 박스 */
-.content_box {padding:28px; border-radius:6px; background-color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.06);}
-.content_box + .content_box {margin-top:30px;}
-
-/* 컨텐츠 박스 타이틀 */
-.content_box .box_title {display:flex; justify-content:space-between; align-items:center; gap:20px; height:48px; font-size:14px;}
-.content_box .box_title div {display:flex; gap:20px;}
-.content_box .box_title div.title {display:flex; align-items:center; flex:1;}
-.content_box .box_title div.title strong {display:block; color:#000; font-size:16px; font-weight:bold;}
-.content_box .box_title div p.txt {color:#333;}
-.content_box .box_title div p.txt span.em {color:red;}
-.content_box .box_title div.title span,
-.content_box .box_title div.title strong {display:inline-block; line-height:1;}
-.content_box .box_title .btn_group {display:flex; gap:10px;}
-.content_box .box_title .btn_group button {height:30px; padding:0 14px; border-radius:2px; background-color:#222;}
-.content_box .box_title .btn_group button.btn {}
-.content_box .box_title .btn_group button span {color:#fff;}
-/* // 컨텐츠 박스 타이틀 */
-/* // 컨텐츠 박스 */
-
-
-
-/* 페이지 네비게이션 */
-.page_nav {display:flex; align-items:center; height:80px; padding-left:48px; background-color:#eef2f5;}
-.page_nav span {display:inline-block; position:relative; color:#999999; font-size:18px; line-height:1.5em; font-weight:500;}
-.page_nav span.home {padding-left:32px; background:url('../../images/ico_home.png') no-repeat left bottom 1px / 24px 24px;}
-.page_nav span:last-of-type {color:#000; font-weight:bold;}
-.page_nav span:last-of-type::before {content:"/"; display:inline-block; color:#ddd; font-weight:bold;}
-/* // 페이지 네비게이션 */
-</style>
 </head>
 <body>
 
@@ -123,9 +81,7 @@
 			<!-- // user_wrap -->
 		</div>
 		<!-- // header -->
-<style>
-.main_wellcom {display:flex; align-items:center; height:60px; padding-left:76px; background-color:#fff;;}
-</style>
+
 		<div class="content_wrap">
 			<div class="page_nav">
 				<span class="home">Home</span>
@@ -140,39 +96,13 @@
 
 				<div class="content_box">
 
-
-<style>
-.search_wrap {position:relative; padding:20px; color:#000; overflow-x:auto;}
-.search_wrap .search_inner {display:inline-flex; flex-direction:column; gap:10px; width:100%; margin:0 auto;}
-.search_wrap div.row {display:flex; gap:10px;}
-.search_wrap div.row div.tit {display:table-cell; width:100px; font-size:14px;}
-.search_wrap div.row div.search_item {display:inline-flex; align-items:center;}
-.search_wrap div.row div.search_item:first-child div.con {display:flex; gap:20px; width:700px;}
-.search_wrap div.row div.search_item:first-child div.con div {display:flex; align-items:center;}
-.search_wrap div.row div.search_item div.con {display:flex; align-items:center;}
-.search_wrap div.row div.search_item:nth-child(2) {}
-.search_wrap div.row div.search_item div.con div:nth-child(2) {}
-.search_wrap select {min-width:130px; height:30px; background-color:#fff; border-radius:4px; font-size:14px; color:222;}
-.search_btn_group {display:flex; justify-content:center; gap:10px; margin-top:1em;}
-.search_btn_group button {width:100px; padding:1em; border-radius:2px; background-color: #333; color:#fff;}
-
-.search_wrap label.chkbox {display:flex; position:relative; line-height:1;}
-.search_wrap label.chkbox input {position:absolute; width:0; height:0; opacity:0;}
-.search_wrap label.chkbox span.checkmark {width:30px; height:30px; border:1px solid #ccc; border-radius:4px; background-color:#fff; font-size:0; line-height:0;}
-.search_wrap label.chkbox input:checked + span.checkmark {background-color:#353851; border-color:transparent;}
-.search_wrap label.chkbox span.checkmark::before {content:""; display:block; position:absolute; top:40%; left:45%; width:40%; height:25%; border-width:0 0 2px 2px; border-style:solid; border-color:#ddd; transform:rotate(-45deg); transform-origin:0 100%;}
-.search_wrap label.chkbox input:checked + span.checkmark::before {border-color:#fff;}
-
-.select_date {position:relative;}
-.select_date span.icon_day {position:absolute; top:50%; right:0; transform:translateY(-50%); cursor:pointer;}
-</style>					
 					<div class="search_wrap">
 							
 						<div class="search_inner">
 							<div class="row">
 								<div class="search_item">
 									<div class="tit">
-										<strong>신청구분</strong>
+										<strong>신청일자</strong>
 									</div>
 									<div class="con">
 										<div>
@@ -182,21 +112,19 @@
 												<option value="전체">전체</option>
 											</select>
 										</div>
+
 										<div>
-
-											<div class="select_date">
-												<input type="text" class="ipt_date" id="date_first">
-												<label for="date_first"><span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span></label>
-											</div>
-											<!-- // select_date -->
-
-											
-											<span>~</span>
-											<!-- <input type="date"> -->
-											 <label class="select_date">
+											<label class="select_date">
 												<input type="text" class="ipt_date">
 												<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
-											 </label>
+											</label>
+											<!-- // select_date -->
+											<span>~</span>
+											<!-- <input type="date"> -->
+											<label class="select_date">
+												<input type="text" class="ipt_date">
+												<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											</label>
 											
 										</div>
 										<div>
@@ -235,7 +163,7 @@
 							<div class="row">
 								<div class="search_item">
 									<div class="tit">
-										<strong>신청구분</strong>
+										<strong>신청일자</strong>
 									</div>
 									<div class="con">
 										<div>
@@ -246,12 +174,17 @@
 											</select>
 										</div>
 										<div>
-											<input type="text" class="date">
-											<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											<label class="select_date">
+												<input type="text" class="ipt_date">
+												<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											</label>
+											 
 											<span>~</span>
 											<!-- <input type="date"> -->
-											<input type="text" class="date">
-											<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											<label class="select_date">
+												<input type="text" class="ipt_date">
+												<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											</label>
 										</div>
 										<div>
 											<select name="" id="">
@@ -329,12 +262,16 @@
 											</select>
 										</div>
 										<div>
-											<input type="text" class="date">
-											<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											<label class="select_date">
+												<input type="text" class="ipt_date">
+												<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											</label>
 											<span>~</span>
 											<!-- <input type="date"> -->
-											<input type="text" class="date">
-											<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											<label class="select_date">
+												<input type="text" class="ipt_date">
+												<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+											</label>
 										</div>
 										<div>
 											<select name="" id="">
@@ -413,8 +350,18 @@
 <script src="../../js/jquery-1.12.4.min.js"></script>
 <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
 <script src="../../js/temp.js"></script>
-
 <script>
+	
+$( function() {
+	// let ipt_date_c = document.querySelectorAll(".ipt_date");
+	// ipt_date_c.forEach(function(item){
+	// 	item.addEventListener("focus", function(){
+	// 			item.datepicker();
+	// 		}
+	// 	)
+	// })
+    $( ".ipt_date" ).datepicker();
+  } );
 </script>
 </body>
 </html>
