@@ -149,7 +149,10 @@ input.w100 {width:100%;}
 
 
 /* 상단 검색 작업중 */
-.search_wrap {position:relative; padding:20px; color:#000; overflow-x:auto;}
+.search_wrap {position:relative; padding:20px; color:#000; overflow-x:auto; font-size:14px;}
+
+
+
 .search_wrap .search_inner {display:inline-flex; flex-direction:column; gap:10px; width:100%; margin:0 auto;}
 .search_wrap div.row {display:flex; gap:10px;}
 .search_wrap div.row div.tit {display:table-cell; width:100px; font-size:14px;}

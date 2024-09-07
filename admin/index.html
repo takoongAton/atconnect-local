@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>ATCONNECT 대출 플렛폼 관리자 페이지</title>
+<style type="text/css">
+body {margin:0; padding:30px 20px 20px 20px; font-family:Tahoma, Sans-Serif; font-size:12px; color:#333; line-height:1;}
+h1, p, ul, th, td {margin:0; padding:0;}
+ul, li {list-style-type:none;}
+
+h1 {margin:0 0 10px 0; font-size:17px;}
+h1 > span {margin-left:10px; font-size:13px; font-weight:normal;}
+.quick *{float:left; vertical-align:middle;}
+.quick {position:fixed; right:0; top:0; padding:5px 10px; background-color:#ddd;}
+.quick p {font-weight:bold;}
+.quick li {margin:0 0 0 8px;}
+.quick li span {display:block; width:5px; padding:0 0 0 8px;}
+.link-guide {display:block; margin-bottom:10px; text-decoration:underline; font-size:13px;}
+a {color:#028086; text-decoration:underline;}
+a:hover {color:#028086; text-decoration:none;}
+a.active {color:red; font-weight:bold;}
+table {width:100%; border-collapse:collapse; border:1px solid #666;}
+tr.line1 {border-top:2px solid #666;}
+tr.line2 {border-top:2px solid #ddd;}
+th, td {vertical-align:middle; padding:5px 0; font-size:13px;}
+th {padding:6px; font-size:12px; text-align:center; color:#fff; border:1px solid #666; background-color:var(--main-color); font-weight:normal;}
+td {padding:5px 4px 5px 10px; text-align:left; border:1px solid #eee; background-color:#fff; line-height:1.4;}
+td.chk {padding:4px 4px 4px 4px; text-align:center;}
+td p {margin:10px 0 5px 0;}
+tr:hover td{background-color:#eee;}
+.done {color:#ca0404;}
+.ing {color:#028086;}
+.notice {padding:3px 0 10px 0; text-align:right; color:#ff0303; line-height:1.4;}
+
+:root {
+	--main-color:#ff3a4a;
+}
+</style>
+	<script type="text/javascript" src="/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $lists = $('.menulist td').addClass('dir');
+			$lists
+				.find('td a')
+				.each(function(index){
+					var links = $(this).text();
+					$(this).attr('href', links).attr('target','_blank');
+
+				})
+				.end();
+			
+			//선택한거 파일 확인
+			$('a').on('click', function(){
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+</head>
+<!-- html body -->
+<body>
+<h1>ATCONNECT 대출 플렛폼 관리자 페이지</h1>
+
+<table class="menulist">
+	<colgroup>
+		<col width="6%">
+		<!-- <col width="10%">
+		<col width="12%">
+		<col width="12%">
+		<col width="14%">
+		<col width="4%">
+		<col width=""> -->
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">화면ID</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 2</th>
+			<th scope="col">Depth 3</th>
+			<th scope="col">Depth 4</th>
+			<th scope="col">파일명</th>
+			<th scope="col">비고</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- <tr>
+		<td colspan="9" class="chk done dir"><strong>0924 : 디자인 검수 요청</strong> 0926 : 디자인 검수 완료 <br> 1004 : 기획 변경 및 추가 수정완료</td>
+	</tr> -->
+<!-- 
+		<tr class="line1">
+			<td>SSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅁㅁㅁㅁ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+		<tr class="line1">
+			<td>Alert</td>
+			<td>공통</td>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/alert.html">alert.html</a></td>
+			<td>-</td>
+			<div>
+				
+			</div>
+		</tr>
+
+		<!-- <tr class="line1">
+			<td>F_MA_01_01</td>
+			<td>메인 (part01)</td>
+			<td>Header</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/part01/ㅁㅁㅁㅁ.html">ㅁㅁㅁㅁ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>F_MA_01_02</td>
+			<td></td>
+			<td>Footer</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/ㅇㅇㅇㅇ/ㅁㅁㅁㅁ.html">ㅁㅁㅁㅁ.html</a></td>
+			<td>-</td>
+		</tr> -->
+		<tr class="line1">
+			<td>B_MA_01_01</td>
+			<td>메인 (part01)</td>
+			<td>로그인</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/part01/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_MA_01_02</td>
+			<td></td>
+			<td>메인 대시보드</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/part01/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+		<tr class="line1">
+			<td>B_LO_01_01</td>
+			<td>대출심사 (part02)</td>
+			<td>신규대출</td>
+			<td>신규대출 현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_01_02</td>
+			<td></td>
+			<td></td>
+			<td>상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_02_01</td>
+			<td></td>
+			<td>대환대출</td>
+			<td>대환대출 현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_02_02</td>
+			<td></td>
+			<td></td>
+			<td>상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_03_01</td>
+			<td></td>
+			<td>추가대출</td>
+			<td>추가대출 현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_03_02</td>
+			<td></td>
+			<td></td>
+			<td>상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_04_01</td>
+			<td></td>
+			<td>연장심사</td>
+			<td>연장신청 현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_LO_04_02</td>
+			<td></td>
+			<td></td>
+			<td>상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part02/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+		<tr class="line1">
+			<td>B_BD_05_01</td>
+			<td>채권관리 (part03)</td>
+			<td>채권현황</td>
+			<td>채권현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_BD_05_02</td>
+			<td></td>
+			<td></td>
+			<td>채권상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<!-- <tr>
+			<td>ㅇㅇㅇㅇ</td>
+			<td></td>
+			<td>ㅇㅇㅇㅇㅇ</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>추후수정</td>
+		</tr>
+		<tr>
+			<td>ㅇㅇㅇㅇ</td>
+			<td></td>
+			<td>ㅇㅇㅇㅇㅇ</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>추후수정</td>
+		</tr> -->
+
+		<tr>
+			<td>B_BD_05_03</td>
+			<td></td>
+			<td></td>
+			<td>계약문서조회</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_BD_06_01</td>
+			<td></td>
+			<td>납입현황</td>
+			<td>납입현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_BD_06_02</td>
+			<td></td>
+			<td></td>
+			<td>납입상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_BD_07_01</td>
+			<td></td>
+			<td>연체현황</td>
+			<td>연체현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_BD_07_02</td>
+			<td></td>
+			<td></td>
+			<td>연체상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part03/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		
+
+		<tr class="line1">
+			<td>B_PD_05_01</td>
+			<td>상품관리 (part04)</td>
+			<td>상품리스트</td>
+			<td>상품리스트</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part04/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_PD_05_02</td>
+			<td></td>
+			<td></td>
+			<td>상품등록</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part04/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<!-- <tr>
+			<td>ㅇㅇㅇㅇ</td>
+			<td></td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/part04/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+		
+
+		<tr class="line1">
+			<td>B_CD_10_01</td>
+			<td>약관관리 (part05)</td>
+			<td>고객동의양식</td>
+			<td>고객동의양식</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part05/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_CD_10_02</td>
+			<td></td>
+			<td></td>
+			<td>고객동의양식</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part05/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		
+
+		<tr class="line1">
+			<td>B_NB_12_01</td>
+			<td>게시판관리 (part06)</td>
+			<td>공지사항관리</td>
+			<td>공지사항현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part06/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_NB_12_02</td>
+			<td></td>
+			<td></td>
+			<td>공지사항상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part06/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>NO_13_01</td>
+			<td></td>
+			<td></td>
+			<td>게시문서현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part06/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		
+
+		<tr class="line1">
+			<td>B_ST_14_01</td>
+			<td>시스템관리 (part07)</td>
+			<td>관리자계정</td>
+			<td>관리자계정현황</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part07/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>B_ST_14_02</td>
+			<td></td>
+			<td></td>
+			<td>관리자계정상세내역</td>
+			<td></td>
+			<td><a target="_blank" href="./html/part07/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+		
+		
+	</tbody>
+</table>
+
+<!-- <style>
+	.file_history {margin-top:20px;}
+	.file_history ul {margin-top:10px; border-top:1px solid #ddd;}
+	.file_history ul li {padding:10px; border:1px solid #ddd; border-top:0;}
+</style>
+<div class="file_history">
+	파일 다운로드: 
+	<ul>
+		<li><a href="./atconnect-homepage_240828.7z">atconnect-homepage_240828.7z</a></li>
+		<li><a href="./atconnect-homepage_240904.7z">atconnect-homepage_240904.7z</a> 수정 : 첨부파일, [필수] 고유 식별 정보 처리 동의 체크박스</li>
+	</ul>
+</div> -->
+
+</body>
+<!-- //html body -->
+</html>
