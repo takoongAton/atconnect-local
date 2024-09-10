@@ -13,4 +13,67 @@
 
 .ipt_wrap {display:flex; align-items:center; gap:10px;}
 
-button.btn {min-width:80px; height:24px; padding:0 1em; border-radius:2px; background-color:#000; color:#fff; font-size:13px;}
+button.btn {min-width:80px; height:30px; padding:0 1em; border-radius:4px; background-color:#000; color:#fff; font-size:13px; text-align:center !important;}
+button.btn_file_down {width:36px; height:36px; background:url('../images/icon_download.png') no-repeat center center / 80%; color:transparent;}
+
+
+hr {display:block; height:40px; border:0 none;}
+
+/* 입력용 테이블 */
+.board_write table {position:relative; width:100%; border-top:1px solid #555; border-bottom:1px solid #ddd; font-size:13px; text-align:center;}
+.board_write table th,
+.board_write table td {height:50px; vertical-align:middle;}
+.board_write table th {background-color: #ebebeb; color:#222; font-weight:bold; border-bottom:1px solid #ddd; border-right:1px solid #ddd;}
+.board_write table th.em {background-color:#b2c7f0; color:#222; border-color:transparent;}
+.board_write table td {padding:8px; word-break:break-all;}
+.board_write table td {border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.board_write table th:last-child,
+.board_write table td:last-child {border-right:0 none;}
+.board_write th.left,
+.board_write td.left,
+.board_write td.title {text-align:left;}
+.board_write td.title {background-color: #f7f7f7;}
+.board_write table .number {text-align:right;}
+.board_write tfoot td {background-color:#f7f7f7;}
+.board_write table textarea {border-color:#ccc; border-radius:2px; min-height:30px; padding:0 12px; line-height:30px;}
+
+.board_write table {text-align:left; font-size:12px;}
+.board_write table th,
+.board_write table td {padding:8px 12px; line-height:1.5em;}
+.board_write table td .w25 {width:25%;}
+.board_write table td .w50 {width:50%;}
+.board_write table td .w75 {width:75%;}
+.board_write table td .w100 {width:100%;}
+
+div.con_divide {display:flex; justify-content:space-between; align-items:center; gap:10px; width:100%;}
+div.con_divide div:first-of-type {flex:1;}
+/* // 입력용 테이블 */
+
+
+
+/* 파일 업로드 타입2 */
+.file_upload_wrap {display:flex; justify-content:space-between; align-items:flex-start; gap:10px; width:100%;}
+.file_upload_wrap form {display:none;}
+.file_upload_wrap button.btn_add_file {height:30px; padding:0 12px; border-radius:2px; background-color:#333; color:#fff; font-size:inherit;}
+.file_upload_wrap button.btn_add_file span {display:block; color:#fff;}
+.file_upload_wrap input.ipt_file {display:none;}
+
+.file_upload_wrap div.file_alert {display:flex; flex-direction:column; gap:0.5em; width:100%; margin-bottom:10px; padding:1em; background-color:#f5f5f5; border-radius:2px;}
+.file_upload_wrap div.file_alert p {position:relative; padding-left:1.25em; color:#222; font-size:14px; line-height:1.25em;}
+.file_upload_wrap div.file_alert p::before {content:"·"; display:block; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit; font-weight:bold;}
+
+.file_upload_wrap div.file_list_wrap {flex:1;}
+.file_upload_wrap ul.file_list {display:flex; flex-direction:column; gap:0.2625em; width:100%;}
+.file_upload_wrap ul.file_list li {display:flex; justify-content:space-between; align-items:center; width:100%; gap:1.25em; width:100%; line-height:30px;}
+.file_upload_wrap ul.file_list li span.count {height:30px; line-height:30px;}
+.file_upload_wrap ul.file_list li p {flex:1; display:flex; justify-content: space-between; gap:10px; color:#555; font-size:1em; line-height:1.5em;}
+.file_upload_wrap ul.file_list li p strong,
+.file_upload_wrap ul.file_list li p span {display:block}
+.file_upload_wrap ul.file_list li p strong {word-break:break-all;}
+.file_upload_wrap ul.file_list li button.btn_del {position:relative; min-width:1.5em; width:1.5em; height:1.5em; color:transparent; font-size:inherit; text-align:center;}
+.file_upload_wrap ul.file_list li button.btn_del span {display:block; position:relative; width:1.25em; height:1.25em; border-radius:100%; background-color:#999999; overflow:hidden;}
+.file_upload_wrap ul.file_list li button.btn_del span::before,
+.file_upload_wrap ul.file_list li button.btn_del span::after {content:""; display:block; position:absolute; top:50%; left:50%; width:57.25%; height:2px; background-color:#fff; transform-origin:50% 50%;}
+.file_upload_wrap ul.file_list li button.btn_del span::before {transform:translate(-50%,-50%) rotate(-45deg);}
+.file_upload_wrap ul.file_list li button.btn_del span::after {transform:translate(-50%,-50%) rotate(45deg);}
+/* // 파일 업로드 타입2 */

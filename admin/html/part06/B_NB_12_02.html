@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+<div class="popup_wrap">
+
+	<div class="popup_header">
+		<div class="title">
+			<strong>공지사항 상세내역</strong>
+		</div>
+	</div>
+	<!-- // popup_header -->
+
+	<div class="popup_body">
+		<div class="content_box">
+
+			
+			<div class="board_write">
+				<table>
+					<tr>
+						<th>제목</th>
+						<td colspan="3"><input type="text" class="w100" value="[필수] 여신거래 기본약관 내용 변경으로 인한 공지" /></td>
+						<th>공개설정</th>
+						<td>
+							<select name="" id="">
+								<option value="공개">공개</option>
+								<option value="비공개">비공개</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<th>등록자명</th>
+						<td>슈퍼관리자</td>
+						<th>등록일자</th>
+						<td>2023-01-01 00:00:00</td>
+						<th>사용여부</th>
+						<td>
+							<select name="" id="">
+								<option value="예">예</option>
+								<option value="아니오">아니오</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>파일첨부</th>
+						<td colspan="5">
+
+							<div class="file_upload_wrap">
+								<button type="button" class="btn_add_file" id="#btnFileUpload"><span>파일첨부</span></button>
+								<form id="file_form" method="post" enctype="multipart/form-data">
+									<input type="file" id="file" class="ipt_file"><!-- // css명 추가, 또는 style="dispaly:none;" -->
+								</form>
+								<div class="file_list_wrap">
+									<ul class="file_list">
+										<li class="file_item">
+											<span class="count">첨부1.</span>
+											<p>
+												<strong class="file_name">document_file_name.doc</strong>
+												<span class="file_size">(300kb)</span>
+											</p>
+											<button type="button" class="btn_del"><span class="txt">삭제</span></button>
+										</li>
+										<!-- <li class="file_item">
+											<span class="count">첨부2.</span>
+											<p>
+												<strong class="file_name">document_file_name.doc</strong>
+												<span class="file_size">(300kb)</span>
+											</p>
+											<button type="button" class="btn_del"><span class="txt">삭제</span></button>
+										</li> -->
+									</ul>
+									<!-- // file_list -->
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>공지내역</th>
+						<td colspan="5">
+							<textarea name="" id="" placeholder="공지내역 입력창" class="w100"></textarea>
+							<!-- editer -->
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- // board_write -->
+
+			
+
+		</div>
+		<!-- // content_box -->
+
+	</div>
+	<!-- // popup_body -->
+
+	<div class="popup_footer">
+		<div class="btn_group">
+			<button type="button"><span>저장</span></button>
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+
+<script>
+$( function() {
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>

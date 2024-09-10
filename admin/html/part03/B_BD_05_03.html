@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="popup_wrap">
+	<div class="popup_header">
+		<div class="title">
+			<strong>계약 문서 조회</strong>
+		</div>
+	</div>
+	<div class="popup_body">
+		<div class="content_box">
+
+			<div class="table_title">
+				<div class="title">
+					<strong>■ 고객정보</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>수동연장</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="title">고객명</th>
+							<td colspan="3">이콩심</td>
+						</tr>
+						<tr>
+							<th class="title">생년월일</th>
+							<td>990101</td>
+							<th class="title">연락처</th>
+							<td>010-0000-0000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+		</div>
+		<!-- // content_box -->
+
+
+		<div class="content_box">
+
+			<div class="table_title">
+				<div class="title">
+					<strong>■ 계약문서</strong>
+				</div>
+			</div>
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:auto;">
+						<col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>문서종류</th>
+							<th>다운로드</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td class="tal">문서명이 들어갑니다.</td>
+							<td><button type="button" class="btn_file_down"><span>다운로드</span></button></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="tal">문서명이 들어갑니다.</td>
+							<td><button type="button" class="btn_file_down"><span>다운로드</span></button></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td class="tal">문서명이 들어갑니다.</td>
+							<td><button type="button" class="btn_file_down"><span>다운로드</span></button></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td class="tal">문서명이 들어갑니다.</td>
+							<td><button type="button" class="btn_file_down"><span>다운로드</span></button></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td class="tal">문서명이 들어갑니다.</td>
+							<td><button type="button" class="btn_file_down"><span>다운로드</span></button></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td class="tal">문서명이 들어갑니다.</td>
+							<td><button type="button" class="btn_file_down"><span>다운로드</span></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- // content_box -->
+	</div>
+	<!-- // popup_body -->
+
+	<div class="popup_footer">
+		<div class="btn_group">
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+
+<script>
+$( function() {
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>

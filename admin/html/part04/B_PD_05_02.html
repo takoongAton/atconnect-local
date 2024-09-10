@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="popup_wrap">
+	<div class="popup_header">
+		<div class="title">
+			<strong>상품 등록</strong>
+		</div>
+	</div>
+	<div class="popup_body">
+		<div class="content_box">
+
+			<div class="table_title">
+				<div class="title">
+					<strong>■ 상품정보</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>수동연장</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+
+			<div class="board_write">
+				<table>
+					<tr>
+						<th>상품번호</th>
+						<td colspan="3">002</td>
+					</tr>
+					<tr>
+						<th>상품명</th>
+						<td colspan="3"><input type="text" class="w100" /></td>
+					</tr>
+					<tr>
+						<th>증권사</th>
+						<td colspan="3">
+							<select name="" id="" class="w100">
+								<option value="유진투자증권">유진투자증권</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>상품등록일자</th>
+						<td colspan="3">
+							<div class="con_divide">
+								<div>
+									2024/07/01
+								</div>
+								<div>
+									<button type="button" class="btn"><span>판매중지</span></button>
+								</div>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>대출기간</th>
+						<td>
+							<select name="" id="">
+								<option value="선택">선택</option>
+								<option value="3개월">3개월</option>
+								<option value="6개월">6개월</option>
+								<option value="12개월">12개월</option>
+							</select>
+						</td>
+						<th>연장가능횟수</th>
+						<td>2회</td>
+					</tr>
+					<tr>
+						<th>최대월수</th>
+						<td>
+							<select name="" id="">
+								<option value="60개월">60개월</option>
+								<option value="12개월">12개월</option>
+								<option value="24개월">24개월</option>
+								<option value="36개월">36개월</option>
+								<option value="48개월">48개월</option>
+							</select>
+						</td>
+						<th>집중투자율</th>
+						<td>
+							<input type="text" class="w50"> <span>%</span>
+						</td>
+					</tr>
+					<tr>
+						<th>로스컷비율</th>
+						<td>
+							<input type="text" class="w50"> <span>%</span>
+						</td>
+						<th>현금인출비율</th>
+						<td>
+							<input type="text" class="w50"> <span>%</span>
+						</td>
+					</tr>
+					
+				</table>
+			</div>
+			<!-- // board_write -->
+
+
+			<div class="table_title">
+				<div class="title">
+					<strong>■ 금리정보</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>수동연장</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+			<!-- // table_title -->
+
+			<div class="board_write">
+				<table>
+					<tr>
+						<th>선,후취 구분</th>
+						<td>
+							<select name="" id="">
+								<option value="선취">선취</option>
+								<option value="후취">후취</option>
+							</select>
+						</td>
+						<th>연장금리</th>
+						<td>
+							<input type="text" class="w50"> <span>%</span>
+						</td>
+					</tr>
+					<tr>
+						<th>대출금리</th>
+						<td>
+							<input type="text" class="w50"> <span>%</span>
+						</td>
+						<th>금리적용시작일자</th>
+						<td>
+							<label class="select_date">
+								<input type="text" class="ipt_date hasDatepicker" id="dp1725888303673">
+								<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+							</label>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- // board_write -->
+
+
+			<div class="table_title">
+				<div class="title">
+					<strong>■ 금리 변경 이력</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>수동연장</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+			<!-- // table_title -->
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:25%;">
+						<col style="width:auto;">
+						<col style="width:25%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>시작일자</th>
+							<th>종료일자</th>
+							<th>신규금리</th>
+							<th>연장금리</th>
+							<th>사용여부</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2023-03-17</td>
+							<td>2024-03-17</td>
+							<td>10.70%</td>
+							<td>10.70%</td>
+							<td>N</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2023-03-17</td>
+							<td>2024-03-17</td>
+							<td>10.70%</td>
+							<td>10.70%</td>
+							<td>Y</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<!-- // content_box -->
+
+	</div>
+	<!-- // popup_body -->
+
+	<div class="popup_footer">
+		<div class="btn_group">
+			<button type="button"><span>저장</span></button>
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+
+<script>
+$( function() {
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>

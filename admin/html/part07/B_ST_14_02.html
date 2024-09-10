@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="popup_wrap">
+	<div class="popup_header">
+		<div class="title">
+			<strong>관리자계정 상세내역</strong>
+		</div>
+	</div>
+	<div class="popup_body">
+		<div class="content_box">
+
+			<div class="table_title">
+				<div class="title">
+					<strong>■ 사용자 정보</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>수동연장</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+			<!-- // table_title -->
+
+			<div class="board_write">
+				<table>
+					<colgroup>
+						<col style="width:200px">
+					</colgroup>
+					<tr>
+						<th>사용자 ID</th>
+						<td>
+							<div class="con_divide">
+								<div>
+									<input type="text" class="w100" />
+								</div>
+								<div>
+									<button type="button" class="btn"><span>판매중지</span></button>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>비밀번호</th>
+						<td>
+							<div class="con_divide">
+								<div>
+									<input type="password" class="w100" />
+								</div>
+								<div>
+									<button type="button" class="btn"><span>비밀번호 변경</span></button>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>사용자명</th>
+						<td>
+							<input type="text" class="w100" />
+						</td>
+					</tr>
+					<tr>
+						<th>부서명</th>
+						<td>
+							<select name="" id="" class="w50">
+								<option value="부서1">부서1</option>
+								<option value="부서2">부서2</option>
+								<option value="부서3">부서3</option>
+								<option value="부서4">부서4</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>권한 / 역할</th>
+						<td>
+							<select name="" id="" class="w50">
+								<option value="관리자">관리자</option>
+								<option value="일반">일반</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>연락처</th>
+						<td>
+							<input type="text" class="w50" placeholder="010-0000-0000" />
+						</td>
+					</tr>
+					<tr>
+						<th>이메일</th>
+						<td>
+							<input type="text" class="w50" placeholder="메일주소입력" />
+						</td>
+					</tr>
+					<tr>
+						<th>사용여부</th>
+						<td>
+							<select name="" id="">
+								<option value="Y">Y</option>
+								<option value="N">N</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- // board_write -->
+
+		</div>
+		<!-- // content_box -->
+
+			
+		
+	</div>
+	<!-- // popup_body -->
+
+	<div class="popup_footer">
+		<div class="btn_group">
+			<button type="button"><span>저장</span></button>
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+
+<script>
+$( function() {
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>

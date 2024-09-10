@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<!-- <link rel="stylesheet" href="../../css/admin_atconnect.css"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+	
+<div class="wrap">
+	<div class="aside">
+		<div id="menu_wrap">
+			<h1 class="logo"><img src="../../images/img_logo.png" alt="로고" /></h1>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">대출심사</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">신규대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">대환대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">추가대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">연장심사</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">채권관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">채권현황</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">납인현황</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">연체현황</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">상품관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">상품리스트</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2 active"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">약관관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3 active"><span class="txt">고객동의양식</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">게시판관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">공지사항관리</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">게시문서관리</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">시스템관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">관리자계정</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // menu -->
+	</div>
+
+	<div class="container">
+		<div class="header">
+			<div class="user_wrap">
+				<p class="txt">안녕하세요</p>
+				<div class="user">
+					<span>Admin</span>
+					<em>슈퍼관리자</em>
+					님
+				</div>
+				<button type="button" class="btn_logout"><span>로그아웃</span></button>
+			</div>
+			<!-- // user_wrap -->
+		</div>
+		<!-- // header -->
+
+		<div class="content_wrap">
+			<div class="page_nav">
+				<span class="home">Home</span>
+				<span>약관관리</span>
+				<span>고객동의양식</span>
+			</div>
+
+			<div class="page_tit">
+				<strong>고객 동의 양식</strong>
+			</div>
+
+			<div class="content">
+
+				<div class="content_box">
+
+					<div class="search_wrap">
+						<div class="search_table">
+							<form action="">
+							
+								<!-- <div class="search_table_header">
+									
+								</div> -->
+								<!-- // search_table_header -->
+
+								<div class="search_table_body">
+									<div class="search_row">
+										<div class="tit"><strong>등록일자</strong></div>
+										<div class="con">
+
+											<div class="form_con">
+												<div>
+													<select name="" id="">
+														<option value="전체">전체</option>
+														<option value="회사 설립일">회사 설립일</option>
+														<option value="9999/12/31">9999/12/31</option>
+													</select>
+												</div>
+		
+												<div>
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													<!-- // select_date -->
+													<span>~</span>
+													<!-- <input type="date"> -->
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>													
+												</div>
+											</div>
+											<!-- // form_con -->
+										</div>
+										<div class="tit">
+											<strong>필수여부</strong>
+										</div>
+										<div class="con">
+											<div>
+												<select name="" id="">
+													<option value="필수">필수</option>
+													<option value="선택">선택</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<!-- // search_row -->
+
+								</div>
+								<!-- // search_table_body -->
+
+								<div class="search_table_footer">
+									<button type="button"><span>검색</span></button>
+									<button type="button"><span>초기화</span></button>
+								</div>
+								<!-- // search_table_footer -->
+
+							</form>
+
+						</div>
+						<!-- // search_table -->
+
+					</div>
+					<!-- // search_wrap -->
+
+				</div>
+				<!-- // content_box -->
+
+				
+
+				<div class="content_box">
+					<div class="box_title">
+						<div class="title">
+							<p class="txt">
+								■ 총 <span class="em">00</span>건이 조회 되었습니다.
+							</p>
+						</div>
+						<!-- <div>
+							<p class="txt">
+								■ 대출금액 합계 <span class="em">1,234,567,890</span>
+							</p>
+							<p class="txt">
+								■ 대출잔책 합계 <span class="em">834,567,890</span>
+							</p>
+						</div> -->
+						<div class="btn_group">
+							<button type="button" class="btn"><span>순서저장</span></button>
+							<button type="button" class="btn"><span>추가</span></button>
+						</div>
+					</div>
+
+					<div class="view_table">
+						<table>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="width:50%">
+								<col style="width:auto;">
+								<col style="width:8%;">
+								<col style="width:15%;">
+								<col style="width:auto;">
+								<col style="width:8%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>문서명</th>
+									<th>문서구분</th>
+									<th>표시순서</th>
+									<th>등록일시</th>
+									<th>등록자명</th>
+									<th>필수여부</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[선택] 개인(신용)정보 수집∙이용 동의서(상품·서비스 안내)</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tal">[필수] 개인(신용)정보 조회 동의서</td>
+									<td>개인정보</td>
+									<td>1</td>
+									<td>2023-01-01 00:00:00</td>
+									<td>슈퍼관리자</td>
+									<td>Y</td>
+								</tr>
+								
+								<!-- <tr>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+									<td>ㅁㅁㅁ</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+
+					<div class="pagination_wrap">
+						<div class="pagination">
+							<a href="#g">«</a>
+							<a href="#g" class="active">1</a>
+							<a href="#g">2</a>
+							<a href="#g">3</a>
+							<a href="#g">4</a>
+							<a href="#g">5</a>
+							<a href="#g">»</a>
+							<div class="sort">
+								<select name="" id="">
+									<option value="30">30</option>
+									<option value="30">30</option>
+									<option value="30">30</option>
+									<option value="30">30</option>
+									<option value="30">30</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- // pagination_wrap -->
+
+				</div>
+				<!-- // content_box -->
+
+			</div>
+			<!-- // content -->
+
+		</div>
+		<!-- // content_wrap -->
+	</div>
+	<!-- // container -->
+</div>
+<!-- // wrap -->
+	
+
+	
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+<script>
+	
+$( function() {
+	// let ipt_date_c = document.querySelectorAll(".ipt_date");
+	// ipt_date_c.forEach(function(item){
+	// 	item.addEventListener("focus", function(){
+	// 			item.datepicker();
+	// 		}
+	// 	)
+	// })
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>

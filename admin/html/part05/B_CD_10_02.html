@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+<div class="popup_wrap">
+
+	<div class="popup_header">
+		<div class="title">
+			<strong>고객동의양식 상세내역</strong>
+		</div>
+	</div>
+	<!-- // popup_header -->
+
+	<div class="popup_body">
+		<div class="content_box">
+
+			
+			<div class="board_write">
+				<table>
+					<tr>
+						<th>제목</th>
+						<td colspan="3"><input type="text" class="w100" value="[필수] 개인(신용)정보 수집 및 이용 동의서"></td>
+						<th>필수여부</th>
+						<td>
+							<select name="" id="">
+								<option value="선택">선택</option>
+								<option value="필수">필수</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<th>문서구분</th>
+						<td>
+							<select name="" id="">
+								<option value="선택">선택</option>
+								<option value="개인정보">개인정보</option>
+								<option value="이용약관">이용약관</option>
+								<option value="대출약정">대출약정</option>
+								<option value="최종양식">최종양식</option>
+							</select>
+						</td>
+						<th>등록일자</th>
+						<td>2023-01-01 00:00:00</td>
+						<th>등록자명</th>
+						<td>슈퍼관리자</td>
+					</tr>
+					<tr>
+						<th>동의구분</th>
+						<td>
+							<select name="" id="">
+								<option value="동의함">동의함</option>
+								<option value="항목">항목</option>
+							</select>
+						</td>
+						<th>수정일자</th>
+						<td>2023-01-01 00:00:00</td>
+						<th>수정자명</th>
+						<td>담당자1</td>
+					</tr>
+					
+					<tr>
+						<th>사용여부</th>
+						<td>
+							<select name="" id="">
+								<option value="예">예</option>
+								<option value="아니오">항목</option>
+							</select>
+						</td>
+						<th></th>
+						<td></td>
+						<th></th>
+						<td></td>
+					</tr>
+					<tr>
+						<th>약관내용</th>
+						<td colspan="5">
+							약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />
+							약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />
+							약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- // board_write -->
+
+			
+
+		</div>
+		<!-- // content_box -->
+
+	</div>
+	<!-- // popup_body -->
+
+	<div class="popup_footer">
+		<div class="btn_group">
+			<button type="button"><span>저장</span></button>
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+
+<script>
+$( function() {
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_new.css">
+	<!-- <link rel="stylesheet" href="../../css/admin_atconnect.css"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+	
+<div class="wrap">
+	<div class="aside">
+		<div id="menu_wrap">
+			<h1 class="logo"><img src="../../images/img_logo.png" alt="로고" /></h1>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">대출심사</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">신규대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">대환대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">추가대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">연장심사</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">채권관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">채권현황</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">납인현황</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">연체현황</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">상품관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">상품리스트</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">약관관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">고객동의양식</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">게시판관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">공지사항관리</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">게시문서관리</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">시스템관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">관리자계정</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // menu -->
+	</div>
+
+	<div class="container">
+		<div class="header">
+			<div class="user_wrap">
+				<p class="txt">안녕하세요</p>
+				<div class="user">
+					<span>Admin</span>
+					<em>슈퍼관리자</em>
+					님
+				</div>
+				<button type="button" class="btn_logout"><span>로그아웃</span></button>
+			</div>
+			<!-- // user_wrap -->
+		</div>
+		<!-- // header -->
+
+		<div class="content_wrap">
+			<div class="page_nav">
+				<span class="home">Home</span>
+				<span>Main</span>
+			</div>
+
+			<div class="page_tit" style="">
+				<strong>AT CONNECK Admin 사이트에 오신걸 환영 합니다.</strong>
+			</div>
+
+			<div class="content">
+
+				<div class="content_box">
+
+					<div class="search_wrap">
+						<div class="search_table">
+							<form action="">
+							
+								<!-- <div class="search_table_header">
+									
+								</div> -->
+								<!-- // search_table_header -->
+
+								<div class="search_table_body">
+									<div class="search_row">
+										<div class="tit"><strong>신청일자</strong></div>
+										<div class="con">
+
+											<div class="form_con">
+												<div>
+													<select name="" id="">
+														<option value="전체">전체</option>
+														<option value="전체">전체</option>
+														<option value="전체">전체</option>
+													</select>
+												</div>
+		
+												<div>
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													<!-- // select_date -->
+													<span>~</span>
+													<!-- <input type="date"> -->
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													
+												</div>
+												<div>
+													<select name="" id="">
+														<option value="최근한달">최근한달</option>
+														<option value="최근한달">최근한달</option>
+														<option value="최근한달">최근한달</option>
+													</select>
+												</div>
+											</div>
+											<!-- // form_con -->
+										</div>
+										<div class="tit"><strong>연장대상</strong></div>
+										<div class="con">
+											<div class="form_con">
+												<label class="chkbox">
+													<input type="checkbox" name="" id="">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="search_row">
+										<div class="tit"><strong>검색조건</strong></div>
+										<div class="con">
+											<div class="form_con">
+												<input type="text" class="w100" />
+											</div>
+										</div>
+										<div class="tit"><strong>보류</strong></div>
+										<div class="con">
+											<div class="form_con">
+												<label class="chkbox">
+													<input type="checkbox" name="" id="">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="search_row">
+										<div class="tit"><strong>실행일자</strong></div>
+										<div class="con">
+
+											<div class="form_con">
+												<div>
+													<select name="" id="">
+														<option value="전체">전체</option>
+														<option value="전체">전체</option>
+														<option value="전체">전체</option>
+													</select>
+												</div>
+		
+												<div>
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													<!-- // select_date -->
+													<span>~</span>
+													<!-- <input type="date"> -->
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													
+												</div>
+												<div>
+													<select name="" id="">
+														<option value="최근한달">최근한달</option>
+														<option value="최근한달">최근한달</option>
+														<option value="최근한달">최근한달</option>
+													</select>
+												</div>
+											</div>
+											<!-- // form_con -->
+										</div>
+										<div class="tit">
+											<strong>계좌상태</strong>
+										</div>
+										<div class="con">
+											<div>
+												<select name="" id="">
+													<option value="전체">전체</option>
+													<option value="전체">전체</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="search_row">
+										<div class="tit"><strong>등록일자</strong></div>
+										<div class="con">
+
+											<div class="form_con">
+												<div>
+													<select name="" id="">
+														<option value="전체">전체</option>
+														<option value="전체">전체</option>
+														<option value="전체">전체</option>
+													</select>
+												</div>
+		
+												<div>
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													<!-- // select_date -->
+													<span>~</span>
+													<!-- <input type="date"> -->
+													<label class="select_date">
+														<input type="text" class="ipt_date">
+														<span class="icon_day"><img src="../../images/icon_calendar.png" alt="달력보기"></span>
+													</label>
+													
+												</div>
+												<div>
+													<select name="" id="">
+														<option value="최근한달">최근한달</option>
+														<option value="최근한달">최근한달</option>
+														<option value="최근한달">최근한달</option>
+													</select>
+												</div>
+											</div>
+											<!-- // form_con -->
+										</div>
+										<div class="tit">
+											<strong>필수여부</strong>
+										</div>
+										<div class="con">
+											<div>
+												<select name="" id="">
+													<option value="전체">전체</option>
+													<option value="전체">전체</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<!-- <div class="search_row">
+										<div class="tit">tit</div>
+										<div class="con">con</div>
+										<div class="tit">tit</div>
+										<div class="con">con</div>
+									</div> -->
+								</div>
+								<!-- // search_table_body -->
+
+								<div class="search_table_footer">
+									<button type="button"><span>검색</span></button>
+									<button type="button"><span>초기화</span></button>
+								</div>
+								<!-- // search_table_footer -->
+
+							</form>
+
+						</div>
+						<!-- // search_table -->
+
+					</div>
+					<!-- // search_wrap -->
+
+				</div>
+				<!-- // content_box -->
+
+				
+
+				<div class="content_box">
+					<div class="box_title">
+						<div class="title">
+							<p class="txt">
+								■ 총 <span class="em">00</span>건이 조회 되었습니다.
+							</p>
+						</div>
+						<div>
+							<p class="txt">
+								■ 대출금액 합계 <span class="em">1,234,567,890</span>
+							</p>
+							<p class="txt">
+								■ 수납금액 합계 <span class="em">834,567,890</span>
+							</p>
+						</div>
+						<div class="btn_group">
+							<button type="button" class="down_excel"><span>엑셀다운로드</span></button>
+						</div>
+					</div>
+
+					흰색박스
+				</div>
+				<!-- // content_box -->
+
+			</div>
+			<!-- // content -->
+
+		</div>
+		<!-- // content_wrap -->
+	</div>
+	<!-- // container -->
+</div>
+<!-- // wrap -->
+	
+
+	
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+<script>
+	
+$( function() {
+	// let ipt_date_c = document.querySelectorAll(".ipt_date");
+	// ipt_date_c.forEach(function(item){
+	// 	item.addEventListener("focus", function(){
+	// 			item.datepicker();
+	// 		}
+	// 	)
+	// })
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>
