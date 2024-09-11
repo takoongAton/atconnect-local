@@ -1,0 +1,21 @@
+
+/* 표 상단 타이틀 */
+/* .table_title {display:flex; justify-content:space-between; align-items:center; gap:20px; height:48px; font-size:14px;}
+.table_title div {display:flex; gap:10px;}
+.table_title div.title {display:flex; align-items:center; flex:1;}
+.table_title div.title strong {display:block; color:#000; font-size:16px; font-weight:bold;}
+.table_title div p.txt {color:#333;}
+.table_title div p.txt span.em {color:red;}
+.table_title div.title span,
+.table_title div.title strong {display:inline-block; line-height:1;} */
+/* // 표 상단 타이틀 */
+
+
+
+
+
+/* button.btn_file_down {width:36px; height:36px; background:url('../images/icon_download.png') no-repeat center center / 80%; color:transparent;} */
+
+
+
+

@@ -6,7 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../../css/reset.css">
-	<link rel="stylesheet" href="../../css/admin_new.css">
 	<link rel="stylesheet" href="../../css/admin_atconnect.css">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="../../css/jquery-ui.css" />
@@ -20,13 +19,47 @@
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jqgrid/4.6.0/i18n/grid.locale-kr.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jqgrid/4.6.0/jquery.jqGrid.src.js"></script>
 </head>
+
 <body style="padding:20px;">
 	
 
-<div class="jqgrid_test_wrap">
+<!--
+*******************************
+******** jqgrid 적용시  ******** 
+*******************************
+
+기존 : 
+<div class="view_table">
+	<table>
+		...
+	</table>
+</div>
+// view_table 
+
+<div class="pagination_wrap">
+	<div class="pagination">
+		...
+	</div>
+</div>
+
+
+수정 :
+아래와 같습니다. 기본형인 테이블에만 적용부탁드립니다.   <div class="view_table vertical">에는 적용불가.
+
+<div class="jqgrid_table_wrap">
 	<table id="list"></table>
 	<div id="pager"></div>
 </div>
+-->
+
+
+
+<div class="jqgrid_table_wrap">
+	<table id="list"></table>
+	<div id="pager"></div>
+</div>
+
+
 
 <script>
 	$(document).ready(function() {
