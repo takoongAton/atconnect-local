@@ -75,21 +75,35 @@
 
 
 <section>
-
-	<div class="container_wrap">
-
-		<div class="content_wrap">
-
-			<div class="main_wrap" style="height:400px; display:flex; justify-content:center; align-items:center; background-color:#f9f9f9; border-radius:2px;;">
-				메인 컨텐츠가 들어갑니다.
+<style>
+.main_visual_wrap {width:100%; height:600px; margin:100px 0; background-color:#DDEAFF;}
+.main_visual_wrap div.inner {position:relative; max-width:1200px; margin:0 auto;}
+.main_visual_wrap div.inner span.main_bg_txt {position:absolute; bottom:60px; left:60px; width:100%; max-width:748px;}
+.main_visual_wrap div.main_visual {display:flex; justify-content:space-between; position:relative; max-width:1200px; margin:0 auto; z-index:1;}
+.main_visual_wrap div.main_visual div.txt_wrap {flex:1; padding:120px 0 0 60px;}
+.main_visual_wrap div.main_visual div.txt_wrap div.tit {}
+.main_visual_wrap div.main_visual div.txt_wrap div.tit strong {display:block; color:#213DA1; font-size:48px; line-height:71px;}
+.main_visual_wrap div.main_visual div.txt_wrap p.txt {margin-top:10px; color:#333; font-size:20px; line-height:32px; font-weight:400;}
+.main_visual_wrap div.main_visual div.txt_wrap button {height:72px; margin-top:40px; padding:22px 44px; background-color:#213DA1; border-radius:2px;}
+.main_visual_wrap div.main_visual div.txt_wrap button span {color:#fff; font-size:20px; line-height:29px; font-weight:500;}
+.main_visual_wrap div.main_visual div.img {width:600px; max-width:600px;}
+.main_visual_wrap div.main_visual span.main_bg_txt {}
+</style>
+	<div class="main_visual_wrap">
+		<div class="inner">
+			<div class="main_visual">
+				<div class="txt_wrap">
+					<div class="tit"><strong>올타임 스탁론</strong></div>
+					<p class="txt">언제 어디서나 간편한 주식 투자<br />
+						DSR 제한 없이 올타임(All Time)으로!</p>
+					<button type="button"><span>대출신청</span></button>
+				</div>
+				<div class="img"><img src="../../images/img_main.png" alt="메인 이미지"></div>
 			</div>
-
+			<span class="main_bg_txt"><img src="../../images/img_bg_txt.png" alt="ALLTIME"></span>
 		</div>
-		<!-- // content_wrap -->
-
 	</div>
-	<!-- // container_wrap -->
-
+	<!-- // main_visual_wrap -->
 
 </section>
 
@@ -121,7 +135,7 @@
 	<div class="footer">
 		<div class="inner">
 			<div class="info_wrap">
-				<div class="logo"><img src="../../images/img_logo.png" alt="에이티코넥"></div>
+				<div class="logo"><img src="../../images/img_logo_w.png" alt="에이티코넥"></div>
 				<div class="info_list">
 					<div class="row_wrap">
 						<div class="row">

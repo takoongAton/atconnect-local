@@ -240,15 +240,32 @@
 							<div class="row">
 								<div class="tit"><strong>상품선택</strong></div>
 								<div class="ipt_form">
-									<div class="ipt_wrap">
-										<div class="select_set">
-											<select name="" id="">
-												<option value="상품을 선택하세요" selected disabled hidden>상품을 선택하세요</option>
-												<option value="선취수수료 : 00.0% / 대출금리: 00.00% / 연장금리: 연장 시 변동">선취수수료 : 00.0% / 대출금리: 00.00% / 연장금리: 연장 시 변동</option>
-												<option value="집중투자율: 00.00% / 현금인출비율:00% / 로스컷비율: 00%">집중투자율: 00.00% / 현금인출비율:00% / 로스컷비율: 00%</option>
-											</select>
+									
+									<div class="custom_select">
+										<div class="btn"><button type="button" class="btn_triger"><span class="btn_txt">상품을 선택하세요.</span></button></div>
+										<div class="custom_select_optgroup">
+											<div class="options">
+												<label>
+													<input type="radio" name="select01">
+													<span class="checkmark"></span>
+													<span class="txt">
+														대출금리: 00.00%<br />
+														연장금리: 연장 시 변동<br />
+														선,후취구분 : 선취</span>
+												</label>
+												<label>
+													<input type="radio" name="select01">
+													<span class="checkmark"></span>
+													<span class="txt">
+														집중투자율: 00.00%<br />
+														현금인출비율:00%<br />
+														로스컷비율: 00%</span>
+												</label>
+											</div>
 										</div>
+										<!-- // custom_select_optgroup -->
 									</div>
+									<!-- // custom_select  -->
 									
 								</div>
 							</div>
@@ -433,5 +450,15 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="../../js/slick.min.js"></script>
 <script type="text/javascript" src="../../js/temp.js"></script>
+
+<script>
+/* 상품선택 */
+let btn_triger = document.querySelector("button.btn_triger");
+let custom_select_optgroup = document.querySelector(".custom_select_optgroup");
+btn_triger.addEventListener("click", function(item){
+	btn_triger.parentElement.closest("div.btn").classList.toggle("active");
+})
+/* // 상품선택 */
+</script>
 </body>
 </html>
