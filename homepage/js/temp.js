@@ -109,3 +109,25 @@ if(selectElement.length > 0) {
 	});
 }
 /* // select용 샘플 */
+
+
+
+/* custom select 테스트 */
+/* 상품선택 */
+let btn_triger = document.querySelector("button.btn_triger");
+let custom_select_optgroup = document.querySelector(".custom_select_optgroup");
+btn_triger.addEventListener("click", function(item){
+	btn_triger.parentElement.closest("div.btn").classList.toggle("active");
+})
+/* // 상품선택 */
+
+/* 상품 선택시 버튼명을 상품명으로변경 */
+let options = custom_select_optgroup.querySelectorAll("input");
+options.forEach(function(item){
+		item.addEventListener("change", function(){
+			btn_triger.querySelector("span").innerText = item.getAttribute("title");
+			// btn_triger.parentElement.closest("div.btn").classList.toggle("active");
+	})
+})
+/* // 상품 선택시 버튼명을 상품명으로변경 */
+/* // custom select 테스트 */
