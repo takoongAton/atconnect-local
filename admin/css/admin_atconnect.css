@@ -352,7 +352,7 @@ label.chkbox input:checked + span.checkmark::before {border-color:#fff;}
 /* 레이어팝업 기본 레이아웃(컨텐츠형) */
 .layer_popup {background-color:#fff;}
 .layer_popup div.dim {position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:30;}
-.layer_popup div.layer_inner {display:flex; flex-direction:column; position:fixed; top:50%; left:50%; min-width:800px; max-width:999px; max-height:calc(75vh - 1px); border-radius:4px; background-color:#EEF2F5; overflow-y:auto; transform:translate(calc(-50% + 150px),-50%); box-shadow:2px 10px 30px rgba(0,0,0,0.16); z-index:40; }
+.layer_popup div.layer_inner {display:flex; flex-direction:column; position:fixed; top:50%; left:50%; min-width:800px; max-width:1000px; max-height:round(to-zero, 75vh, 1px); border-radius:4px; background-color:#EEF2F5; overflow-y:auto; transform: translate(round(to-zero, calc(-50% + 150px), 1px) , round(to-zero, calc(-50% - 1px), 1px)); box-shadow:2px 10px 30px rgba(0,0,0,0.16); z-index:40;}
 .layer_popup div.layer_inner div.layer_header {position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; padding:20px;}
 .layer_popup div.layer_inner div.layer_body {flex:1; overflow-y:auto; padding:0 20px;}
 .layer_popup div.layer_inner div.layer_footer {position:-webkit-sticky; position:sticky; bottom:0; left:0; width:100%; padding:20px;}
