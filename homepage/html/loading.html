@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
-	<link rel="stylesheet" type="text/css" href="../../css/slick.css">
-	<link rel="stylesheet" type="text/css" href="../../css/atconnect_homepage.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/atconnect_homepage.css">
 	
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&display=swap" rel="stylesheet">
@@ -28,14 +28,14 @@
 
 <header>
 	<div class="inner">
-		<div class="logo"><h1><strong><img src="../../images/img_logo.png" alt="에이티코넥"></strong></h1></div>
+		<div class="logo"><h1><strong><img src="../images/img_logo.png" alt="에이티코넥"></strong></h1></div>
 		<div class="nav">
 			<ul class="gnb">
 				<li><a href="#g" class="depth1 active"><span>대출신청</span></a>
 					<div class="itemmenu">
 						<ul>
-							<li><a href="#g"><span>신규대출</span></a></li>
-							<li><a href="#g" class="current-page"><span>대환대출</span></a></li>
+							<li><a href="#g" class="current-page"><span>신규대출</span></a></li>
+							<li><a href="#g"><span>대환대출</span></a></li>
 							<li><a href="#g"><span>추가대출</span></a></li>
 						</ul>
 					</div>
@@ -76,39 +76,39 @@
 
 <section>
 	<div class="container_wrap">
-		
+
 		<div class="content_wrap">
 
 			<div class="loan_wrap">
 
 				<div class="loan_step_wrap">
 					<ol>
-						<li class="complete">
+						<li class="active">
 							<span class="step_icon">1</span>
 							<div>
 								<strong>Step 1</strong>
 								<span>본인인증</span>
 							</div>
 						</li>
-						<li class="complete">
+						<li>
 							<span class="step_icon">2</span>
 							<div>
 								<strong>Step 2</strong>
 								<span>고객동의</span>
 							</div>
 						</li>
-						<li class="active">
+						<li>
 							<span class="step_icon">3</span>
 							<div>
 								<strong>Step 3</strong>
-								<span>계좌조회</span>
+								<span>상품선택</span>
 							</div>
 						</li>
 						<li>
 							<span class="step_icon">4</span>
 							<div>
 								<strong>Step 4</strong>
-								<span>대환신청</span>
+								<span>대출신청</span>
 							</div>
 						</li>
 						<li>
@@ -121,169 +121,111 @@
 					</ol>
 				</div>
 				<!-- // loan_step_wrap -->
-		
-		
+
 				<div class="loan_content">
-		
+
 					<div class="loan_group">
-						<div class="box_alert">
-							<ul>
-								<li><p>증권계좌 담보평가를 위해 본인명의의 증권계좌번호(기존대출계좌 및 대환대출계좌)를 입력해 주십시오.</p></li>
-								<li><p>증권계좌의 담보평가액(예수금+주식)이 100만원 이상 보유중이어야 하며, 대출신청금액 최소 100만원 이상이어야 진행 가능합니다.</p></li>
-								<li><p>대출신청은 증권계좌 1계좌당 1회에 한하여 가능하오니, 참고하시기 바랍니다.</p></li>
-							</ul>
-						</div>
-						<!-- // box_alert -->
-			
-						<div class="form_wrap">
-			
-							<div class="row">
-								<div class="tit"><strong>고객구분</strong></div>
-								<div class="ipt_form">
-									<div class="ipt_wrap">
-										<div class="select_set">
-											<select name="" id="">
-												<option value="고객을 선택하세요" selected disabled hidden>고객을 선택하세요</option>
-												<option value="개인">개인</option>
-												<option value="단체">단체</option>
-											</select>
+
+						<div class="loan_conetnet">
+				
+							<div class="form_wrap">
+								<div class="row">
+									<div class="tit"><strong>본인인증</strong></div>
+									<div class="ipt_form">
+										<div class="btn_set">
+											<button type="button" class="btn_default"><span>휴대폰으로 본인인증</span></button>
 										</div>
 									</div>
 								</div>
-							</div>
-			
-							<div class="row">
-								<div class="tit"><strong>기존대출 계좌번호<br />(지급계좌)</strong></div>
-								<div class="ipt_form">
-									<div class="ipt_wrap">
-										<div class="select_set">
-											<select name="" id="">
-												<option value="증권사 선택" selected disabled hidden>증권사 선택</option>
-												<option value="증권사1">증권사1</option>
-												<option value="증권사2">증권사2</option>
-											</select>
-										</div>
-										<div class="ipt_set">
-											<div><input type="text" placeholder="계좌번호를 입력하세요" /></div>
-										</div>
-									</div>
-			
-									<br />
-			
-									<div class="file_upload_wrap">
-										<button type="button" class="btn_add_file"><span>잔고현황 캡쳐화면 파일 첨부</span></button>
-										<div class="file_alert">
-											<p>증권사 계좌번호가 확인 가능한 화면(MTS,HTS)을 캡쳐하여 주십시오.</p>
-											<p>JPG, JPEG, GIF, PNG 파일만 가능</p>
-											<p>파일제한크기: 6.00MB</p>
-										</div>
-										<!-- // file_alert -->
-			
-										<ul class="file_list">
-											<li class="file_item">
-												<p>
-													<strong class="file_name">document_file_name.doc</strong>
-													<span class="file_size">(300kb)</span>
-												</p>
-												<button type="button" class="btn_del"><span class="txt">삭제</span></button>
-											</li>
-											<!-- <li class="file_item">
-												<p>
-													<strong class="file_name">document_file_namedocument_file_namedocument_file_namedocument_file_namedocument_file_namedocument_file_namedocument_file_name.doc</strong>
-													<span class="file_size">(300kb)</span>
-												</p>
-												<button type="button" class="btn_del"><span class="txt">삭제</span></button>
-											</li> -->
-											<!-- <li class="file_item">
-												<p>
-													<strong class="file_name">document_file_name.doc</strong>
-													<span class="file_size">(300kb)</span>
-												</p>
-												<button type="button" class="btn_del"><span class="txt">삭제</span></button>
-											</li> -->
-										</ul>
-										<!-- // file_list -->
-									</div>
-									<!-- // file_upload_wrap -->
-									 
-									<br />
-			
-								</div>
-							</div>
-							
-			
-							<div class="row">
-								<div class="tit"><strong>대환대출 계좌번호<br />(질권계좌)</strong></div>
-								<div class="ipt_form">
-									<div class="ipt_wrap">
-										<div class="select_set">
-											<select name="" id="">
-												<option value="증권사 선택" selected disabled hidden>증권사 선택</option>
-												<option value="증권사1">증권사1</option>
-												<option value="증권사2">증권사2</option>
-											</select>
-										</div>
-										<div class="ipt_set">
-											<div><input type="text" placeholder="계좌번호를 입력하세요" /></div>
-											<button type="button" class="btn_address"><span>조회</span></button>
-										</div>
-									</div>
-									<div class="form_alert">
-										<ul>
-											<li><p class="txt"><span>*</span>위탁계좌만 거래가 가능합니다.</p></li>
-											<li><p class="txt"><span>*</span>계좌번호는 증권사 HTS에서 확인하실 수 있습니다.</p></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-			
-							<div class="row">
-								<div class="tit"><strong>상품선택</strong></div>
-								<div class="ipt_form">
-									
-									<div class="custom_select">
-										<div class="btn"><button type="button" class="btn_triger"><span class="btn_txt">상품을 선택하세요.</span></button></div>
-										<div class="custom_select_optgroup">
-											<div class="options">
-												<label>
-													<input type="radio" name="select01" title="대출금리: 00.00% / 연장금리: 연장 시 변동 / 선,후취구분 : 선취">
-													<!-- <span class="checkmark"></span> -->
-													<span class="txt">
-														대출금리: 00.00%<br />
-														연장금리: 연장 시 변동<br />
-														선,후취구분 : 선취</span>
-												</label>
-												<label>
-													<input type="radio" name="select01" title="집중투자율: 00.00% / 현금인출비율:00% / 로스컷비율: 00%">
-													<!-- <span class="checkmark"></span> -->
-													<span class="txt">
-														집중투자율: 00.00%<br />
-														현금인출비율:00%<br />
-														로스컷비율: 00%</span>
-												</label>
+				
+								<div class="row">
+									<div class="tit"><strong>성명</strong></div>
+									<div class="ipt_form">
+										<div class="ipt_wrap">
+											<div class="ipt_set">
+												<input type="text" placeholder="본인성명" />
 											</div>
 										</div>
-										<!-- // custom_select_optgroup -->
+										<div class="form_alert" style="display:none;">
+											<p class="em">경고문구가 들어갑니다.</p>
+										</div>
 									</div>
-									<!-- // custom_select  -->
-									
 								</div>
+				
+				
+								<div class="row">
+									<div class="tit"><strong>휴대폰번호</strong></div>
+									<div class="ipt_form">
+										<div class="ipt_wrap">
+											<div class="ipt_set">
+												<input type="text" placeholder="휴대폰번호" />
+											</div>
+										</div>
+										<div class="form_alert" style="display:none;">
+											<p class="em">경고문구가 들어갑니다.</p>
+										</div>
+									</div>
+								</div>
+				
+								<div class="row">
+									<div class="tit"><strong>주민등록번호</strong></div>
+									<div class="ipt_form">
+										<div class="ipt_wrap">
+											<div class="ipt_set">
+												<input type="text" placeholder="주민번호 앞자리" />
+											</div>
+											<span class="dash">-</span>
+											<div class="ipt_set">
+												<input type="password" placeholder="주민번호 뒷자리" />
+											</div>
+										</div>
+									</div>
+								</div>
+				
+								<hr>
+
+								<div class="agree_wrap">
+									<div class="chk_all">
+										<label>
+											<input type="checkbox" class="agree all">
+											<span class="checkmark"></span>
+											<span class="txt">[필수] 고유 식별 정보 처리 동의</span>
+										</label>
+									</div>
+								</div>
+								<!-- // agree_wrap -->
+
+								<hr>
+								
+								<div class="btn_group">
+									<div>
+										<button type="button" class="btn_next"><span>다음</span></button>
+									</div>
+								</div>
+								<!-- // btn_group -->
+								
 							</div>
-			
-						</div>
-						<!-- // form_wrap -->
-			
-						<hr>
-						
-						<div class="btn_group">
-							<div>
-								<button type="button"><span>다음</span></button>
+							<!-- // form_wrap -->
+				
+							<hr>
+				
+							<div class="box_alert">
+								<ul>
+									<li>
+										<p>대출신청 시간은 증권사영업일 08:30 ~ 16:00(토, 일요일, 공휴일 제외)입니다.</p>
+										<p>증권계좌의 담보평가액(예수금+주식)이 100만원 이상 보유중이어야 하며, 대출신청금액 최소 100만원 이상이어야 진행 가능합니다.</p>
+										<p>휴대폰 본인인증을 통하여 가능합니다.</p>
+									</li>
+								</ul>
 							</div>
+							<!-- // box_alert -->
+							 
 						</div>
-			
+						<!-- // loan_content -->
+	
 					</div>
 					<!-- // loan_group -->
-		
+
 				</div>
 				<!-- // loan_content -->
 
@@ -292,12 +234,13 @@
 
 		</div>
 		<!-- // content_wrap -->
-		
+
 	</div>
 	<!-- // container_wrap -->
 
-
 </section>
+
+
 
 <div class="footer_wrap">
 	<div class="footer_privacy_wrap">
@@ -322,12 +265,12 @@
 				대출시 신용등급 또는 개인신용평점 하락으로 다른 금융거래가 제약 받을 수 있습니다.</p>
 		</div>
 	</div>
-	<!-- // footer_alert -->
-	 
+
+
 	<div class="footer">
 		<div class="inner">
 			<div class="info_wrap">
-				<div class="logo"><img src="../../images/img_logo_w.png" alt="에이티코넥"></div>
+				<div class="logo"><img src="../images/img_logo.png" alt="에이티코넥"></div>
 				<div class="info_list">
 					<div class="row_wrap">
 						<div class="row">
@@ -361,28 +304,22 @@
 							</dl>
 						</div>
 					</div>
-					<!-- // row_wrap -->
 					<div class="row_wrap">
-						<div class="row">
+						<div class="reg">
 							<dl>
 								<dt>대부업등록번호</dt>
 								<dd>000-00-00000</dd>
 							</dl>
-						</div>
-						<div class="row">
 							<dl>
 								<dt>대부중계업 등록번호 </dt>
 								<dd>000000000000000000000</dd>
 							</dl>
 						</div>
 					</div>
-					<!-- // row_wrap -->
+					
 				</div>
-				<!-- // info_list -->
 			</div>
-			<!-- // info_wrap -->
 		</div>
-		<!-- // inner -->
 		<div class="copyright">Copyright ⓒ 주식회사 에이티코넥 All rights reserved.</div>
 	</div>
 	<!-- // footer -->
@@ -453,8 +390,20 @@
 
 
 
+<div class="layer_loading">
+	<div class="dim"></div>
+	<div class="layer_content">
+		<div class="loader"></div>
+		<p class="txt">대출승인을 심사중입니다.</p>
+	</div>
+	<!-- // layer_content -->
+</div>
+<!-- // layer_loading -->
+
+
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/slick.min.js"></script>
-<script type="text/javascript" src="../../js/temp.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script type="text/javascript" src="../js/temp.js"></script>
 </body>
 </html>
