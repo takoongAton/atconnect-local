@@ -1,0 +1,690 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>����Ƽ�ڳ� ������</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/ui.jqgrid.css" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+	
+	<script type="text/javascript" src="../../js/lib/jquery-1.12.4.min.js"></script>
+	<script src="../../js/common/CommonUtil.js?ver=1.0"></script>
+	<script src="../../js/common/MessageUtil.js?ver=1.0"></script>
+	<script src="../../js/common/GridUtil.js?ver=1.0"></script>
+	
+	<script type="text/javascript" src="../../js/lib/jquery.jqGrid.min.js" ></script>
+	<script type="text/javascript" src="../../js/lib/grid.locale-ko.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js" ></script>
+</head>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#btnLogout").on("click", function() {
+		action_popup.confirm("�α׾ƿ��� �ϰڽ��ϱ�?", function (res) {
+			if (res) {
+				fnLogout();
+			} 
+		});
+	});
+	
+	$("#btnListMove").on("click", function() {
+		
+		
+		// ������ �̵�
+		$("#frmSelect").attr("action", "../../bond/selectBondView.do");
+		$("#frmSelect").attr("method", "post");
+		$("#frmSelect").submit();
+	});
+	
+	$("#btnFileView").on("click", function() {
+		fnBondFile();
+	});
+	
+	$("#btnClose").on("click", function() {
+		$("#fileLayer").css('display', 'none');
+		return;
+	});
+	
+	var receiptList_colNames = ['����', '���ڱݾ�', '���ڰ�������', '���ڰ��������', '��������', '���Կ���'];
+	var receiptList_colModel = [
+		{name:'cdNm',index:'cdNm', width:40, align:"center"},
+		{name:'receiptMoney',index:'receiptMoney', width:120, align:"center"},
+		{name:'interestSDate',index:'interestSDate', width:60, align:"center"},
+		{name:'interestEDate',index:'interestSDate', width:60, align:"center"},
+		{name:'payDate',index:'payDate', width:60, align:"center"},
+		{name:'receiptYn',index:'receiptYn', width:40, align:"center"}
+   	];
+	
+	var gridOption = {
+		gridNm: "#receiptList"
+		,datatype : "local"
+		,height: 250
+		,colNames: receiptList_colNames
+		,colModel: receiptList_colModel
+		,loadComplete: function(data) {
+			
+		}
+		,ondblClickRow:function(rowId,status){
+			fnBondListOnSelectRow(rowId,status);
+		}
+	}
+	
+	gridUtil.fnGridCall(gridOption);
+	
+	
+	var data = {};
+	
+	data.loanNo = $("#loanNo").val();
+	
+	$("#receiptList").setGridParam(
+			{
+				url:"../../bond/selectBondInterestReceiptGridList.do",
+				datatype:'json',
+				postData:data
+			}
+	).trigger("reloadGrid");
+	
+})
+
+function fnBondFile(){
+	
+	var data = {};
+	
+	data.loanNo = $("#loanNo").val();
+	
+	var option = {
+		url: "../../loan/selectBondFileList.do"
+		,data: data
+		,callbackFn: function(res) {
+			
+			$("#fileLayer").css('display', 'block');
+			
+			$("#fName").text($("#name").text());
+			$("#fBirth").text($("#birth").text());
+			$("#fPhoneNo").text($("#phoneNo").text());
+			$("#fLoanNo").text($("#loanNo").val());
+			
+			var lstBondFile = res.lstBondFile;
+			
+			var innerHtml = "";
+			for (var i = 0; i <lstBondFile.length; i++) {
+				innerHtml += '<tr>';
+				innerHtml += '<td>'+lstBondFile[i].rownum+'</td>';
+				innerHtml += '<td class="tal">'+lstBondFile[i].fileNm+'</td>';
+				innerHtml += '<td><a id="'+i+'" href=""></a><button type="button" class="btn_file_down" '+'onclick="fnFileDown('+i+', '+lstBondFile[i].fileSeq+')"><span>�ٿ�ε�</span></button></td>';
+				innerHtml += '</tr>';
+			};
+			
+			$("#fileList").empty();
+			
+			$("#fileList").append(innerHtml);
+			
+		}
+	}
+		
+	commonUtil.fnAjaxCall(option);
+		
+}
+
+function fnFileDown(i, fileSeq){
+	
+	$("#"+i).prop("href", "../../cmmn/selectFileDownload.do?commonFileMgrTSeq="+fileSeq);
+	$("#"+i).get(0).click();
+	
+	
+}
+
+function fnLogout(){
+	
+	var option = {
+			 url : "../../logout.do"
+			,data : null
+			,callbackFn : function(res) {
+					
+				// ������ �̵�
+				$("#frmComm").attr("action", "../../index.do");
+				$("#frmComm").attr("method", "post");
+				$("#frmComm").submit();
+				
+			}
+	}
+	
+	commonUtil.fnAjaxCall(option);
+}
+
+function fnMovePage(url) {
+	
+	//window.location.href=""+url;
+	// ������ �̵�
+	$("#frmSelect").attr("action", ""+url);
+	$("#frmSelect").attr("method", "post");
+	$("#frmSelect").submit();
+}
+
+</script>
+
+<body>
+<form id="frmSelect" name="frmSelect" method="post">
+	<input type="hidden" id="loanNo" name="loanNo" value="S20240900016"../../>
+	<input type="hidden" id="loanDetailTSeq" name="loanDetailTSeq" value="20"../../>
+</form>
+<div class="wrap">
+	<div class="aside">
+		<div id="menu_wrap">
+			<h1 class="logo"><a href="javascript:fnMovePage('/main.do')"><img src="../../images/img_logo.png" alt="�ΰ�" /></a></h1>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="������"></span><span class="txt">����ɻ�</span></a>
+						<ul>
+							<li><a href="javascript:fnMovePage('/loan/selectNewView.do')" class="depth3"><span class="txt">�űԴ���</span></a></li>
+							<li><a href="javascript:fnMovePage('/loan/selectReplacementView.do')" class="depth3"><span class="txt">��ȯ����</span></a></li>
+							<li><a href="javascript:fnMovePage('/loan/selectAddView.do')" class="depth3"><span class="txt">�߰�����</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">����ɻ�</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="������"></span><span class="txt">ä�ǰ���</span></a>
+						<ul>
+							<li><a href="javascript:fnMovePage('/bond/selectBondView.do')" class="depth3"><span class="txt">ä����Ȳ</span></a></li>
+							<li><a href="javascript:fnMovePage('/bond/selectReceiptView.do')" class="depth3"><span class="txt">������Ȳ</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">��ü��Ȳ</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="������"></span><span class="txt">��ǰ����</span></a>
+						<ul>
+							<li><a href="javascript:fnMovePage('/product/selectProductView.do')" class="depth3"><span class="txt">��ǰ����Ʈ</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="������"></span><span class="txt">�������</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">�������Ǿ��</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="������"></span><span class="txt">�Խ��ǰ���</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">�������װ���</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">�Խù�������</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="������"></span><span class="txt">�ý��۰���</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">�����ڰ���</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // menu -->
+	</div>
+
+<div class="content_wrap">
+   <div class="header">
+			<div class="user_wrap">
+				<p class="txt">�ȳ��ϼ���</p>
+				<div class="user">
+					<span>���۰�����</span>
+					��
+				</div>
+				<button type="button" class="btn_logout" id="btnLogout"><span>�α׾ƿ�</span></button>
+			</div>
+			<!-- // user_wrap -->
+		</div>
+		<!-- // header -->
+   <div class="content">	
+<div class="popup_wrap">
+	<div class="popup_header">
+		<div class="title">
+			<strong>ä�� �� ����</strong>
+		</div>
+	</div>
+	<div class="popup_body">
+		<div class="content_box">
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� ��������</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>��������</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="title">������</th>
+							<td colspan="3" id="name">�躴��</td>
+						</tr>
+						<tr>
+							<th class="title">�������</th>
+							<td id="birth">19730825</td>
+							<th class="title">����ó</th>
+							<td id="phoneNo">01077230727</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+		</div>
+		<!-- // content_box -->
+
+			
+		<div class="content_box">
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� ä������</strong>
+				</div>
+				<div class="btn_group">
+					<button type="button" class="btn"><span>�����̷�</span></button>
+				</div>
+			</div>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="title em">���Ź�ȣ</th>
+							<td>S20240900016</td>
+							<th class="title em">���»���</th>
+							<td>Ȱ��</td>
+						</tr>
+						<tr>
+							<th class="title">�����ǰ</th>
+							<td>��ȯ����</td>
+							<th class="title">���ű��</th>
+							<td>�ֽ�ȸ�� ����Ƽ�ڳ�</td>
+						</tr>
+						<tr>
+							<th class="title">���� �������</th>
+							<td>-</td>
+							<th class="title">���� ���ǻ��</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th class="title">���ǰ��¹�ȣ</th>
+							<td>44443333****</td>
+							<th class="title">���ǻ��</th>
+							<td>�ϳ�����</td>
+						</tr>
+						<tr>
+							<th class="title">����ݾ�</th>
+							<td>20,000,000 ��</td>
+							<th class="title">����Ⱓ</th>
+							<td>3����(���尡��)</td>
+						</tr>
+						<tr>
+							<th class="title">�����ܾ�</th>
+							<td>20,000,000 ��</td>
+							<th class="title">����ݸ�</th>
+							<td>15.300%/����</td>
+						</tr>
+						<tr>
+							<th class="title">��������</th>
+							<td>2024-12-26</td>
+							<th class="title">����������</th>
+							<td>10.00%</td>
+						</tr>
+						<tr>
+							<th class="title">�ν��ƺ���</th>
+							<td>20.00%</td>
+							<th class="title">�����������</th>
+							<td>30.00%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<hr>
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� �ҵ�����</strong>
+				</div>
+				<div class="btn_group">
+					<button type="button" class="btn" id="btnFileView"><span>��๮��</span></button>
+				</div>
+			</div>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="title">�ҵ���������</th>
+							<td><a href='/cmmn/selectFileDownload.do?commonFileMgrTSeq=23'><span>����.jpg</span></a></td>
+							<th class="title">�ҵ��������</th>
+							<td>����</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<hr>
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� EOD ����</strong>
+				</div>
+				<div class="btn_group">
+					<button type="button" class="btn"><span>��������</span></button>
+					<button type="button" class="btn"><span>�ν���</span></button>
+				</div>
+			</div>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="title">EOD �߻�����</th>
+							<td></td>
+							<th class="title">EOD �����</th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+
+		<div class="content_box">
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� ���� �̷�</strong>
+				</div>
+			</div>
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:25%;">
+						<col style="width:auto;">
+						<col style="width:25%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>����</th>
+							<th>��û����</th>
+							<th>����ݾ�</th>
+							<th>��������</th>
+					</thead>
+					<tbody>
+						
+						<tr>
+							<td>�ű�</td>
+							<td>2024-09-27</td>
+							<td>20,000,000 ��</td>
+							<td>2024-09-27</td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<!-- // content_box -->
+
+
+
+		<div class="content_box">
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� �ݸ� �̷�</strong>
+				</div>
+			</div>
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:25%;">
+						<col style="width:auto;">
+						<col style="width:25%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>����</th>
+							<th>��û����</th>
+							<th>��������</th>
+							<th>��������</th>
+							<th>�ݸ�</th>
+					</thead>
+					<tbody>
+						
+						<tr>
+							<td>1</td>
+							<td>2024-09-27</td>
+							<td>2024-09-27</td>
+							<td>2024-12-26</td>
+							<td>15.300 %</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<!-- // content_box -->
+		
+		<div class="content_box">
+		<div class="box_title temp">
+			<div class="title">
+				<strong>�� ��������</strong>
+			</div>
+		</div>
+			
+		<div class="jqgrid_table_wrap">
+			<table id="receiptList"></table>
+		</div>
+		</div>
+	</div>
+	<!-- // popup_body -->
+
+	
+
+<div class="popup_footer">
+		<div class="btn_group">
+			<button type="button" id="btnListMove"><span>���</span></button>
+		</div>
+	</div>
+</div>
+
+<div class="layer_popup" id="fileLayer" style="display:none;">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_header">
+			<div class="title"><strong>��� ���� ��ȸ</strong></div>
+		</div>
+		<!-- // layer_header -->
+		
+		<div class="layer_body">
+			<div class="content_box">
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� ��������</strong>
+				</div>
+				<!-- <div class="btn_group">
+					<button type="button" class="btn"><span>��������</span></button>
+					<button type="button" class="btn"><span>EOD</span></button>
+				</div> -->
+			</div>
+
+			<div class="view_table vertical">
+				<table>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="title">������</th>
+							<td id="fName"></td>
+							<th class="title">���Ź�ȣ</th>
+							<td id="fLoanNo"></td>
+						</tr>
+						<tr>
+							<th class="title">�������</th>
+							<td id="fBirth"></td>
+							<th class="title">����ó</th>
+							<td id="fPhoneNo"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- // view_table -->
+		</div>
+		<!-- // content_box -->
+
+
+		<div class="content_box">
+
+			<div class="box_title temp">
+				<div class="title">
+					<strong>�� ��๮��</strong>
+				</div>
+			</div>
+
+			<div class="view_table">
+				<table>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:auto;">
+						<col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>��������</th>
+							<th>�ٿ�ε�</th>
+					</thead>
+					<tbody id="fileList">
+						
+					</tbody>
+					 
+				</table>
+			</div>
+		</div>
+		<!-- // content_box -->
+		
+		</div>
+		<!-- // layer_body -->
+
+		<div class="layer_footer">
+				<div class="btn_group">
+					<button class="btn" id="btnClose"><span>�ݱ�</span></button>
+				</div>
+			</div>
+			<!-- // layer_footer -->
+
+	</div>
+	<!-- // layer_inner -->
+	
+	
+</div>
+<!-- // layer_popup -->
+
+
+<div class="layer_alert"id="layer_alert" style="display:none;">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_content">
+			<span class="icon"><img src="../../images/ico_notice.png" alt="���"></span>
+			<div class="txt_wrap" id="alertMsg">
+				
+			</div>
+		</div>
+		
+		<div class="btn_group">
+			<button type="button" class="btn_next" id="btn_alert_next"><span>Ȯ��</span></button>
+		</div>
+	</div>
+</div>
+
+<div class="layer_alert"id="layer_confirm" style="display:none;">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_content">
+			<span class="icon"><img src="../../images/ico_notice.png" alt="���"></span>
+			<div class="txt_wrap" id="confirmMsg">
+				
+			</div>
+		</div>
+		
+		<div class="btn_group">
+			<button type="button" class="btn_cancel" id="btn_confirm_cancel"><span>���</span></button>
+			<button type="button" class="btn_next" id="btn_confirm_next"><span>Ȯ��</span></button>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+
+<div class="layer_loading" style="display:none;" id="loading">
+	<div class="dim"></div>
+	<div class="layer_content">
+		<div class="loader"></div>
+		<p class="txt">ó�����Դϴ�.</p>
+	</div>
+	<!-- // layer_content -->
+</div>
+<!-- // layer_loading -->
+</div>
+</body>
+<script src="../../js/temp.js?ver=1.0"></script>
+</html>

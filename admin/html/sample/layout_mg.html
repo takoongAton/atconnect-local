@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>admin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/admin_atconnect.css">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/ui.jqgrid.css" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+</head>
+<body>
+
+	
+<div class="wrap">
+	<div class="aside">
+		<div id="menu_wrap">
+			<h1 class="logo"><img src="../../images/img_logo.png" alt="로고" /></h1>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">대출심사</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">신규대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">대환대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">추가대출</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">연장심사</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">채권관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">채권현황</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">납인현황</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">연체현황</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">상품관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">상품리스트</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">약관관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">고객동의양식</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">게시판관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">공지사항관리</span></a></li>
+							<li><a href="#" class="depth3"><span class="txt">게시문서관리</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="depth2"><span class="ico"><img src="../../images/ico_eg.png" alt="아이콘"></span><span class="txt">시스템관리</span></a>
+						<ul>
+							<li><a href="#" class="depth3"><span class="txt">관리자계정</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // menu -->
+	</div>
+
+	<div class="container">
+		<div class="header">
+			<div class="user_wrap">
+				<p class="txt">안녕하세요</p>
+				<div class="user">
+					<span>Admin</span>
+					<em>슈퍼관리자</em>
+					님
+				</div>
+				<button type="button" class="btn_logout"><span>로그아웃</span></button>
+			</div>
+			<!-- // user_wrap -->
+		</div>
+		<!-- // header -->
+
+		<div class="content_wrap">
+			<div class="page_nav">
+				<span class="home">Home</span>
+				<span>Main</span>
+			</div>
+
+			<div class="page_tit">
+				<strong>AT CONNECK Admin 사이트에 오신걸 환영 합니다.</strong>
+			</div>
+
+			<div class="content">
+
+				<div class="content_box">
+
+			
+					<div class="board_write">
+						<table>
+							<tr>
+								<th>제목</th>
+								<td colspan="3"><input type="text" class="w100" value="[필수] 개인(신용)정보 수집 및 이용 동의서"></td>
+								<th>필수여부</th>
+								<td>
+									<select name="" id="">
+										<option value="선택">선택</option>
+										<option value="필수">필수</option>
+									</select>
+								</td>
+							</tr>
+		
+							<tr>
+								<th>문서구분</th>
+								<td>
+									<select name="" id="">
+										<option value="선택">선택</option>
+										<option value="개인정보">개인정보</option>
+										<option value="이용약관">이용약관</option>
+										<option value="대출약정">대출약정</option>
+										<option value="최종양식">최종양식</option>
+									</select>
+								</td>
+								<th>등록일자</th>
+								<td>2023-01-01 00:00:00</td>
+								<th>등록자명</th>
+								<td>슈퍼관리자</td>
+							</tr>
+							<tr>
+								<th>동의구분</th>
+								<td>
+									<select name="" id="">
+										<option value="동의함">동의함</option>
+										<option value="항목">항목</option>
+									</select>
+								</td>
+								<th>수정일자</th>
+								<td>2023-01-01 00:00:00</td>
+								<th>수정자명</th>
+								<td>담당자1</td>
+							</tr>
+							
+							<tr>
+								<th>사용여부</th>
+								<td>
+									<select name="" id="">
+										<option value="예">예</option>
+										<option value="아니오">항목</option>
+									</select>
+								</td>
+								<th></th>
+								<td></td>
+								<th></th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>약관내용</th>
+								<td colspan="5">
+									약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />
+									약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />
+									약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />약관 내용이 들어갑니다.<br />
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- // board_write -->
+		
+					
+		
+				</div>
+				<!-- // content_box -->
+
+			</div>
+			<!-- // content -->
+
+		</div>
+		<!-- // content_wrap -->
+	</div>
+	<!-- // container -->
+</div>
+<!-- // wrap -->
+	
+
+	
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="../../js/temp.js"></script>
+<script>
+	
+$( function() {
+	// let ipt_date_c = document.querySelectorAll(".ipt_date");
+	// ipt_date_c.forEach(function(item){
+	// 	item.addEventListener("focus", function(){
+	// 			item.datepicker();
+	// 		}
+	// 	)
+	// })
+    $( ".ipt_date" ).datepicker();
+  } );
+</script>
+</body>
+</html>
