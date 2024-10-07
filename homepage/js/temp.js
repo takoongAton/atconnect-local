@@ -136,3 +136,17 @@ if(custom_select_optgroup) {
 
 /* // 상품 선택시 버튼명을 상품명으로변경 */
 /* // custom select 테스트 */
+
+let btn_tooltips = document.querySelector(".btn_tooltips");
+if(btn_tooltips) {
+	let layer_tooltips = document.querySelector(".layer_tooltips");
+	if(layer_tooltips) {
+		btn_tooltips.addEventListener("mouseenter", function(){
+			layer_tooltips.style.display = "block";
+		})
+		btn_tooltips.addEventListener("mouseleave", function(){
+			layer_tooltips.style.display = "none";
+		})
+	}
+
+}
