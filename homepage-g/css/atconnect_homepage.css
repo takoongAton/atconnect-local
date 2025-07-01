@@ -1018,7 +1018,7 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 .main_visual_wrap div.main_visual .txt_wrap {text-align:right;}
 header .inner {position:relative;}
 header .inner div.lang {display:flex; align-items:center; position:absolute; top:-36px; right:0; border-radius:0 0 4px 4px; transition:opacity 0.2s ease-in-out; overflow:hidden;}
-header .inner div.lang a {display:inline-block; padding:1em 2em; background-color:#ddd;}
+header .inner div.lang a {display:inline-block; padding:1em 2em; background-color:#ddd; text-align:center;}
 header .inner div.lang a.active {background-color:#333;}
 header .inner div.lang a span {display:inline-block; color:#333; font-size:1em; line-height:1em;}
 header .inner div.lang a.active span{color:#fff;}
