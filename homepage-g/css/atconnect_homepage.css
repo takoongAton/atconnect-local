@@ -1027,7 +1027,7 @@ body header.active .inner div.lang {opacity:0;}
 body header.mobile .inner div.lang {opacity:1; margin-right:1em; border-radius:2px;}
 @media only screen and (max-width: 786px) {
     header .inner div.lang {position:static;}
-	header .inner div.lang a {padding:0.5em 1em;}
+	header .inner div.lang a {padding:0.5em;}
 	header .inner div.lang a span {font-size:14px;}
 }
 
