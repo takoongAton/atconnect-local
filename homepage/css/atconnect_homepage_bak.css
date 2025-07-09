@@ -19,7 +19,6 @@ body header.home {background-color:transparent;}
 body header .inner {display:-ms-flexbox; display:flex; justify-content:space-between;  align-items:center; width:100%; max-width:1200px; margin:0  auto;}
 body header .inner div.nav {display:-ms-flexbox; display:flex; position:static; top:auto; right:auto; bottom:auto; background-color:rgba(0,0,0,0);}
 body header .logo {flex:1;}
-body header .logo a {display:inline-block;}
 body header .logo h1 {display:flex; align-items:center; height:72px;color:#fff;  font-weight:bold;}
 body header .logo h1 strong {display:inline-block; width:180px; font-size:24px; line-height:36px;}
 
@@ -307,7 +306,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .board_list_wrap div.board_item p.tit {flex:1;}
 .board_list_wrap div.board_item div.file {width:100px;}
 .board_list_wrap div.board_item div.date {width:100px;}
-.board_list_wrap div.board_item span.ico_file {display:inline-block; min-width:20px; width:20px; height:20px; background:url('../images/ico_file.png') no-repeat center / contain; color:transparent; white-space:nowrap;}
+.board_list_wrap div.board_item span.ico_file {min-width:20px; width:20px; height:20px; background:url('../images/ico_file.png') no-repeat center / contain; color:transparent; white-space:nowrap;}
 .board_list_wrap div.board_item button.btn_down {min-width:20px; width:20px; height:20px; background:url('../images/ico_file.png') no-repeat center / contain; color:transparent; white-space:nowrap;}
 .board_list .board_item {border-bottom:1px solid #ddd;}
 .board_list .board_nodata {padding:50px; text-align:center;}
@@ -367,7 +366,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 
 
 /* 공지사항 페이지 */
-.pagination_wrap {width:100%; max-width:1200px; margin:0 auto; margin-top:72px; text-align:center;}
+.pagination_wrap {width:100%; max-width:1200px; margin:0 auto; margin-top:2em; text-align:center;}
 .pagination_wrap .pagination {display:flex; justify-content:center; align-items:center; text-align:center;}
 .pagination_wrap .pagination a {display:inline-block; margin:0 2px; padding:0 8px; color:black; font-size:20px; line-height:20px; text-decoration:none;}
 .pagination_wrap .pagination a.prev {margin:0 4px;}
@@ -675,7 +674,7 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 
 /* 항목 선택 */
 .select_group {display:flex; justify-content:flex-start; width:100%; padding:0.5em 0;}
-.select_group label {display:flex; justify-content:center; align-items:center; position:relative; width:100%; min-width:20%; height:3.75em; color:#555; cursor:pointer;}
+.select_group label {display:flex; justify-content:center; align-items:center; position:relative; width:100%; min-width:25%; height:3.75em; color:#555; cursor:pointer;}
 .select_group.multi {flex-wrap:wrap;}
 .select_group.multi label {width:25%;}
 .select_group label span.checkmark {display:flex; justify-content:center; align-items:center; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #ddd; background-color:#fff;}
@@ -855,11 +854,11 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 .custom_select div.btn {}
 .custom_select div.btn.active + .custom_select_optgroup {display:block;}
 .custom_select div.btn button.btn_triger {position:relative; width:100%; height:60px; padding:0 24px; border:0 none; color:#999; font-size:18px; background:url('../images/ico_arrow_u.png') no-repeat right 24px center / 36px 36px; text-align:left;}
-.custom_select_optgroup {display:block; margin-top:10px;}
+.custom_select_optgroup {display:none; margin-top:10px;}
 .custom_select_optgroup div.options {display:flex; gap:20px;}
 .custom_select_optgroup div.options label {display:flex; gap:10px; position:relative; width:100%; background-color:#fff; line-height:1.5em; cursor:pointer;}
 .custom_select_optgroup div.options label input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
-.custom_select_optgroup div.options label input + span.checkmark {display:inline-block; position:relative; width:26px; height:26px; background-color:#fff; border:1px solid #ddd; border-radius:100%;}
+.custom_select_optgroup div.options label input + span.checkmark {display:none; position:relative; width:26px; height:26px; background-color:#fff; border:1px solid #ddd; border-radius:100%;}
 .custom_select_optgroup div.options label input + span.checkmark::before {content:""; display:block; position:absolute; top:50%; left:50%; width:44%; height:44%; background-color:#ddd; border-radius:100%; transform:translate(-50%,-50%);}
 .custom_select_optgroup div.options label input ~ span.txt {flex:1; display:block; width:100%; padding:15px; border:1px solid #ddd; border-radius:2px; color:#333; font-size:16px; line-height:1.4em;}
 .custom_select_optgroup div.options label input:checked + span.checkmark::before {background-color:#213DA1;}
@@ -875,6 +874,28 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 /* // 상품선택 */
 
 /* // 컨텐츠 */
+
+
+
+
+/* 심사 진행중 진행률 */
+.layer_progress {}
+.layer_progress .layer_content {position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:21; text-align:center;}
+.layer_progress .layer_content p.txt {text-shadow:0 0 3px rgba(0, 0, 0, 0.4);}
+.layer_progress .layer_content div.bar {width:200px; height:20px; border-radius:5px; background-color:#ddd; overflow:hidden; box-shadow:inset 2px 0 4px rgba(0, 0, 0, 0.4);}
+.layer_progress .layer_content div.bar span {display:flex; justify-content:center; align-items:center; position:relative; width:0%; max-width:100%; height:20px; background-color:#213DA1; border-radius:0 5px 5px 0; color:#fff; font-size:12px; transition:width 0.2s ease;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+	animation: progress-bar-stripes 2s linear infinite;
+	text-shadow:0 0 3px rgba(0, 0, 0, 0.4);
+}
+@keyframes progress-bar-stripes {
+	0% {background-position: 40px 0;}
+	100% {background-position: 0 0;}
+}
+.layer_progress .layer_content p.txt {margin-top:1em; color:#fff;}
+/* // 심사 진행중 진행률 */
+
 
 /* 로딩중 */
 .layer_loading .layer_content {position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:21; text-align:center;}
@@ -901,24 +922,6 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 /* // 로딩중 */
 
 
-/* 심사 진행중 진행률 */
-.layer_progress {}
-.layer_progress .layer_content {position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:21; text-align:center;}
-.layer_progress .layer_content p.txt {text-shadow:0 0 3px rgba(0, 0, 0, 0.4);}
-.layer_progress .layer_content div.bar {width:200px; height:20px; border-radius:5px; background-color:#ddd; overflow:hidden; box-shadow:inset 2px 0 4px rgba(0, 0, 0, 0.4);}
-.layer_progress .layer_content div.bar span {display:flex; justify-content:center; align-items:center; position:relative; width:0%; max-width:100%; height:20px; background-color:#213DA1; border-radius:0 5px 5px 0; color:#fff; font-size:12px; transition:width 0.2s ease;
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-size: 40px 40px;
-	animation: progress-bar-stripes 2s linear infinite;
-	text-shadow:0 0 3px rgba(0, 0, 0, 0.4);
-}
-@keyframes progress-bar-stripes {
-	0% {background-position: 40px 0;}
-	100% {background-position: 0 0;}
-}
-.layer_progress .layer_content p.txt {margin-top:1em; color:#fff;}
-/* // 심사 진행중 진행률 */
-
 
 /* 메인 비주얼 영역 */
 .main_visual_wrap {display:flex; align-items:center; width:100%; margin:100px 0; background-color:#DDEAFF;}
@@ -943,7 +946,7 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 	.main_visual_wrap div.main_visual div.txt_wrap {padding:0}
 	.main_visual_wrap div.main_visual div.txt_wrap div.tit strong {font-size:24px;}
 	.main_visual_wrap div.main_visual div.txt_wrap p.txt {font-size:16px;}
-	.main_visual_wrap div.main_visual div.txt_wrap button {height:50px; margin-top:1em; padding:0 30px; border-radius:4px; box-shadow:inset 0 0 6px rgba(0,0,0,0.16);}
+	.main_visual_wrap div.main_visual div.txt_wrap button {height:50px; margin-top:1em; padding:0 30px; border-radius:4px; box-shadow:inset 0 0 6px rgba(0,0,0,0..16);}
 	.main_visual_wrap div.main_visual div.txt_wrap button span {font-size:18px;}
 }
 @media screen and (max-width:500px) {
