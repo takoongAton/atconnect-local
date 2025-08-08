@@ -42,6 +42,23 @@ body header .inner div.nav ul.gnb div.itemmenu li a.current-page span {color:#21
 body header .inner div.nav ul.gnb div.itemmenu li a:hover {background-color:#f9f9f9; border-radius:2px; overflow:hidden;}
 /* // 상단메뉴 추가 수정 */
 
+/* 국내/해외 */
+header .inner {position:relative;}
+header .inner div.lang {display:flex; margin:9px 1em 0; transition:opacity 0.2s ease-in-out; overflow:hidden;}
+header .inner div.lang a {display:inline-flex; justify-content:center; align-items:center; width:98px; height:48px; background-color:#ddd; text-align:center; text-decoration:none;}
+header .inner div.lang a.active {background-color:#2D3138;}
+header .inner div.lang a span {display:inline-block; color:#555; font-size:1em; line-height:1em;}
+header .inner div.lang a.active span{color:#fff;}
+
+/* body header.active .inner div.lang {opacity:0;} */
+body header.mobile .inner div.lang {margin-right:1em;}
+@media only screen and (max-width: 786px) {
+    header .inner div.lang {position:static; margin:0;}
+	header .inner div.lang a {height:40px;}
+	header .inner div.lang a span {font-size:14px;}
+}
+/* // 국내/해외 */
+
 body header.active {padding-top:0; background-color:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.06);}
 body header.active li a {color:#000;}
 body header.active li a span {color:#000;}
