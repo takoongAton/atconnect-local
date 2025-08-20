@@ -740,6 +740,34 @@
 
 
 
+<div class="layer modal">
+	<div class="dim"></div>
+	<div class="layer_content">
+		<div class="bnr_list bnr_slick">
+			<div class="bnr_item">
+				<a href="https://atconneck.com/consulting" target="_blank"><img src="../../images/temp/img_banner01.png" alt="무이자 프로모션 오픈" /></a>
+			</div>
+			<div class="bnr_item">
+				<a href="https://atconneck.com/consulting" target="_blank"><img src="../../images/temp/img_banner02.png" alt="무이자 프로모션 오픈" /></a>
+			</div>
+		</div>
+		<!-- // layer_content -->
+
+		<div class="close_wrap">
+			<div class="chk_wrap">
+				<label>
+					<input type="checkbox" id="test123" />
+					<span class="checkmark"></span>
+					<span class="txt">하루 동안 보지않기</span>
+				</label>
+			</div>
+			<button type="button" class="btn_close_today"><span>닫기</span></button>
+		</div>
+		<!-- // close_wrap -->
+	</div>
+	<!-- // layer_content -->
+</div>
+<!-- layer modal -->
 
 
 
@@ -771,6 +799,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+/* 메인배너 슬라이드 2개 이상인 경우만 실행. */
+function bnrSlick(){
+	$('.bnr_slick').slick({
+		dots: true,
+		dotsClass: "bnr_slide_dot",
+		infinite: true,
+		arrows: false,
+		// centerMode: true,
+		// centerPadding : '18px'
+	});
+}
+let bnrItems = document.querySelectorAll(".bnr_slick .bnr_item");
+if(bnrItems.length > 1) {
+	bnrSlick();
+}
+/* // 메인배너 슬라이드 2개 이상인 경우만 실행. */
+
+
+
+/* 오늘 하루 창 닫기 chatGPT */
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.querySelector(".layer.modal");
+  const closeBtn = document.querySelector(".btn_close_today");
+  const chkBox = document.querySelector("#test123");
+
+  // 오늘 날짜 (yyyy-mm-dd 형태)
+  const today = new Date().toISOString().split("T")[0];
+
+  // localStorage 값 확인
+  const hideDate = localStorage.getItem("hideToday");
+  if (hideDate === today) {
+    modal.style.display = "none"; // 오늘 이미 체크했으면 숨김
+  } else {
+    modal.style.display = "block"; // 오늘 처음이면 보이기
+  }
+
+  // 닫기 버튼 클릭
+  closeBtn.addEventListener("click", function() {
+    if (chkBox.checked) {
+      localStorage.setItem("hideToday", today); // 오늘 날짜 저장
+    }
+    modal.style.display = "none";
+  });
+});
+/* // 오늘 하루 창 닫기 chatGPT */
 </script>
 </body>
 </html>

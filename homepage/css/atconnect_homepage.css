@@ -61,7 +61,7 @@ body header.mobile .inner div.lang {margin-right:1em;}
 
 body header.active {padding-top:0; background-color:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.06);}
 body header.active li a {color:#000;}
-body header.active li a span {color:#000;}
+body header.active li a span {color:#000; white-space:nowrap;}
 body header.active li a.active::before {background-color:#000;}
 
 body header:not(.home) .logo h1 {color:#000;}
@@ -964,7 +964,7 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 	.main_visual_wrap div.main_visual div.txt_wrap button span {font-size:18px;}
 }
 @media screen and (max-width:500px) {
-	.main_visual_wrap div.inner {padding:3em 1.5em}
+	.main_visual_wrap div.inner {padding:3em 1.5em; overflow-x:hidden;}
 	.main_visual_wrap div.main_visual {flex-direction:column;}
 	.main_visual_wrap div.main_visual div.txt_wrap div.tit strong {font-size:20px;}
 	.main_visual_wrap div.main_visual div.txt_wrap p.txt {font-size:14px;}
@@ -1019,3 +1019,36 @@ ol.agree_txt li p span {position:absolute; top:0; left:0; ;color:inherit; font-s
 .layer.agreement .agreement_content .sign_wrap {font-size:20px;}
 .layer.agreement .agreement_content strong.state {color:#213DA1; font-weight:500;}
 /* // 동의서 약정서 레이어팝업 */
+
+
+
+/* 메인 배너용 모달팝업 */
+.layer.modal .layer_content {position:fixed; top:50%; left:50%; width:400px; height:536px; background-color:#fff; transform:translate(-50%, -50%); transform:translate(round(to-zero, -50%, 1px) , round(to-zero, -50%, 1px)); z-index:21; border-radius:4px; overflow:hidden; user-select:none; box-shadow:0 2px 4px rgba(0,0,0,0.16);}
+.layer.modal .layer_content .bnr_list {width:400px; height:480px; overflow:hidden;}
+.layer.modal .layer_content div.close_wrap {display:flex; justify-content:space-between; align-items:center; height:56px; background-color:#fff; padding:18px 20px; overflow:hidden;}
+.layer.modal .layer_content div.close_wrap div.chk_wrap label {display:inline-flex; align-items:center; gap:6px; position:relative;}
+.layer.modal .layer_content div.close_wrap div.chk_wrap label input[type="checkbox"] {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
+.layer.modal .layer_content div.close_wrap div.chk_wrap label input[type="checkbox"] + span.checkmark {display:inline-block; position:relative; width:28px; height:28px; background:url('../images/ico_bcheck.png') no-repeat left top / cover;}
+.layer.modal .layer_content div.close_wrap div.chk_wrap label input[type="checkbox"] ~ span.txt {display:block; font-size:16px; line-height:1.5em; color:#000;}
+.layer.modal .layer_content div.close_wrap div.chk_wrap label input[type="checkbox"]:checked + span.checkmark {background-position:left bottom;}
+.layer.modal .layer_content div.close_wrap button.btn_close_today {position:relative; }
+.layer.modal .layer_content div.close_wrap button.btn_close_today span {display:inline-block; position:relative; color:#000; font-size:16px; line-height:1.5em; font-weight:500;}
+@media only screen and (max-width: 414px) {
+	.layer.modal .layer_content {width:280px; height:384px;}
+	.layer.modal .layer_content .bnr_list {width:280px; height:336px;}
+	.layer.modal .layer_content div.close_wrap {height:48px; padding:14px; padding:14px 12px;}
+	.layer.modal .layer_content div.close_wrap div.chk_wrap label  {gap:4px;}
+	.layer.modal .layer_content div.close_wrap div.chk_wrap label input[type="checkbox"] + span.checkmark {width:20px; height:20px; background-image:url('../images/ico_bcheck_m.png');}
+	.layer.modal .layer_content div.close_wrap div.chk_wrap label input[type="checkbox"] ~ span.txt,
+	.layer.modal .layer_content div.close_wrap button.btn_close_today span {font-size:14px;}
+}
+/* // 메인 배너용 모달팝업 */
+
+/* slick */
+.bnr_slick {position: relative;}
+/* more slick dot */
+.bnr_slide_dot {display:inline-flex; gap:6px; position:absolute; bottom:6px; left:50%; font-size:0; transform:translateX(-50%);}
+.bnr_slide_dot li button {width:6px; height:6px; border-radius:4px; background-color:rgba(255,255,255,0.5); font-size:0; overflow:hidden; transition:all 0.2s ease;}
+.bnr_slide_dot li.slick-active button {width:12px; background-color:rgba(255,255,255,0.8);}
+/* // more slick dot */
+/* // slick */
