@@ -24,12 +24,12 @@
 /* 로고 영역 */
 .cpa_atconnect_wrap .at_logo {display:flex; justify-content:space-between; align-items: center; position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; max-width:1350px; height:101px; margin:0 auto; padding:25px 75px; background-color:#fff; z-index:1;}
 .cpa_atconnect_wrap .at_logo strong {display:inline-block; line-height:1;}
-.cpa_atconnect_wrap .at_logo strong img {height:40px;}
-.cpa_atconnect_wrap .at_logo a {display:inline-flex; justify-content:center; align-items:center; width:148px; height:50px; border-radius:25px; background-color:#213DA1;}
-.cpa_atconnect_wrap .at_logo a span {color:#fff; font-size:20px; font-weight:bold;}
+.cpa_atconnect_wrap .at_logo strong img {width:200px; max-width:100%; height:auto; transition:all 0.2s ease-in-out;}
+.cpa_atconnect_wrap .at_logo a {display:inline-flex; justify-content:center; align-items:center; width:148px; height:50px; border-radius:25px; background-color:#213DA1; transition:all 0.2s ease-in-out;}
+.cpa_atconnect_wrap .at_logo a span {color:#fff; font-size:20px; font-weight:bold; transition:all 0.2s ease-in-out;}
 @media screen and (max-width:901px) {
 	.cpa_atconnect_wrap .at_logo {height:61px; padding:0 20px;}
-	.cpa_atconnect_wrap .at_logo strong img {height:24px;}
+	.cpa_atconnect_wrap .at_logo strong img {width:118px;}
 	.cpa_atconnect_wrap .at_logo a {width:104px; height:36px;}
 	.cpa_atconnect_wrap .at_logo a span {font-size:14px;}
 }
