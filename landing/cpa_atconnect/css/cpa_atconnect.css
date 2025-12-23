@@ -81,9 +81,9 @@
 
 
 /* 간편상담신청 */
-.cpa_atconnect_wrap .fast_contact {display:flex; flex-direction:column; gap:30px; width:100%; max-width:520px; margin:0 auto; padding:0 20px 100px;}
+.cpa_atconnect_wrap .fast_contact {display:flex; flex-direction:column; gap:30px; width:100%; max-width:520px; margin:0 auto; padding:60px 20px;}
 @media screen and (max-width:592px) {
-	.cpa_atconnect_wrap .fast_contact {gap:20px; padding:0 20px 20px 20px;}
+	.cpa_atconnect_wrap .fast_contact {gap:20px; padding:20px;}
 }
 /* 간편상담신청 정보입력 */
 .cpa_atconnect_wrap .user_info_form div.tit {padding-bottom:20px; text-align:center;}
@@ -183,6 +183,7 @@
 }
 /* // footer_wrap 공통 */
 
+.cpa_img_list {max-width:1350px; margin:0 auto;}
 
 
 /* sns 상담하기 */
