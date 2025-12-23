@@ -82,8 +82,9 @@
 
 /* 간편상담신청 */
 .cpa_atconnect_wrap .fast_contact {display:flex; flex-direction:column; gap:30px; width:100%; max-width:520px; margin:0 auto; padding:60px 20px;}
+.cpa_atconnect_wrap .fast_contact ~ .fast_contact {padding-top:0;}
 @media screen and (max-width:592px) {
-	.cpa_atconnect_wrap .fast_contact {gap:20px; padding:20px;}
+	.cpa_atconnect_wrap .fast_contact {gap:20px; padding:40px 20px;}
 }
 /* 간편상담신청 정보입력 */
 .cpa_atconnect_wrap .user_info_form div.tit {padding-bottom:20px; text-align:center;}
@@ -94,7 +95,7 @@
 .cpa_atconnect_wrap .user_info_form div.ipt_list p.txt {position:relative; padding-left:1.25em; color:#000; font-size:14px; line-height:20px; font-weight:400; word-break:keep-all;}
 .cpa_atconnect_wrap .user_info_form div.ipt_list p.txt span {position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit; font-weight:inherit;}
 @media screen and (max-width:592px) {
-	.cpa_atconnect_wrap .user_info_form div.tit {padding-bottom:12px;}
+	.cpa_atconnect_wrap .user_info_form div.tit {padding-bottom:16px;}
 	.cpa_atconnect_wrap .user_info_form div.tit strong {font-size:18px; line-height:1.5em;}
 	.cpa_atconnect_wrap .user_info_form div.ipt_list {gap:10px;}
 	.cpa_atconnect_wrap .user_info_form div.ipt_list .ipt_set input {height:48px; padding:0 16px; font-size:14px; line-height:40px;}
@@ -183,23 +184,6 @@
 }
 /* // footer_wrap 공통 */
 
+/* 배너 리스트 */
 .cpa_img_list {max-width:1350px; margin:0 auto;}
-
-
-/* sns 상담하기 */
-/* .sns_customer {position:fixed; left:50%; bottom:30px; width:72px; margin-left:520px; animation: sns_cus_ani 1s infinite ease-in-out;}
-.sns_customer a {display:inline-flex; flex-direction:column; text-decoration:none;}
-.sns_customer a span.ico {width:100%; line-height:0; border-radius:100%; box-shadow:0 2px 4px rgba(0,0,0,0.43);}
-.sns_customer a span.txt {display:flex; justify-content:center; align-items:center; height:24px; border-radius:12px; background-color:#000; color:#fff; font-size:14px; line-height:20px; font-weight:500;}
-@media screen and (max-width:1230px) {
-	.sns_customer {left:unset; right:20px; margin:0;}
-}
-@media screen and (max-width:768px) {
-	.sns_customer {bottom:unset; top:100px; width:60px; animation-duration: 1.6s;}
-	.sns_customer a span.txt {height:20px; font-size:12px;}
-}
-@keyframes sns_cus_ani {
-	0%,100% {transform:translateY(0);}
-	50% {transform:translateY(4px);}
-} */
-/* // sns 상담하기 */
+/* // 배너 리스트 */
