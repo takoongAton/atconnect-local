@@ -25,7 +25,7 @@
 .cpa_atconnect_wrap .at_logo {display:flex; justify-content:space-between; align-items: center; position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; max-width:1350px; height:101px; margin:0 auto; padding:25px 75px; background-color:#fff; z-index:1;}
 .cpa_atconnect_wrap .at_logo strong {display:inline-block; line-height:1;}
 .cpa_atconnect_wrap .at_logo strong img {width:200px; max-width:100%; height:auto; transition:all 0.2s ease-in-out;}
-.cpa_atconnect_wrap .at_logo a {display:inline-flex; justify-content:center; align-items:center; width:148px; height:50px; border-radius:25px; background-color:#213DA1; transition:all 0.2s ease-in-out;}
+.cpa_atconnect_wrap .at_logo a {display:inline-flex; justify-content:center; align-items:center; min-width:175px; height:50px; border-radius:25px; background-color:#213DA1; transition:all 0.2s ease-in-out;}
 .cpa_atconnect_wrap .at_logo a span {color:#fff; font-size:20px; font-weight:bold; transition:all 0.2s ease-in-out;}
 @media screen and (max-width:901px) {
 	.cpa_atconnect_wrap .at_logo {height:61px; padding:0 20px;}
@@ -82,7 +82,7 @@
 
 /* 간편상담신청 */
 .cpa_atconnect_wrap .fast_contact {display:flex; flex-direction:column; gap:30px; width:100%; max-width:520px; margin:0 auto; padding:60px 20px;}
-.cpa_atconnect_wrap .fast_contact ~ .fast_contact {padding-top:0;}
+/* .cpa_atconnect_wrap .fast_contact ~ .fast_contact {padding-top:0;} */
 @media screen and (max-width:592px) {
 	.cpa_atconnect_wrap .fast_contact {gap:20px; padding:40px 20px;}
 }
@@ -123,7 +123,7 @@
 
 .agree_wrap label {display:inline-flex; align-items:center; position:relative; padding-left:2.375em; line-height:1.75em; cursor:pointer;}
 .agree_wrap label input[type="checkbox"] {position:absolute; width:0; height:0; border:0 none; opacity:0;}
-.agree_wrap label input[type="checkbox"] + span.checkmark {content:""; display:inline-block; position:absolute; top:0; left:0; width:28px; height:28px; background:url('../images/ico_bcheck_off.png') no-repeat center / contain; vertical-align:top;}
+.agree_wrap label input[type="checkbox"] + span.checkmark {content:""; display:inline-block; position:absolute; top:0; left:0; width:28px; height:28px; border:2px solid #ccc; border-radius:4px; background-repeat:no-repeat; background-position:center; background-size:contain; vertical-align:top;}
 .agree_wrap label input[type="checkbox"]:checked + span.checkmark {border:0; background-image:url('../images/ico_bcheck_on.png');}
 .agree_wrap label span.txt {display:inline-block; line-height:1.75em; word-break:keep-all;}
 @media screen and (max-width:592px) {
@@ -189,3 +189,9 @@
 .cpa_img_list .img picture {display:block; line-height:1em;}
 .cpa_img_list .img a {display:block;}
 /* // 배너 리스트 */
+
+
+@keyframes kakao-bounce {
+	0%,100% { transform: translateY(0); }
+	50% { transform: translateY(-8px); }
+}
